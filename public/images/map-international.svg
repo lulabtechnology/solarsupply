@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" role="img" aria-label="Cobertura Panamá Centroamérica Suramérica">
+<defs><linearGradient id="bg" x1="0" x2="1"><stop stop-color="#061b49"/><stop offset="1" stop-color="#0d3c86"/></linearGradient></defs>
+<rect width="900" height="620" rx="40" fill="url(#bg)"/>
+<g fill="none" stroke="#ffffff" opacity=".12"><circle cx="450" cy="310" r="95"/><circle cx="450" cy="310" r="175"/><circle cx="450" cy="310" r="255"/></g>
+<path d="M400 110 C488 126 532 190 506 250 C494 278 525 310 500 350 C466 405 504 480 445 532 C404 567 318 527 320 472 C321 429 364 398 350 360 C330 306 368 272 348 232 C326 189 337 132 400 110Z" fill="#ffffff" opacity=".18"/>
+<path d="M404 105 C492 125 518 190 492 246 C480 274 512 300 493 346 C470 402 498 480 443 524 C410 550 337 525 340 470 C342 427 383 398 369 362 C346 303 384 270 366 232 C346 186 346 132 404 105Z" fill="#ffffff" opacity=".36"/>
+<circle cx="410" cy="230" r="14" fill="#f4a11a"/><circle cx="398" cy="316" r="10" fill="#f4a11a"/><circle cx="456" cy="420" r="12" fill="#f4a11a"/>
+<path d="M410 230 C520 190 625 204 730 144" stroke="#f4a11a" stroke-width="5" fill="none" stroke-linecap="round"/><path d="M398 316 C560 316 690 362 810 310" stroke="#f4a11a" stroke-width="4" fill="none" stroke-linecap="round" opacity=".75"/>
+<text x="450" y="540" font-size="30" text-anchor="middle" fill="#fff" font-family="Arial" font-weight="700">Panamá · Centroamérica · Suramérica</text>
+</svg>

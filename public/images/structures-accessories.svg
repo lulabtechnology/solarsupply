@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" role="img" aria-label="Estructuras y accesorios para sistemas solares">
+<defs><linearGradient id="m" x1="0" x2="1"><stop stop-color="#fff"/><stop offset="1" stop-color="#eef5ff"/></linearGradient><filter id="sh"><feDropShadow dx="0" dy="20" stdDeviation="16" flood-color="#061b49" flood-opacity=".18"/></filter></defs>
+<rect width="900" height="620" rx="40" fill="url(#m)"/>
+<path d="M115 435h670" stroke="#061b49" stroke-width="22" stroke-linecap="round" opacity=".16"/>
+<g stroke="#061b49" stroke-width="18" stroke-linecap="round" filter="url(#sh)"><path d="M190 420 370 190 555 420"/><path d="M370 190 735 420"/><path d="M280 315h370"/><path d="M460 300v120"/></g>
+<g transform="translate(185 158) skewY(-8)"><rect width="470" height="150" rx="18" fill="#0d3c86"/><g stroke="#a6d1ff" stroke-width="2" opacity=".55"><path d="M0 50h470M0 100h470"/><path d="M78 0v150M156 0v150M234 0v150M312 0v150M390 0v150"/></g></g>
+<g transform="translate(610 115)" filter="url(#sh)"><rect width="150" height="94" rx="20" fill="#f4a11a"/><circle cx="47" cy="47" r="21" fill="#061b49" opacity=".2"/><rect x="80" y="34" width="42" height="26" rx="13" fill="#061b49" opacity=".75"/></g>
+<text x="450" y="532" font-size="29" text-anchor="middle" fill="#061b49" font-family="Arial" font-weight="700">Estructuras · fijación · cableado · accesorios</text>
+</svg>

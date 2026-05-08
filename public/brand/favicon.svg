@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Solar Supply">
+  <rect width="128" height="128" rx="30" fill="#061b49"/>
+  <circle cx="66" cy="62" r="34" fill="#fff" opacity=".96"/>
+  <path d="M76 8 44 66h22l-15 54 42-72H70L76 8Z" fill="#f4a11a"/>
+  <path d="M17 80h38v12H17zM26 60h33v12H26z" fill="#f4a11a"/>
+</svg>

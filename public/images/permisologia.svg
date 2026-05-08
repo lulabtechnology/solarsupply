@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" role="img" aria-label="Confección de planos y permisología solar">
+<defs><linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#fff"/><stop offset="1" stop-color="#eff6ff"/></linearGradient><filter id="sh"><feDropShadow dx="0" dy="22" stdDeviation="14" flood-color="#061b49" flood-opacity=".16"/></filter></defs>
+<rect width="900" height="620" rx="40" fill="url(#bg)"/>
+<g transform="translate(130 85)" filter="url(#sh)"><rect width="420" height="450" rx="30" fill="#fff"/><rect x="52" y="60" width="250" height="20" rx="10" fill="#061b49"/><rect x="52" y="112" width="315" height="14" rx="7" fill="#aec2dd"/><rect x="52" y="150" width="285" height="14" rx="7" fill="#aec2dd"/><rect x="52" y="188" width="330" height="14" rx="7" fill="#aec2dd"/><path d="M78 300h250l-70 78H22z" fill="#0d3c86"/><g stroke="#a6d1ff" opacity=".55"><path d="M78 326h250M55 352h250M98 300v78M160 300v78M222 300v78M284 300v78"/></g></g>
+<g transform="translate(540 210)" filter="url(#sh)"><circle cx="110" cy="110" r="110" fill="#061b49"/><path d="M112 42 80 129h32l-18 64 59-105h-34l-7-46Z" fill="#f4a11a"/><path d="M56 230 132 170 180 220" stroke="#061b49" stroke-width="18" stroke-linecap="round" fill="none"/></g>
+</svg>
