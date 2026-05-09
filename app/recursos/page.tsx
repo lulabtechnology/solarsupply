@@ -7,20 +7,25 @@ import { resourceItems, whatsappUrl } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Recursos y fichas técnicas",
   description:
-    "Recursos de Solar Supply: fichas técnicas, ofertas, disponibilidad y galería de instalaciones."
+    "Recursos de Solar Supply: fichas técnicas, disponibilidad comercial y materiales de apoyo para proyectos solares."
 };
 
 export default function RecursosPage() {
   const icons = [FileText, Tag, ImageIcon];
+  const messages = [
+    "Hola Solar Supply, deseo recibir fichas técnicas de sus productos.",
+    "Hola Solar Supply, deseo consultar disponibilidad y oferta comercial.",
+    "Hola Solar Supply, deseo recibir información adicional sobre aplicaciones y productos."
+  ];
 
   return (
     <>
       <section className="pageHero compactHero">
         <div className="container">
           <span className="eyebrow">Recursos comerciales</span>
-          <h1>Fichas técnicas, ofertas y materiales para apoyar la decisión de compra.</h1>
+          <h1>Información técnica y comercial para apoyar cada cotización.</h1>
           <p>
-            Esta sección está lista para adjuntar PDFs, brochures, fichas, videos o fotos reales de instalaciones cuando el cliente los entregue.
+            Esta sección concentra el tipo de material que Solar Supply comparte con instaladores y empresas para facilitar la evaluación de equipos y soluciones.
           </p>
         </div>
       </section>
@@ -32,12 +37,11 @@ export default function RecursosPage() {
             return (
               <article key={item.title} className="resourceCard">
                 <Icon size={30} />
-                <span>{item.status}</span>
                 <h2>{item.title}</h2>
                 <p>{item.text}</p>
-                <button type="button" className="disabledDownload" disabled>
-                  <Download size={17} /> Pendiente de archivo
-                </button>
+                <Link href={whatsappUrl(messages[index])} className="secondaryButton" target="_blank" rel="noreferrer">
+                  <Download size={17} /> {item.action}
+                </Link>
               </article>
             );
           })}
@@ -48,18 +52,18 @@ export default function RecursosPage() {
         <div className="container">
           <SectionHeader
             center
-            eyebrow="Ofertas"
-            title="Bloque preparado para inventario y promociones por temporada."
-            text="Cuando se tengan modelos, precios o disponibilidad, se pueden agregar tarjetas por producto sin cambiar la estructura de la web."
+            eyebrow="Disponibilidad comercial"
+            title="Consulta productos activos, líneas destacadas y opciones recomendadas."
+            text="La oferta puede cambiar según inventario, marca y negociación comercial. Por eso Solar Supply trabaja con atención directa para orientar mejor cada solicitud."
           />
           <div className="offerCards">
-            <article><h3>Paneles por marca</h3><p>Publicar disponibilidad actual y fichas técnicas.</p></article>
-            <article><h3>NEP seleccionado</h3><p>Microinversores 2,250 W, híbrido 12 kW y RSD.</p></article>
-            <article><h3>Nuevas líneas</h3><p>Baterías, lámparas y productos complementarios.</p></article>
+            <article><h3>Paneles por marca</h3><p>Consulta opciones disponibles para tu proyecto según potencia, formato y rendimiento.</p></article>
+            <article><h3>Líneas FOX y NEP</h3><p>Monofásicos, híbridos, microinversores, Rapid Shutdown y respaldo energético.</p></article>
+            <article><h3>Nuevas categorías</h3><p>Estructuras, accesorios, baterías y futuras líneas complementarias como lámparas.</p></article>
           </div>
           <div className="centerAction">
-            <Link href={whatsappUrl("Hola Solar Supply, deseo recibir fichas técnicas y ofertas disponibles.")} className="primaryButton" target="_blank" rel="noreferrer">
-              Solicitar recursos disponibles
+            <Link href={whatsappUrl("Hola Solar Supply, deseo recibir información técnica y comercial de sus productos.")} className="primaryButton" target="_blank" rel="noreferrer">
+              Solicitar información
             </Link>
           </div>
         </div>

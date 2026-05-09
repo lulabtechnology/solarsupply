@@ -13,11 +13,11 @@ export default function HomePage() {
       <section className="hero corporateHero">
         <div className="container heroGrid">
           <div className="heroCopy">
-            <span className="eyebrow">Distribución solar · Panamá y mercados internacionales</span>
-            <h1>Suministro solar confiable para instaladores, empresas y proyectos de alto crecimiento.</h1>
+            <span className="eyebrow">Distribución solar · Panamá, Centroamérica y Suramérica</span>
+            <h1>Suministro solar confiable para instaladores, empresas y proyectos con visión internacional.</h1>
             <p>
-              Solar Supply, S.A. nace para ofrecer productos solares de buen costo, calidad comprobada y respaldo técnico sólido:
-              paneles, inversores, microinversores, estructuras, accesorios y nuevas líneas energéticas.
+              Solar Supply, S.A. ofrece paneles solares, inversores, microinversores, baterías, estructuras y accesorios,
+              con un enfoque comercial serio, criterio técnico y atención orientada a proyectos reales.
             </p>
             <div className="heroActions">
               <Link href="/productos" className="primaryButton">
@@ -28,13 +28,13 @@ export default function HomePage() {
               </Link>
             </div>
             <div className="heroStats">
-              <div><strong>Panamá</strong><span>base comercial</span></div>
-              <div><strong>Centroamérica</strong><span>visión regional</span></div>
-              <div><strong>Suramérica</strong><span>crecimiento</span></div>
+              <div><strong>Paneles solares</strong><span>suministro por marca</span></div>
+              <div><strong>FOX y NEP</strong><span>líneas destacadas</span></div>
+              <div><strong>Respaldo técnico</strong><span>orientación comercial</span></div>
             </div>
           </div>
           <div className="heroVisual">
-            <Image src="/images/hero-solar-international.svg" alt="Productos solares con visión internacional" width={900} height={620} priority />
+            <Image src="/images/hero-solar-real.png" alt="Profesionales en una instalación solar comercial" width={900} height={620} priority />
           </div>
         </div>
       </section>
@@ -52,8 +52,8 @@ export default function HomePage() {
         <div className="container splitGrid">
           <SectionHeader
             eyebrow="Propuesta corporativa"
-            title="Una empresa de suministro solar pensada para crecer más allá de Panamá."
-            text="La web se estructura como una plataforma corporativa, no como una landing: permite presentar empresa, productos, marcas, recursos, servicios técnicos y canales de contacto."
+            title="Una empresa de suministro solar preparada para crecer con nuevas marcas y nuevas líneas de producto."
+            text="La web presenta a Solar Supply como una plataforma corporativa completa: empresa, productos, marcas, servicios técnicos, recursos y contacto comercial en un solo ecosistema."
           />
           <div className="pillarGrid">
             {valuePillars.map((pillar) => (
@@ -72,8 +72,8 @@ export default function HomePage() {
           <SectionHeader
             center
             eyebrow="Productos principales"
-            title="Catálogo solar organizado para actualizar marcas, fichas y nuevas líneas sin rehacer el sitio."
-            text="La estructura permite manejar paneles por marca, inversores por fabricante, NEP como línea específica, accesorios y baterías en negociación."
+            title="Un catálogo pensado para vender hoy y crecer mañana."
+            text="Solar Supply puede presentar su oferta actual por familia y por marca, manteniendo la flexibilidad para incorporar nuevos productos como baterías, lámparas y soluciones complementarias."
           />
           <div className="productGrid">
             {productFamilies.slice(0, 4).map((product) => (
@@ -90,8 +90,8 @@ export default function HomePage() {
           <div>
             <SectionHeader
               eyebrow="Servicio adicional"
-              title="Planos y permisología para clientes que compran productos."
-              text="Este servicio se presenta con claridad: no reemplaza el enfoque de suministro, sino que aumenta el valor técnico para proyectos que necesitan documentación y acompañamiento."
+              title="Planos y permisología para clientes que compran productos con Solar Supply."
+              text="Además del suministro, Solar Supply puede apoyar proyectos que requieran confección de planos, permisología y orientación técnica como un servicio adicional cotizado según el alcance."
             />
             <div className="miniCards">
               {services.map((service) => (
@@ -102,7 +102,7 @@ export default function HomePage() {
               ))}
             </div>
           </div>
-          <Image src="/images/permisologia.svg" alt="Planos y permisología solar" width={760} height={530} className="roundedVisual" />
+          <Image src="/images/servicios-planos.png" alt="Revisión técnica de planos para proyecto solar" width={760} height={530} className="roundedVisual" />
         </div>
       </section>
 
@@ -111,8 +111,8 @@ export default function HomePage() {
           <div>
             <SectionHeader
               eyebrow="Contacto comercial"
-              title="Cotizaciones según especificación de cada proyecto."
-              text="Cada proyecto solar tiene capacidades, marcas, accesorios y condiciones distintas. Por eso la llamada a la acción principal es conversar y cotizar con criterio técnico."
+              title="Cotizaciones según especificación, capacidad y tipo de proyecto."
+              text="Cada proyecto solar exige una combinación distinta de equipos y accesorios. Por eso Solar Supply trabaja sobre consulta técnica y cotización personalizada."
             />
             <div className="contactQuickInfo">
               <p><strong>Teléfono:</strong> {site.phone}</p>

@@ -7,7 +7,7 @@ import { SectionHeader } from "@/components/SectionHeader";
 export const metadata: Metadata = {
   title: "Productos solares",
   description:
-    "Catálogo corporativo de Solar Supply: paneles solares, inversores FOX, microinversores NEP, Rapid Shutdown, baterías, estructuras y accesorios."
+    "Catálogo corporativo de Solar Supply: paneles solares, inversores FOX, soluciones NEP, baterías, estructuras y accesorios."
 };
 
 export default function ProductosPage() {
@@ -16,9 +16,9 @@ export default function ProductosPage() {
       <section className="pageHero compactHero">
         <div className="container">
           <span className="eyebrow">Catálogo corporativo</span>
-          <h1>Productos solares organizados por familia y marca.</h1>
+          <h1>Productos solares organizados por familia y línea comercial.</h1>
           <p>
-            La página está preparada para crecer con nuevas marcas, fichas técnicas, ofertas, baterías, lámparas y productos complementarios.
+            Solar Supply estructura su oferta para que el cliente pueda identificar con claridad las soluciones principales y consultar disponibilidad según cada proyecto.
           </p>
         </div>
       </section>
@@ -34,9 +34,9 @@ export default function ProductosPage() {
       <section className="section softSection">
         <div className="container brandSection">
           <SectionHeader
-            eyebrow="Manejo por marcas"
-            title="La estructura permite actualizar productos sin complicar el mantenimiento."
-            text="Los inversores se manejan por marca, los paneles por disponibilidad y las estructuras con marca discreta para facilitar cambios comerciales."
+            eyebrow="Manejo por líneas y marcas"
+            title="Una estructura pensada para vender mejor y actualizar más fácil."
+            text="Los paneles pueden manejarse por marca, los inversores por fabricante y las estructuras con una referencia discreta de proveedor, permitiendo que la web siga siendo útil aunque cambie la oferta comercial."
           />
           <div className="brandGrid">
             {brands.map((brand) => (
@@ -50,7 +50,7 @@ export default function ProductosPage() {
               </article>
             ))}
           </div>
-          <Image src="/images/hero-solar-international.svg" alt="Catálogo solar internacional" width={1100} height={650} className="wideVisual" />
+          <Image src="/images/product-paneles.png" alt="Paneles solares en cubierta comercial" width={1100} height={650} className="wideVisual" />
         </div>
       </section>
     </>

@@ -18,24 +18,24 @@ export default function EmpresaPage() {
         <div className="container pageHeroGrid">
           <div>
             <span className="eyebrow">Quiénes somos</span>
-            <h1>Solar Supply, S.A. combina suministro, criterio técnico y visión internacional.</h1>
+            <h1>Solar Supply, S.A. combina suministro, criterio técnico y proyección internacional.</h1>
             <p>
-              La empresa atiende instaladores de paneles solares y compañías que requieren suministro de productos confiables,
-              con una comunicación cercana, moderna y técnica.
+              Solar Supply atiende instaladores de paneles solares, empresas de ingeniería, contratistas y clientes
+              que buscan un proveedor serio de equipos y soluciones para sistemas solares.
             </p>
             <Link href={whatsappUrl("Hola Solar Supply, deseo más información corporativa y comercial.")} className="primaryButton" target="_blank" rel="noreferrer">
               Hablar con Solar Supply <ArrowRight size={18} />
             </Link>
           </div>
-          <Image src="/images/map-international.svg" alt="Cobertura Panamá Centroamérica y Suramérica" width={760} height={530} className="roundedVisual" />
+          <Image src="/images/empresa-corporativa.png" alt="Parque solar en cubierta comercial" width={760} height={530} className="roundedVisual" />
         </div>
       </section>
 
       <section className="section">
         <div className="container fourGrid">
-          <article className="metricCard"><Building2 size={26} /><strong>Solar Supply, S.A.</strong><span>Nombre comercial</span></article>
-          <article className="metricCard"><UsersRound size={26} /><strong>Instaladores y empresas</strong><span>Público objetivo</span></article>
-          <article className="metricCard"><ShieldCheck size={26} /><strong>Respaldo técnico</strong><span>Diferenciador</span></article>
+          <article className="metricCard"><Building2 size={26} /><strong>Solar Supply, S.A.</strong><span>Empresa de suministro solar</span></article>
+          <article className="metricCard"><UsersRound size={26} /><strong>Instaladores y empresas</strong><span>Público principal</span></article>
+          <article className="metricCard"><ShieldCheck size={26} /><strong>Respaldo técnico</strong><span>Valor diferenciador</span></article>
           <article className="metricCard"><Globe2 size={26} /><strong>{site.market}</strong><span>Mercado objetivo</span></article>
         </div>
       </section>
@@ -44,13 +44,14 @@ export default function EmpresaPage() {
         <div className="container splitGrid reverse">
           <div className="storyCard">
             <span className="eyebrow">Posicionamiento</span>
-            <h2>Una distribuidora solar con imagen limpia, técnica y preparada para nuevas categorías.</h2>
+            <h2>Una marca solar construida para vender producto, generar confianza y escalar regionalmente.</h2>
             <p>
-              El sitio se diseñó para que Solar Supply pueda crecer con productos actuales y futuros: paneles solares, inversores,
-              microinversores, baterías, estructuras, accesorios y otras líneas como lámparas o soluciones energéticas complementarias.
+              La propuesta comercial de Solar Supply se basa en ofrecer productos de buena calidad, costo competitivo y
+              acompañamiento técnico, manteniendo la flexibilidad de trabajar paneles por marca e incorporar nuevas líneas cuando el mercado lo requiera.
             </p>
             <p>
-              La intención visual es corporativa, elegante y moderna, con fondo blanco, fotos amplias, azul navy como color principal y acentos solares.
+              La imagen corporativa busca transmitir orden, solidez, modernidad y una visión más amplia que el mercado local,
+              alineada con oportunidades en Panamá, Centroamérica y Suramérica.
             </p>
           </div>
           <div className="pillarGrid">
@@ -68,9 +69,9 @@ export default function EmpresaPage() {
         <div className="container">
           <SectionHeader
             center
-            eyebrow="Para instaladores"
-            title="Soporte para decidir mejor cuando aparece un producto nuevo."
-            text="Una de las objeciones normales del público es el precio y la incertidumbre ante equipos nuevos. Por eso la comunicación se enfoca en confianza, respaldo y orientación."
+            eyebrow="Acompañamiento comercial"
+            title="Apoyo para tomar mejores decisiones técnicas y comerciales."
+            text="Solar Supply entiende que el instalador muchas veces necesita validar marcas, productos nuevos y configuraciones. Por eso la empresa se presenta como un aliado confiable, no solo como un punto de venta."
           />
         </div>
       </section>

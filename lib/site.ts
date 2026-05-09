@@ -8,6 +8,8 @@ export const site = {
   whatsappNumber: "50767681246",
   address:
     "Plaza Calle 50, Piso 1, Local 1, Calle 50, Urb. Obarrio, Bella Vista, Panamá",
+  googleMapsUrl:
+    "https://www.google.com/maps/search/?api=1&query=Plaza+Calle+50+Piso+1+Local+1+Calle+50+Obarrio+Bella+Vista+Panama",
   contactPerson: "Leonor Gómez Marín",
   tagline: "Suministro solar confiable con respaldo técnico sólido.",
   market: "Panamá, Centroamérica y Suramérica",
@@ -34,77 +36,77 @@ export const productFamilies = [
   {
     slug: "paneles-solares",
     title: "Paneles solares",
-    eyebrow: "Catálogo por marca",
+    eyebrow: "Suministro por marca y disponibilidad",
     summary:
-      "Módulos solares seleccionados por disponibilidad, rendimiento y relación costo-calidad para proyectos residenciales, comerciales e industriales.",
-    image: "/images/panels-real.svg",
-    highlight: "Marcas ajustables según oferta",
+      "Solar Supply maneja paneles solares organizados por marca para poder actualizar la oferta comercial según inventario, eficiencia, potencia y condiciones del mercado.",
+    image: "/images/product-paneles.png",
+    highlight: "Residencial · Comercial · Industrial",
     items: [
-      "Organización por marca para actualizar inventario sin rehacer la web.",
-      "Opciones para instaladores y empresas que buscan suministro directo.",
-      "Selección enfocada en costo competitivo y calidad comprobada en Panamá."
+      "Módulos para proyectos residenciales, comerciales e industriales.",
+      "Selección por marca para adaptarse a cambios de oferta sin afectar la operación comercial.",
+      "Enfoque en rendimiento, disponibilidad y buena relación costo-calidad para el instalador."
     ],
     cta: "Consultar paneles disponibles"
   },
   {
     slug: "inversores",
-    title: "Inversores solares",
-    eyebrow: "Manejo por marcas",
+    title: "Inversores FOX ESS",
+    eyebrow: "Monofásicos, híbridos y respaldo",
     summary:
-      "Línea preparada para inversores monofásicos, híbridos, microinversores y soluciones de apagado rápido por marca.",
-    image: "/images/inverters-fox.svg",
-    highlight: "FOX + NEP",
+      "Línea FOX orientada a sistemas que requieren conversión eficiente, respaldo energético y soluciones híbridas para distintos tamaños de proyecto.",
+    image: "/images/product-inversores-fox.png",
+    highlight: "FOX ESS",
     items: [
-      "FOX: inversores monofásicos, híbridos y baterías.",
-      "NEP: microinversores, inversor híbrido 12 kW y dispositivos Rapid Shutdown.",
-      "Acompañamiento técnico para seleccionar la solución correcta por proyecto."
+      "Inversores monofásicos para aplicaciones residenciales y comerciales ligeras.",
+      "Inversores híbridos para soluciones con almacenamiento y continuidad energética.",
+      "Acompañamiento técnico para dimensionar la opción correcta según carga, tipo de sistema y crecimiento esperado."
     ],
-    cta: "Cotizar inversores"
+    cta: "Cotizar inversores FOX"
   },
   {
     slug: "microinversores-nep",
     title: "NEP Microinversores, híbrido y RSD",
-    eyebrow: "Productos NEP destacados",
+    eyebrow: "Línea NEP seleccionada",
     summary:
-      "Selección inicial NEP para microinversores de 2,250 W, híbrido de 12 kW y dos opciones de Rapid Shutdown.",
-    image: "/images/nep-products.svg",
-    highlight: "2,250 W · 12 kW · RSD",
+      "Solar Supply incorpora soluciones NEP para proyectos que buscan microinversión, seguridad en techo y configuraciones híbridas con enfoque técnico.",
+    image: "/images/product-nep-rsd.png",
+    highlight: "Microinversor 2,250 W · Híbrido 12 kW · RSD",
     items: [
-      "Microinversor NEP BDM-2250 para proyectos con monitoreo y expansión modular.",
-      "Inversor híbrido NEP de 12 kW para soluciones con respaldo energético.",
-      "Dos opciones de Rapid Shutdown para elevar seguridad y cumplimiento técnico."
+      "Microinversores NEP de 2,250 W para instalaciones que requieren flexibilidad y control por módulo.",
+      "Inversor híbrido NEP de 12 kW para proyectos con respaldo energético y mayor capacidad.",
+      "Dos soluciones Rapid Shutdown para elevar seguridad, cumplimiento técnico y protección del sistema."
     ],
     cta: "Ver línea NEP"
   },
   {
     slug: "estructuras-accesorios",
     title: "Estructuras y accesorios",
-    eyebrow: "Montaje y balance de sistema",
+    eyebrow: "Montaje y balance del sistema",
     summary:
-      "Estructuras, fijaciones, componentes y accesorios para completar instalaciones solares con orden técnico.",
-    image: "/images/structures-accessories.svg",
-    highlight: "Marca discreta y reemplazable",
+      "Rieles, anclajes, fijaciones, soportes y accesorios para instalaciones solares limpias, seguras y bien resueltas en campo.",
+    image: "/images/product-estructuras.png",
+    highlight: "Montaje profesional",
     items: [
-      "Sistemas de montaje para diferentes tipos de techo y aplicaciones.",
-      "Accesorios de instalación, fijación y soporte para proyectos solares.",
-      "La marca se mantiene como dato secundario para facilitar cambios futuros."
+      "Componentes para montaje en diferentes cubiertas y configuraciones de proyecto.",
+      "Accesorios de fijación y soporte para completar el balance mecánico del sistema.",
+      "La marca se mantiene en segundo plano para facilitar ajustes comerciales cuando cambie la oferta."
     ],
     cta: "Consultar estructuras"
   },
   {
     slug: "baterias",
-    title: "Baterías solares",
-    eyebrow: "Línea en negociación",
+    title: "Baterías para respaldo energético",
+    eyebrow: "Almacenamiento y continuidad",
     summary:
-      "Espacio preparado para integrar baterías cuando se confirme la marca comercial y las especificaciones finales.",
-    image: "/images/batteries-coming.svg",
-    highlight: "Próxima disponibilidad",
+      "Sección dedicada a soluciones de almacenamiento para sistemas híbridos y respaldo. La disponibilidad final de marca puede variar según cierre comercial y oferta vigente.",
+    image: "/images/product-baterias.png",
+    highlight: "Respaldo energético",
     items: [
-      "Sección lista para activar catálogo, fichas técnicas y formularios por modelo.",
-      "Pensada para soluciones híbridas, respaldo y almacenamiento energético.",
-      "Integración futura sin afectar la estructura principal de productos."
+      "Baterías para proyectos que requieren respaldo, mayor autonomía y gestión de energía.",
+      "Compatibilidad con soluciones híbridas orientadas a continuidad operativa y aprovechamiento solar.",
+      "Atención comercial para recomendar la alternativa disponible más conveniente en cada momento."
     ],
-    cta: "Solicitar actualización"
+    cta: "Consultar baterías"
   }
 ];
 
@@ -113,21 +115,21 @@ export const brands = [
     name: "FOX ESS",
     category: "Inversores y almacenamiento",
     description:
-      "Línea para inversores monofásicos, híbridos y baterías con enfoque en rendimiento y respaldo energético.",
+      "Soluciones para inversores monofásicos, híbridos y respaldo con un enfoque técnico y comercial adaptable al proyecto.",
     products: ["Monofásicos", "Híbridos", "Baterías"]
   },
   {
     name: "NEP",
     category: "Microinversores y seguridad",
     description:
-      "Microinversores, inversor híbrido de 12 kW y dispositivos Rapid Shutdown para soluciones solares modernas.",
+      "Microinversores, híbrido de 12 kW y Rapid Shutdown para instalaciones modernas con criterios de seguridad y eficiencia.",
     products: ["Microinversor 2,250 W", "Híbrido 12 kW", "Rapid Shutdown"]
   },
   {
-    name: "Estructuras",
-    category: "Accesorios y montaje",
+    name: "Estructuras y accesorios",
+    category: "Montaje y soporte",
     description:
-      "Componentes de instalación y soporte técnico con marca visible solo de forma secundaria.",
+      "Rieles, fijaciones y accesorios necesarios para completar instalaciones solares con orden técnico y buena terminación.",
     products: ["Montaje", "Fijaciones", "Accesorios"]
   }
 ];
@@ -135,52 +137,52 @@ export const brands = [
 export const valuePillars = [
   {
     title: "Suministro con criterio técnico",
-    text: "No se trata solo de vender equipos: ayudamos al instalador a elegir productos adecuados para cada tipo de proyecto."
+    text: "Solar Supply no solo despacha equipos: orienta al instalador y a la empresa para seleccionar productos coherentes con cada proyecto."
   },
   {
     title: "Costo competitivo",
-    text: "Productos de buena calidad y precio atractivo frente a opciones que pueden duplicar su valor en el mercado."
+    text: "La oferta se enfoca en productos de buena calidad y precio atractivo, capaces de competir frente a opciones de costo mucho mayor."
   },
   {
     title: "Catálogo flexible",
-    text: "La web está preparada para actualizar marcas, fichas, ofertas y líneas nuevas como lámparas, baterías y accesorios."
+    text: "La estructura comercial está preparada para incorporar nuevas marcas, baterías, lámparas, accesorios y líneas complementarias cuando sea necesario."
   },
   {
     title: "Visión internacional",
-    text: "Pensada para atender Panamá, Centroamérica, Suramérica y oportunidades de suministro con alcance regional."
+    text: "La marca se presenta con una imagen corporativa capaz de atender Panamá, Centroamérica y Suramérica con seriedad y proyección."
   }
 ];
 
 export const services = [
   {
     title: "Confección de planos",
-    text: "Servicio técnico adicional para clientes que compran productos con Solar Supply y requieren documentación para su proyecto."
+    text: "Servicio técnico adicional para clientes que compran productos con Solar Supply y requieren documentación formal para desarrollar su proyecto."
   },
   {
     title: "Permisología",
-    text: "Acompañamiento en el proceso de permisos relacionados con proyectos solares, cotizado según alcance y requisitos."
+    text: "Acompañamiento en procesos de permisos vinculados al proyecto solar, cotizado según alcance, complejidad y requisitos específicos."
   },
   {
     title: "Orientación técnica",
-    text: "Soporte para instaladores con mucho o poco conocimiento de producto, reduciendo dudas sobre equipos nuevos."
+    text: "Soporte para instaladores y empresas que desean validar una selección de equipos, entender nuevas tecnologías o definir una propuesta adecuada."
   }
 ];
 
 export const resourceItems = [
   {
-    title: "Fichas técnicas",
-    text: "Espacio para subir PDFs de paneles, inversores, microinversores, RSD, baterías y accesorios.",
-    status: "Preparado para adjuntar"
+    title: "Fichas técnicas de productos",
+    text: "Atención comercial para compartir fichas de paneles, inversores, microinversores, baterías, RSD, estructuras y accesorios según la necesidad del proyecto.",
+    action: "Solicitar fichas"
   },
   {
-    title: "Ofertas por disponibilidad",
-    text: "Bloque listo para destacar inventario, promociones o modelos disponibles por temporada.",
-    status: "Editable"
+    title: "Disponibilidad y oferta comercial",
+    text: "Consulta inventario, líneas activas y opciones recomendadas para cada tipo de sistema solar, con enfoque práctico para instaladores y empresas.",
+    action: "Consultar disponibilidad"
   },
   {
-    title: "Galería de instalaciones",
-    text: "Área pensada para mostrar prueba social con fotos reales de proyectos e instalaciones.",
-    status: "Lista para cargar fotos"
+    title: "Aplicaciones y referencia de uso",
+    text: "Solar Supply puede apoyar la conversación comercial con referencias técnicas, fotografías de aplicación y orientación para respaldar la decisión de compra.",
+    action: "Solicitar información"
   }
 ];
 
@@ -188,22 +190,22 @@ export const faqs = [
   {
     question: "¿Solar Supply instala sistemas solares?",
     answer:
-      "El enfoque principal es el suministro de productos. Los servicios de planos y permisología se ofrecen como costo adicional únicamente a clientes que compren productos."
+      "El enfoque principal es el suministro de productos. Los servicios de planos y permisología se ofrecen como costo adicional únicamente a clientes que compran productos."
   },
   {
     question: "¿Los paneles solares serán siempre de las mismas marcas?",
     answer:
-      "No necesariamente. La sección está diseñada para organizar paneles por marca, porque la oferta puede cambiar según disponibilidad y negociación comercial."
+      "No necesariamente. La sección está diseñada para manejar paneles por marca y actualizar la oferta según disponibilidad comercial y condiciones del mercado."
   },
   {
     question: "¿Pueden ayudar si el instalador no conoce un producto nuevo?",
     answer:
-      "Sí. Solar Supply busca afianzar al instalador con orientación técnica y respaldo para que pueda evaluar equipos nuevos con mayor seguridad."
+      "Sí. Solar Supply busca afianzar al instalador con orientación técnica y respaldo para que pueda evaluar productos nuevos con mayor confianza."
   },
   {
     question: "¿Manejan productos para proyectos internacionales?",
     answer:
-      "La visión comercial contempla Panamá, Centroamérica y Suramérica, con una imagen corporativa preparada para crecer a nivel internacional."
+      "La visión comercial contempla Panamá, Centroamérica y Suramérica, con una imagen corporativa preparada para crecer y atender oportunidades regionales."
   }
 ];
 

@@ -61,7 +61,8 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
               ))}
             </ul>
             <div className="detailNote">
-              <strong>Nota:</strong> los modelos, fichas técnicas y disponibilidad pueden ajustarse desde el archivo <code>lib/site.ts</code> sin rediseñar toda la web.
+              <strong>Importante:</strong> la disponibilidad de modelos y marcas puede variar según inventario,
+              negociación comercial y especificación del proyecto. Solar Supply orienta la selección final de acuerdo con cada requerimiento.
             </div>
           </div>
           <ContactBlock />

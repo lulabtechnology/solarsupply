@@ -18,15 +18,16 @@ export default function ServiciosPage() {
         <div className="container pageHeroGrid">
           <div>
             <span className="eyebrow">Servicios técnicos adicionales</span>
-            <h1>Planos y permisología como valor agregado para clientes que compran productos.</h1>
+            <h1>Planos, permisología y orientación técnica como valor agregado al suministro.</h1>
             <p>
-              El servicio se presenta de forma clara: Solar Supply se enfoca en suministro solar, pero puede acompañar técnicamente a clientes que necesitan documentación y permisos.
+              Solar Supply se enfoca en productos, pero también puede acompañar proyectos que requieran documentación,
+              revisión técnica y soporte adicional para avanzar con mayor seguridad.
             </p>
             <Link href={whatsappUrl("Hola Solar Supply, deseo información sobre planos y permisología para un proyecto solar.")} className="primaryButton" target="_blank" rel="noreferrer">
               Consultar servicio <ArrowRight size={18} />
             </Link>
           </div>
-          <Image src="/images/permisologia.svg" alt="Servicios de planos y permisología" width={760} height={530} className="roundedVisual" />
+          <Image src="/images/servicios-planos.png" alt="Especialista revisando planos de un proyecto solar" width={760} height={530} className="roundedVisual" />
         </div>
       </section>
 
@@ -51,13 +52,13 @@ export default function ServiciosPage() {
           <SectionHeader
             center
             eyebrow="Cómo funciona"
-            title="Un flujo simple para proyectos que requieren soporte técnico adicional."
-            text="El cliente comparte el alcance, Solar Supply revisa la necesidad técnica, cotiza productos y define si aplica el servicio adicional de planos o permisología."
+            title="Un proceso claro para atender proyectos con mayor exigencia técnica."
+            text="El cliente comparte el alcance del proyecto, Solar Supply propone el suministro correspondiente y, si aplica, cotiza el apoyo adicional de planos o permisología."
           />
           <div className="stepsGrid">
-            <article><strong>01</strong><h3>Revisión del proyecto</h3><p>Se recibe información básica: capacidad, tipo de instalación, equipos requeridos y ubicación.</p></article>
-            <article><strong>02</strong><h3>Cotización de productos</h3><p>Se recomienda la línea comercial adecuada: paneles, inversores, NEP, estructuras o accesorios.</p></article>
-            <article><strong>03</strong><h3>Servicio adicional</h3><p>Si aplica, se cotizan planos y permisología como un costo adicional y no incluido automáticamente.</p></article>
+            <article><strong>01</strong><h3>Revisión del proyecto</h3><p>Se analizan capacidad, tipo de sistema, uso esperado y equipamiento requerido.</p></article>
+            <article><strong>02</strong><h3>Selección y cotización</h3><p>Se recomienda la línea de producto más adecuada según la necesidad técnica y comercial.</p></article>
+            <article><strong>03</strong><h3>Soporte adicional</h3><p>Cuando el cliente lo necesita, se cotizan planos y permisología como un servicio complementario.</p></article>
           </div>
         </div>
       </section>
