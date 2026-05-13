@@ -38,44 +38,54 @@ export const productFamilies = [
     title: "Paneles Solares",
     eyebrow: "Trina · Jinko · Canadian",
     summary:
-      "Paneles solares organizados por marca para que el cliente identifique rápidamente las líneas disponibles y pueda consultar potencia, disponibilidad e inventario según proyecto.",
-    image: "/images/products/card-paneles-marcas.svg",
+      "Paneles solares organizados por marca y ficha técnica para que el cliente vea opciones disponibles, potencias y referencias comerciales antes de cotizar.",
+    image: "/images/products/catalog-paneles-marcas.svg",
     highlight: "Trina · Jinko · Canadian",
     items: [
-      "Trina, Jinko y Canadian quedan como marcas principales visibles en el carrusel de paneles solares.",
-      "La categoría permite cotizar por marca, potencia, disponibilidad y necesidad técnica del proyecto.",
-      "Pensado para proyectos residenciales, comerciales e industriales donde el cliente necesita comparar opciones por fabricante."
+      "La categoría mantiene visibles las marcas Trina, Jinko y Canadian como líneas principales de paneles solares.",
+      "Se agregan las referencias Trina Vertex N enviadas en PDF: 610-635W y 695-720W.",
+      "El carrusel muestra imágenes grandes de marcas y fichas, no miniaturas pequeñas ni imágenes genéricas."
     ],
     cta: "Consultar paneles solares",
     carousel: [
-      { name: "Trina Solar", label: "Paneles solares", image: "/images/products/brand-trina.svg" },
+      { name: "Trina · Jinko · Canadian", label: "Marcas de paneles", image: "/images/products/catalog-paneles-marcas.svg" },
+      { name: "Trina Vertex N 610-635W", label: "N-type i-TOPCon", image: "/images/products/catalog-trina-vertex-n-635.webp" },
+      { name: "Trina Vertex N 695-720W", label: "Bifacial dual glass", image: "/images/products/catalog-trina-vertex-n-720.webp" },
       { name: "Jinko Solar", label: "Paneles solares", image: "/images/products/brand-jinko.svg" },
       { name: "Canadian Solar", label: "Paneles solares", image: "/images/products/brand-canadian.svg" }
     ],
     catalogItems: [
       {
-        title: "Trina Solar",
-        label: "Paneles solares",
-        image: "/images/products/brand-trina.svg",
+        title: "Trina Vertex N TSM-NEG19RC.20 610-635W",
+        label: "Panel solar Trina",
+        image: "/images/products/catalog-trina-vertex-n-635.webp",
         description:
-          "Marca visible dentro de la familia de paneles solares para cotizar según potencia, inventario y alcance del proyecto.",
-        specs: ["Marca principal", "Consulta por inventario", "Proyectos residenciales, comerciales e industriales"]
+          "Módulo monocristalino bifacial dual glass N-type i-TOPCon, con potencia máxima de 635W, eficiencia máxima de 23.5% y garantía de potencia a 30 años.",
+        specs: ["610-635W", "Hasta 23.5% eficiencia", "N-type i-TOPCon", "Bifacial dual glass", "30 años garantía de potencia"]
+      },
+      {
+        title: "Trina Vertex N TSM-NEG21C.20 695-720W",
+        label: "Panel solar Trina",
+        image: "/images/products/catalog-trina-vertex-n-720.webp",
+        description:
+          "Módulo Trina de alta potencia para proyectos de mayor escala, con rango 695-720W, tolerancia positiva 0~+5W y eficiencia máxima de 23.2%.",
+        specs: ["695-720W", "0~+5W tolerancia", "Hasta 23.2% eficiencia", "N-type i-TOPCon", "30 años garantía de potencia"]
       },
       {
         title: "Jinko Solar",
-        label: "Paneles solares",
+        label: "Marca de paneles solares",
         image: "/images/products/brand-jinko.svg",
         description:
-          "Línea de paneles solares organizada por fabricante para facilitar la selección comercial y técnica del cliente.",
-        specs: ["Marca principal", "Consulta por potencia", "Selección por disponibilidad"]
+          "Marca incluida como línea visible para cotización de paneles solares según inventario, potencia disponible y requerimientos del proyecto.",
+        specs: ["Marca principal", "Cotización por inventario", "Paneles solares", "Uso residencial y comercial"]
       },
       {
         title: "Canadian Solar",
-        label: "Paneles solares",
+        label: "Marca de paneles solares",
         image: "/images/products/brand-canadian.svg",
         description:
-          "Marca incluida para presentar alternativas claras dentro de la familia de paneles solares.",
-        specs: ["Marca principal", "Cotización por proyecto", "Aplicación fotovoltaica"]
+          "Marca visible dentro del carrusel de paneles solares para presentar alternativas comerciales en proyectos fotovoltaicos.",
+        specs: ["Marca principal", "Cotización por proyecto", "Paneles solares", "Uso comercial e industrial"]
       }
     ]
   },
@@ -193,39 +203,65 @@ export const productFamilies = [
   },
   {
     slug: "estructura-accesorios-electricos",
-    title: "Estructura y accesorios eléctricos",
-    eyebrow: "Montaje · balance · protección",
+    title: "Estructuras y accesorios eléctricos",
+    eyebrow: "CHIKO · montaje · accesorios",
     summary:
-      "Familia para estructuras, rieles, anclajes, fijaciones, componentes de montaje y accesorios eléctricos que completan la instalación solar.",
-    image: "/images/products/card-estructuras-electricas.svg",
-    highlight: "Estructura · accesorios",
+      "Familia para estructuras CHIKO, rieles, grapas, soportes, cable solar, conectores MC4, clips, amarres y accesorios eléctricos que completan la instalación solar.",
+    image: "/images/products/catalog-chiko-quotation.webp",
+    highlight: "CHIKO · montaje solar",
     items: [
-      "Rieles, anclajes, fijaciones y soportes para montaje profesional de paneles solares.",
-      "Accesorios eléctricos y componentes complementarios para el balance del sistema.",
-      "La categoría queda lista para agregar marcas chicas y productos específicos según el catálogo comercial."
+      "Se agrega CHIKO como línea principal de estructuras y montaje: Rail #518, L Feet, splices, clamps, grounding clip y grounding lug.",
+      "Se incluyen accesorios eléctricos y de instalación: cable solar 6mm² rojo/negro, conectores MC4, cable clips SUS304 y cable ties SUS304.",
+      "La subpágina queda organizada con carrusel grande y tarjetas por familia para que se pueda ampliar con nuevos productos sin romper la estructura."
     ],
-    cta: "Consultar accesorios",
+    cta: "Consultar estructuras y accesorios",
     carousel: [
-      { name: "Estructuras", label: "Montaje solar", image: "/images/products/brand-structures.svg" },
-      { name: "Accesorios eléctricos", label: "Balance del sistema", image: "/images/products/brand-electrical.svg" },
-      { name: "Componentes de instalación", label: "Protección y conexión", image: "/images/products/card-estructuras-electricas.svg" }
+      { name: "CHIKO L Feet · Rail #518", label: "Lista de compra", image: "/images/products/catalog-chiko-quotation.webp" },
+      { name: "Metal Roof L Feet Mount", label: "Estructura para techo metálico", image: "/images/products/catalog-chiko-metal-roof-l-feet.webp" },
+      { name: "Classic Rail · clamps", label: "Rieles y grapas", image: "/images/products/catalog-chiko-rail-clamps.webp" },
+      { name: "Flat Roof Mount", label: "Estructura para techo plano", image: "/images/products/catalog-chiko-flat-roof.webp" },
+      { name: "Ground Mount", label: "Estructura en suelo", image: "/images/products/catalog-chiko-ground-mount.webp" }
     ],
     catalogItems: [
       {
-        title: "Estructuras de montaje",
-        label: "Montaje solar",
-        image: "/images/products/brand-structures.svg",
+        title: "CHIKO L Feet + Rail #518",
+        label: "Estructura de techo metálico",
+        image: "/images/products/catalog-chiko-quotation.webp",
         description:
-          "Componentes para montar paneles solares con orden, seguridad y buena terminación en campo.",
-        specs: ["Rieles", "Anclajes", "Fijaciones", "Soportes"]
+          "Sistema de montaje CHIKO para techo metálico con riel #518, rail splice kit, mid clamp, end clamp, L Feet mount, grounding clip y grounding lug.",
+        specs: ["CK-FT-R518B1-4800", "Rail #518 4800mm", "Rail Splice Kit", "Mid/End Clamp 30-40mm", "L Feet Mount"]
       },
       {
-        title: "Accesorios eléctricos",
-        label: "Balance del sistema",
-        image: "/images/products/brand-electrical.svg",
+        title: "Accesorios eléctricos CHIKO",
+        label: "Balance y conexión",
+        image: "/images/products/catalog-chiko-quotation.webp",
         description:
-          "Productos complementarios para completar la instalación y mantener una presentación técnica clara.",
-        specs: ["Conexión", "Protección", "Orden de instalación", "Componentes complementarios"]
+          "Accesorios para completar la instalación: cable solar PV 6mm² rojo y negro, conectores MC4 para cable 6mm², clips SUS304 y amarres SUS304.",
+        specs: ["PV Cable 6mm² rojo", "PV Cable 6mm² negro", "MC4 6mm²", "SUS304 Cable Clip", "SUS304 Cable Ties"]
+      },
+      {
+        title: "CHIKO Metal Roof Mount Bracket",
+        label: "Montaje para techo metálico",
+        image: "/images/products/catalog-chiko-metal-roof-l-feet.webp",
+        description:
+          "Soluciones de montaje para techos trapezoidales y corrugados, incluyendo L Feet, hanger bolt, trapezoidal clamp, rail-free mount y standing seam clamps.",
+        specs: ["L Feet Mount", "Hanger Bolt Mount", "Trapezoidal Clamp", "Rail-Free Mount", "Standing Seam Clamps"]
+      },
+      {
+        title: "CHIKO Classic Rail · grapas · empalmes",
+        label: "Rieles y fijación",
+        image: "/images/products/catalog-chiko-rail-clamps.webp",
+        description:
+          "Familia de rieles, empalmes, mid clamps, end clamps y grapas ajustables para fijación ordenada de módulos solares.",
+        specs: ["Classic Rail", "Rail Splice Kit", "Mid Clamp", "End Clamp", "Adjustable Clamp"]
+      },
+      {
+        title: "CHIKO Flat Roof y Ground Mount",
+        label: "Estructuras especiales",
+        image: "/images/products/catalog-chiko-flat-roof.webp",
+        description:
+          "Opciones de montaje para techos planos y aplicaciones en suelo: sistemas ballast, triangular mount y estructuras para proyectos comerciales o industriales.",
+        specs: ["Flat roof", "Ballast mount", "Triangular mount", "Ground mount", "Comercial / industrial"]
       }
     ]
   }
@@ -236,8 +272,8 @@ export const brands = [
     name: "Trina · Jinko · Canadian",
     category: "Paneles Solares",
     description:
-      "La categoría de paneles se presenta por marcas visibles para que el cliente consulte disponibilidad, potencia y oferta vigente.",
-    products: ["Trina", "Jinko", "Canadian"]
+      "La categoría de paneles se presenta por marcas visibles y ahora incluye fichas Trina Vertex N para consulta comercial por potencia.",
+    products: ["Trina Vertex N 610-635W", "Trina Vertex N 695-720W", "Jinko", "Canadian"]
   },
   {
     name: "NEP",
@@ -261,11 +297,11 @@ export const brands = [
     products: ["EP6", "EP12", "Alto voltaje"]
   },
   {
-    name: "Estructuras · accesorios eléctricos",
-    category: "Estructura y accesorios eléctricos",
+    name: "CHIKO",
+    category: "Estructuras y accesorios eléctricos",
     description:
-      "Sección preparada para marcas chicas, estructuras, balance del sistema y productos del catálogo comercial.",
-    products: ["Rieles", "Anclajes", "Protección", "Conexión"]
+      "CHIKO queda como marca de estructura, rieles, fijaciones, soportes y accesorios eléctricos para completar la instalación solar.",
+    products: ["Rail #518", "L Feet", "Clamps", "MC4", "Cable solar 6mm²"]
   }
 ];
 
