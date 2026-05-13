@@ -30,7 +30,10 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
 
   if (!product) notFound();
 
-  const slides = product.carousel ? [...product.carousel, ...product.carousel] : [];
+  const sourceSlides = product.carousel?.length
+    ? product.carousel
+    : [{ name: product.title, label: product.highlight, image: product.image }];
+  const slides = [...sourceSlides, ...sourceSlides];
 
   return (
     <>
@@ -41,18 +44,6 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
             <span className="eyebrow">{product.eyebrow}</span>
             <h1>{product.title}</h1>
             <p>{product.summary}</p>
-            {slides.length > 0 && (
-              <div className="detailLogoCarousel" aria-label={`Carrusel de ${product.title}`}>
-                <div className="detailLogoTrack">
-                  {slides.map((slide, index) => (
-                    <div className="detailLogoSlide" key={`${slide.name}-${index}`}>
-                      <Image src={slide.image} alt={slide.name} width={170} height={82} />
-                      <span>{slide.label}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
             <div className="heroActions">
               <Link href={whatsappUrl(`Hola Solar Supply, deseo cotizar ${product.title}.`)} className="primaryButton" target="_blank" rel="noreferrer">
                 {product.cta} <ArrowRight size={18} />
@@ -60,7 +51,21 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
               <Link href="/contacto" className="secondaryButton">Formulario de contacto</Link>
             </div>
           </div>
-          <Image src={product.image} alt={product.title} width={900} height={620} className="roundedVisual" />
+
+          <div className="detailVisualCarousel" aria-label={`Carrusel visual de ${product.title}`}>
+            <div className="detailVisualTrack">
+              {slides.map((slide, index) => (
+                <div className="detailVisualSlide" key={`${slide.name}-${index}`}>
+                  <Image src={slide.image} alt={slide.name} width={900} height={620} className="detailVisualImage" />
+                  <div className="detailVisualCaption">
+                    <strong>{slide.name}</strong>
+                    <span>{slide.label}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <span className="productBadge">{product.highlight}</span>
+          </div>
         </div>
       </section>
 
@@ -97,7 +102,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
               {product.catalogItems.map((item) => (
                 <article className="catalogCard" key={item.title}>
                   <div className="catalogImageWrap">
-                    <Image src={item.image} alt={item.title} width={520} height={580} className="catalogImage" />
+                    <Image src={item.image} alt={item.title} width={720} height={520} className="catalogImage" />
                   </div>
                   <div className="catalogCardBody">
                     <span>{item.label}</span>

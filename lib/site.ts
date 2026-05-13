@@ -42,40 +42,40 @@ export const productFamilies = [
     image: "/images/products/card-paneles-marcas.svg",
     highlight: "Trina · Jinko · Canadian",
     items: [
-      "Trina, Jinko y Canadian como marcas principales visibles en la categoría de paneles solares.",
-      "Consulta por disponibilidad, potencia, eficiencia y condiciones comerciales vigentes.",
-      "Enfoque para proyectos residenciales, comerciales e industriales que requieren selección por marca."
+      "Trina, Jinko y Canadian quedan como marcas principales visibles en el carrusel de paneles solares.",
+      "La categoría permite cotizar por marca, potencia, disponibilidad y necesidad técnica del proyecto.",
+      "Pensado para proyectos residenciales, comerciales e industriales donde el cliente necesita comparar opciones por fabricante."
     ],
     cta: "Consultar paneles solares",
     carousel: [
-      { name: "Trina Solar", label: "Paneles solares", image: "/images/products/logo-trina.svg" },
-      { name: "Jinko Solar", label: "Paneles solares", image: "/images/products/logo-jinko.svg" },
-      { name: "Canadian Solar", label: "Paneles solares", image: "/images/products/logo-canadian.svg" }
+      { name: "Trina Solar", label: "Paneles solares", image: "/images/products/brand-trina.svg" },
+      { name: "Jinko Solar", label: "Paneles solares", image: "/images/products/brand-jinko.svg" },
+      { name: "Canadian Solar", label: "Paneles solares", image: "/images/products/brand-canadian.svg" }
     ],
     catalogItems: [
       {
         title: "Trina Solar",
         label: "Paneles solares",
-        image: "/images/products/logo-trina.svg",
+        image: "/images/products/brand-trina.svg",
         description:
-          "Marca visible para cotizaciones de paneles solares según disponibilidad, potencia requerida y condiciones del proyecto.",
-        specs: ["Marca principal", "Consulta por inventario", "Aplicación residencial, comercial e industrial"]
+          "Marca visible dentro de la familia de paneles solares para cotizar según potencia, inventario y alcance del proyecto.",
+        specs: ["Marca principal", "Consulta por inventario", "Proyectos residenciales, comerciales e industriales"]
       },
       {
         title: "Jinko Solar",
         label: "Paneles solares",
-        image: "/images/products/logo-jinko.svg",
+        image: "/images/products/brand-jinko.svg",
         description:
-          "Línea de paneles solares para organizar la oferta por fabricante y facilitar la selección comercial del cliente.",
+          "Línea de paneles solares organizada por fabricante para facilitar la selección comercial y técnica del cliente.",
         specs: ["Marca principal", "Consulta por potencia", "Selección por disponibilidad"]
       },
       {
         title: "Canadian Solar",
         label: "Paneles solares",
-        image: "/images/products/logo-canadian.svg",
+        image: "/images/products/brand-canadian.svg",
         description:
-          "Marca incluida dentro de la categoría de paneles solares para presentar alternativas claras por fabricante.",
-        specs: ["Marca principal", "Cotización por proyecto", "Aplicación solar fotovoltaica"]
+          "Marca incluida para presentar alternativas claras dentro de la familia de paneles solares.",
+        specs: ["Marca principal", "Cotización por proyecto", "Aplicación fotovoltaica"]
       }
     ]
   },
@@ -84,19 +84,20 @@ export const productFamilies = [
     title: "Microinversores, inversores y RSD",
     eyebrow: "NEP · FOX ESS",
     summary:
-      "Categoría para soluciones NEP y FOX ESS: microinversores, inversores híbridos, equipos AC/híbridos y dispositivos Rapid Shutdown para proyectos solares modernos.",
+      "Categoría para soluciones NEP y FOX ESS: microinversores, inversores monofásicos, inversores híbridos, equipos AC/híbridos y dispositivos Rapid Shutdown.",
     image: "/images/products/card-inversores-rsd.svg",
     highlight: "NEP · FOX ESS",
     items: [
-      "NEP se presenta como línea para microinversores, soluciones híbridas y Rapid Shutdown.",
-      "FOX ESS se presenta con catálogo de inversores híbridos/AC para sistemas con almacenamiento y respaldo.",
-      "La categoría permite mostrar marcas por fuera y productos específicos al entrar al detalle."
+      "NEP queda como marca visible para microinversores, soluciones híbridas y Rapid Shutdown.",
+      "FOX ESS queda segmentado en inversores híbridos/AC y monofásicos, además de baterías en su categoría correspondiente.",
+      "Dentro del detalle se muestran los productos/catálogos que se venden: US Series Hybrid/AC y G Series G7/G10 monofásicos."
     ],
     cta: "Cotizar inversores y RSD",
     carousel: [
-      { name: "NEP", label: "Microinversores · RSD", image: "/images/products/logo-nep.svg" },
-      { name: "FOX ESS", label: "Inversores híbridos", image: "/images/products/logo-fox-ess.svg" },
-      { name: "US Series", label: "Hybrid/AC", image: "/images/products/catalog-fox-us-series.webp" }
+      { name: "NEP", label: "Microinversores · RSD", image: "/images/products/brand-nep.svg" },
+      { name: "FOX ESS", label: "Marca / catálogo", image: "/images/products/brand-fox-ess.svg" },
+      { name: "FOX ESS US Series", label: "Híbrido / AC", image: "/images/products/catalog-fox-us-series.webp" },
+      { name: "FOX ESS G Series", label: "G7 / G10 monofásicos", image: "/images/products/catalog-fox-g-series.webp" }
     ],
     catalogItems: [
       {
@@ -105,15 +106,23 @@ export const productFamilies = [
         image: "/images/products/catalog-fox-us-series.webp",
         description:
           "Inversor de almacenamiento monofásico diseñado para aplicaciones con baterías de alto voltaje, respaldo y monitoreo remoto.",
-        specs: ["Rango 3.8 kW a 11.4 kW", "Hasta 4 unidades en paralelo", "Type 4X para instalación exterior", "Monitoreo remoto vía app o portal web"]
+        specs: ["3.8 kW a 11.4 kW", "Hasta 4 unidades en paralelo", "Type 4X exterior", "Monitoreo remoto"]
+      },
+      {
+        title: "FOX ESS G Series G7 / G10",
+        label: "Inversores monofásicos",
+        image: "/images/products/catalog-fox-g-series.webp",
+        description:
+          "Inversores monofásicos G Series con tres MPPT, monitoreo remoto, protección IP65 y eficiencia máxima de 97.8%.",
+        specs: ["G7 y G10", "Three MPPT", "IP65", "Eficiencia máx. 97.8%", "Monitoreo por app o portal"]
       },
       {
         title: "NEP Microinversores y RSD",
         label: "Microinversores · Rapid Shutdown",
-        image: "/images/products/logo-nep.svg",
+        image: "/images/products/brand-nep.svg",
         description:
           "Línea NEP para presentar microinversores, equipos híbridos y soluciones de apagado rápido dentro de la misma familia comercial.",
-        specs: ["Microinversores", "Solución híbrida", "Rapid Shutdown", "Aplicación en sistemas solares modernos"]
+        specs: ["Microinversores", "Solución híbrida", "Rapid Shutdown", "Proyectos solares modernos"]
       }
     ]
   },
@@ -126,15 +135,15 @@ export const productFamilies = [
     image: "/images/products/card-baterias-fox.svg",
     highlight: "EP6 · EP12",
     items: [
-      "FOX ESS EP6 como batería de alto voltaje escalable para respaldo y almacenamiento.",
-      "FOX ESS EP12 como alternativa de mayor capacidad para proyectos con más demanda energética.",
-      "Soluciones orientadas a sistemas híbridos, continuidad energética y eficiencia de almacenamiento."
+      "FOX ESS EP6 queda dentro de baterías como solución de alto voltaje escalable.",
+      "FOX ESS EP12 queda dentro de baterías como alternativa de mayor capacidad para proyectos con más demanda energética.",
+      "Ambas referencias se presentan con imágenes de catálogo y datos técnicos resumidos para cotización."
     ],
     cta: "Consultar baterías",
     carousel: [
-      { name: "FOX ESS EP6", label: "Batería alto voltaje", image: "/images/products/catalog-fox-ep6.webp" },
-      { name: "FOX ESS EP12", label: "Batería alto voltaje", image: "/images/products/catalog-fox-ep12.webp" },
-      { name: "FOX ESS", label: "Almacenamiento", image: "/images/products/logo-fox-ess.svg" }
+      { name: "FOX ESS", label: "Baterías de alto voltaje", image: "/images/products/brand-fox-ess.svg" },
+      { name: "FOX ESS EP6", label: "Escalable a 23.04 kWh", image: "/images/products/catalog-fox-ep6.webp" },
+      { name: "FOX ESS EP12", label: "Escalable a 46.08 kWh", image: "/images/products/catalog-fox-ep12.webp" }
     ],
     catalogItems: [
       {
@@ -143,7 +152,7 @@ export const productFamilies = [
         image: "/images/products/catalog-fox-ep6.webp",
         description:
           "Sistema de almacenamiento de energía escalable y compacto para aplicaciones de respaldo con montaje sobre muro o piso.",
-        specs: ["5.76 kWh nominal", "Escalable hasta 23.04 kWh", "90% de profundidad de descarga", "IP65"]
+        specs: ["5.76 kWh nominal", "Escalable a 23.04 kWh", "90% DOD", "IP65"]
       },
       {
         title: "FOX ESS EP12",
@@ -151,7 +160,7 @@ export const productFamilies = [
         image: "/images/products/catalog-fox-ep12.webp",
         description:
           "Sistema de almacenamiento de mayor capacidad para proyectos que requieren más autonomía y escalabilidad.",
-        specs: ["11.52 kWh nominal", "Escalable hasta 46.08 kWh", "90% de profundidad de descarga", "IP65"]
+        specs: ["11.52 kWh nominal", "Escalable a 46.08 kWh", "90% DOD", "IP65"]
       }
     ]
   },
@@ -166,19 +175,19 @@ export const productFamilies = [
     items: [
       "Rieles, anclajes, fijaciones y soportes para montaje profesional de paneles solares.",
       "Accesorios eléctricos y componentes complementarios para el balance del sistema.",
-      "La categoría queda preparada para incorporar marcas y productos específicos desde los catálogos comerciales."
+      "La categoría queda lista para agregar marcas chicas y productos específicos según el catálogo comercial."
     ],
     cta: "Consultar accesorios",
     carousel: [
-      { name: "Estructuras", label: "Montaje solar", image: "/images/products/logo-structures.svg" },
-      { name: "Accesorios", label: "Balance del sistema", image: "/images/structures-accessories.svg" },
-      { name: "Eléctricos", label: "Protección y conexión", image: "/images/products/card-estructuras-electricas.svg" }
+      { name: "Estructuras", label: "Montaje solar", image: "/images/products/brand-structures.svg" },
+      { name: "Accesorios eléctricos", label: "Balance del sistema", image: "/images/products/brand-electrical.svg" },
+      { name: "Componentes de instalación", label: "Protección y conexión", image: "/images/products/card-estructuras-electricas.svg" }
     ],
     catalogItems: [
       {
         title: "Estructuras de montaje",
         label: "Montaje solar",
-        image: "/images/products/logo-structures.svg",
+        image: "/images/products/brand-structures.svg",
         description:
           "Componentes para montar paneles solares con orden, seguridad y buena terminación en campo.",
         specs: ["Rieles", "Anclajes", "Fijaciones", "Soportes"]
@@ -186,7 +195,7 @@ export const productFamilies = [
       {
         title: "Accesorios eléctricos",
         label: "Balance del sistema",
-        image: "/images/structures-accessories.svg",
+        image: "/images/products/brand-electrical.svg",
         description:
           "Productos complementarios para completar la instalación y mantener una presentación técnica clara.",
         specs: ["Conexión", "Protección", "Orden de instalación", "Componentes complementarios"]
@@ -200,29 +209,29 @@ export const brands = [
     name: "Trina · Jinko · Canadian",
     category: "Paneles Solares",
     description:
-      "La categoría de paneles queda presentada por marcas visibles para que el cliente consulte disponibilidad, potencia y oferta vigente.",
+      "La categoría de paneles se presenta por marcas visibles para que el cliente consulte disponibilidad, potencia y oferta vigente.",
     products: ["Trina", "Jinko", "Canadian"]
   },
   {
     name: "NEP · FOX ESS",
     category: "Microinversores, inversores y RSD",
     description:
-      "La web muestra las marcas por fuera y, al entrar, presenta productos o catálogos específicos como FOX ESS US Series y soluciones NEP.",
-    products: ["Microinversores", "Inversores", "RSD"]
+      "NEP y FOX ESS se muestran por fuera; al entrar se ven productos y catálogos específicos como FOX ESS US Series, G Series G7/G10 y soluciones NEP.",
+    products: ["Microinversores", "Inversores", "RSD", "G7/G10"]
   },
   {
     name: "FOX ESS EP6 · EP12",
     category: "Baterías",
     description:
-      "Baterías de alto voltaje para almacenamiento y respaldo energético, presentadas con referencia visual de catálogo.",
+      "Las baterías FOX ESS EP6 y EP12 quedan en la familia de almacenamiento de alto voltaje.",
     products: ["EP6", "EP12", "Alto voltaje"]
   },
   {
-    name: "Estructura y accesorios eléctricos",
-    category: "Montaje y balance del sistema",
+    name: "Estructuras · accesorios eléctricos",
+    category: "Estructura y accesorios eléctricos",
     description:
-      "Categoría preparada para rieles, anclajes, fijaciones, soportes, protecciones y accesorios que lleguen desde los catálogos comerciales.",
-    products: ["Montaje", "Accesorios", "Eléctricos"]
+      "Sección preparada para marcas chicas, estructuras, balance del sistema y productos del catálogo comercial.",
+    products: ["Rieles", "Anclajes", "Protección", "Conexión"]
   }
 ];
 
