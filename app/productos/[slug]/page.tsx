@@ -30,6 +30,8 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
 
   if (!product) notFound();
 
+  const slides = product.carousel ? [...product.carousel, ...product.carousel] : [];
+
   return (
     <>
       <section className="pageHero productDetailHero">
@@ -39,6 +41,18 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
             <span className="eyebrow">{product.eyebrow}</span>
             <h1>{product.title}</h1>
             <p>{product.summary}</p>
+            {slides.length > 0 && (
+              <div className="detailLogoCarousel" aria-label={`Carrusel de ${product.title}`}>
+                <div className="detailLogoTrack">
+                  {slides.map((slide, index) => (
+                    <div className="detailLogoSlide" key={`${slide.name}-${index}`}>
+                      <Image src={slide.image} alt={slide.name} width={170} height={82} />
+                      <span>{slide.label}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
             <div className="heroActions">
               <Link href={whatsappUrl(`Hola Solar Supply, deseo cotizar ${product.title}.`)} className="primaryButton" target="_blank" rel="noreferrer">
                 {product.cta} <ArrowRight size={18} />
@@ -46,7 +60,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
               <Link href="/contacto" className="secondaryButton">Formulario de contacto</Link>
             </div>
           </div>
-          <Image src={product.image} alt={product.title} width={760} height={530} className="roundedVisual" />
+          <Image src={product.image} alt={product.title} width={900} height={620} className="roundedVisual" />
         </div>
       </section>
 
@@ -54,20 +68,51 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
         <div className="container detailContentGrid">
           <div className="detailCard">
             <span className="productBadge static">{product.highlight}</span>
-            <h2>Enfoque comercial</h2>
+            <h2>Información de la categoría</h2>
             <ul className="checkList">
               {product.items.map((item) => (
                 <li key={item}><CheckCircle2 size={20} /> <span>{item}</span></li>
               ))}
             </ul>
             <div className="detailNote">
-              <strong>Importante:</strong> la disponibilidad de modelos y marcas puede variar según inventario,
-              negociación comercial y especificación del proyecto. Solar Supply orienta la selección final de acuerdo con cada requerimiento.
+              <strong>Nota comercial:</strong> la disponibilidad de modelos, marcas y configuraciones puede ajustarse según inventario,
+              cotización activa y especificación técnica del proyecto.
             </div>
           </div>
           <ContactBlock />
         </div>
       </section>
+
+      {product.catalogItems.length > 0 && (
+        <section className="section softSection">
+          <div className="container">
+            <div className="sectionHeader center">
+              <span className="eyebrow">Productos y catálogos</span>
+              <h2>Referencias visibles dentro de {product.title}.</h2>
+              <p>
+                Estas tarjetas muestran lo que se venderá dentro de la familia seleccionada, con imágenes y datos listos para seguir ampliando por tandas.
+              </p>
+            </div>
+            <div className="catalogGrid">
+              {product.catalogItems.map((item) => (
+                <article className="catalogCard" key={item.title}>
+                  <div className="catalogImageWrap">
+                    <Image src={item.image} alt={item.title} width={520} height={580} className="catalogImage" />
+                  </div>
+                  <div className="catalogCardBody">
+                    <span>{item.label}</span>
+                    <h3>{item.title}</h3>
+                    <p>{item.description}</p>
+                    <div className="tagList">
+                      {item.specs.map((spec) => <small key={spec}>{spec}</small>)}
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
     </>
   );
 }

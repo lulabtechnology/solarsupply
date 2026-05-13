@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import { brands, productFamilies } from "@/lib/site";
 import { ProductCard } from "@/components/ProductCard";
 import { SectionHeader } from "@/components/SectionHeader";
@@ -7,7 +6,7 @@ import { SectionHeader } from "@/components/SectionHeader";
 export const metadata: Metadata = {
   title: "Productos solares",
   description:
-    "Catálogo corporativo de Solar Supply: paneles solares, inversores FOX, soluciones NEP, baterías, estructuras y accesorios."
+    "Catálogo corporativo de Solar Supply: paneles solares Trina, Jinko y Canadian, microinversores, inversores, RSD, baterías FOX ESS, estructuras y accesorios eléctricos."
 };
 
 export default function ProductosPage() {
@@ -16,9 +15,9 @@ export default function ProductosPage() {
       <section className="pageHero compactHero">
         <div className="container">
           <span className="eyebrow">Catálogo corporativo</span>
-          <h1>Productos solares organizados por familia y línea comercial.</h1>
+          <h1>Productos solares organizados por marcas, catálogos y líneas comerciales.</h1>
           <p>
-            Solar Supply estructura su oferta para que el cliente pueda identificar con claridad las soluciones principales y consultar disponibilidad según cada proyecto.
+            Cada familia muestra un carrusel de marcas o productos para que el cliente identifique primero la categoría y luego entre al detalle de lo que Solar Supply puede cotizar.
           </p>
         </div>
       </section>
@@ -34,11 +33,11 @@ export default function ProductosPage() {
       <section className="section softSection">
         <div className="container brandSection">
           <SectionHeader
-            eyebrow="Manejo por líneas y marcas"
-            title="Una estructura pensada para vender mejor y actualizar más fácil."
-            text="Los paneles pueden manejarse por marca, los inversores por fabricante y las estructuras con una referencia discreta de proveedor, permitiendo que la web siga siendo útil aunque cambie la oferta comercial."
+            eyebrow="Nueva lógica de productos"
+            title="Marcas por fuera, productos y catálogos dentro de cada familia."
+            text="La sección queda preparada para trabajar por tandas: primero se muestran las marcas principales y, al entrar en cada categoría, se despliegan productos, catálogos e imágenes específicas."
           />
-          <div className="brandGrid">
+          <div className="brandGrid brandGridFour">
             {brands.map((brand) => (
               <article className="brandCard" key={brand.name}>
                 <span>{brand.category}</span>
@@ -50,7 +49,6 @@ export default function ProductosPage() {
               </article>
             ))}
           </div>
-          <Image src="/images/product-paneles.png" alt="Paneles solares en cubierta comercial" width={1100} height={650} className="wideVisual" />
         </div>
       </section>
     </>

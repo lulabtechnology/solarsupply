@@ -29,7 +29,7 @@ export default function HomePage() {
             </div>
             <div className="heroStats">
               <div><strong>Paneles solares</strong><span>suministro por marca</span></div>
-              <div><strong>FOX y NEP</strong><span>líneas destacadas</span></div>
+              <div><strong>NEP y FOX ESS</strong><span>catálogos destacados</span></div>
               <div><strong>Respaldo técnico</strong><span>orientación comercial</span></div>
             </div>
           </div>
@@ -73,7 +73,7 @@ export default function HomePage() {
             center
             eyebrow="Productos principales"
             title="Un catálogo pensado para vender hoy y crecer mañana."
-            text="Solar Supply puede presentar su oferta actual por familia y por marca, manteniendo la flexibilidad para incorporar nuevos productos como baterías, lámparas y soluciones complementarias."
+            text="Solar Supply presenta sus productos por carrusel de marcas y catálogos: paneles Trina, Jinko y Canadian; soluciones NEP y FOX ESS; baterías y accesorios eléctricos."
           />
           <div className="productGrid">
             {productFamilies.slice(0, 4).map((product) => (

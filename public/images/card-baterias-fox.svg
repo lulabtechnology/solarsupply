@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" role="img" aria-label="FOX ESS EP6 · EP12">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#061b49"/>
+      <stop offset=".55" stop-color="#0c2e73"/>
+      <stop offset="1" stop-color="#ffffff"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#dce6f3"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="26" stdDeviation="28" flood-color="#061b49" flood-opacity=".28"/></filter>
+  </defs>
+  <rect width="900" height="620" fill="url(#bg)"/>
+  <circle cx="760" cy="80" r="180" fill="#8b82d8" opacity=".23"/>
+  <circle cx="130" cy="520" r="220" fill="#f4a11a" opacity=".17"/>
+  <g transform="translate(520 98) rotate(-7)" filter="url(#shadow)">
+    <rect width="270" height="320" rx="28" fill="url(#panel)"/>
+    <g stroke="#9fb3ce" stroke-width="3">
+      <path d="M38 68H232M38 132H232M38 196H232M38 260H232M90 32V288M150 32V288M210 32V288"/>
+    </g>
+  </g>
+  <g transform="translate(84 112)">
+    <text font-family="Inter, Arial" font-size="20" font-weight="900" fill="#8b82d8" letter-spacing="3">BATERÍAS</text>
+    <text y="84" font-family="Inter, Arial" font-size="58" font-weight="900" fill="#fff" letter-spacing="-2">FOX ESS EP6 · EP12</text>
+    <foreignObject x="0" y="112" width="445" height="110"><div xmlns="http://www.w3.org/1999/xhtml" style="font-family:Inter,Arial;color:rgba(255,255,255,.82);font-size:24px;line-height:1.35;font-weight:700">Almacenamiento de alto voltaje para respaldo energético</div></foreignObject>
+  </g>
+  <g transform="translate(70 276)"><rect width="150" height="54" rx="18" fill="#fff" opacity=".96"/><text x="75" y="35" text-anchor="middle" font-family="Inter, Arial" font-size="18" font-weight="900" fill="#061b49">EP6</text></g><g transform="translate(260 276)"><rect width="150" height="54" rx="18" fill="#fff" opacity=".96"/><text x="75" y="35" text-anchor="middle" font-family="Inter, Arial" font-size="18" font-weight="900" fill="#061b49">EP12</text></g><g transform="translate(450 276)"><rect width="150" height="54" rx="18" fill="#fff" opacity=".96"/><text x="75" y="35" text-anchor="middle" font-family="Inter, Arial" font-size="18" font-weight="900" fill="#061b49">FOX ESS</text></g>
+</svg>
