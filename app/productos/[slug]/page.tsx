@@ -10,6 +10,39 @@ type ProductPageProps = {
   params: Promise<{ slug: string }>;
 };
 
+const panelPdfPreviews = [
+  {
+    brand: "Trina Solar",
+    title: "Vertex N TSM-NEG19RC.20",
+    range: "610-635W",
+    image: "/images/products/pdf-trina-vertex-n-635-cover.webp"
+  },
+  {
+    brand: "Trina Solar",
+    title: "Vertex N TSM-NEG21C.20",
+    range: "695-720W",
+    image: "/images/products/pdf-trina-vertex-n-720-cover.webp"
+  },
+  {
+    brand: "Canadian Solar",
+    title: "TOPBiHiKu6 CS6.2-66TB",
+    range: "600-630W",
+    image: "/images/products/pdf-canadian-topbihiku6-cover.webp"
+  },
+  {
+    brand: "Jinko Solar",
+    title: "Tiger Neo N-type 72HL4-(V)",
+    range: "570-590W",
+    image: "/images/products/pdf-jinko-tiger-neo-570-590-cover.webp"
+  },
+  {
+    brand: "Jinko Solar",
+    title: "Tiger Neo 66HL4M-BDV",
+    range: "600-620W",
+    image: "/images/products/pdf-jinko-tiger-neo-600-620-cover.webp"
+  }
+];
+
 const panelHighlights = [
   {
     brand: "Trina Solar",
@@ -51,6 +84,34 @@ const panelHighlights = [
       "Hasta 85% de bifacialidad",
       "Coeficiente de temperatura Pmax -0.29%/°C",
       "12 años de garantía de producto y 30 años de garantía lineal de potencia"
+    ]
+  },
+  {
+    brand: "Jinko Solar",
+    model: "Tiger Neo N-type 72HL4-(V)",
+    range: "570-590W",
+    summary:
+      "Módulo monofacial N-type orientado a confiabilidad, tolerancia positiva y resistencia para condiciones ambientales exigentes.",
+    points: [
+      "Rango de potencia 570-590W",
+      "Tolerancia positiva 0~+3%",
+      "SMBB Technology para mejor captura de luz y corriente",
+      "HOT 2.0 Technology para mayor confiabilidad y menor LID/LeTID",
+      "12 años de garantía de producto y 30 años de garantía lineal"
+    ]
+  },
+  {
+    brand: "Jinko Solar",
+    model: "Tiger Neo 66HL4M-BDV",
+    range: "600-620W",
+    summary:
+      "Módulo bifacial dual glass N-type para proyectos que buscan generación por ambas caras y reducción del costo nivelado de energía.",
+    points: [
+      "Rango de potencia 600-620W",
+      "Tecnología HOT 2.0",
+      "Generación bifacial dual-sided",
+      "Carga mecánica: 5400 Pa frontal y 2400 Pa trasera",
+      "12 años de garantía de producto y 30 años de garantía lineal"
     ]
   }
 ];
@@ -115,6 +176,35 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
         </div>
       </section>
 
+      {isPaneles && (
+        <section className="section panelPdfSection">
+          <div className="container">
+            <div className="sectionHeader center">
+              <span className="eyebrow">Fichas técnicas disponibles</span>
+              <h2>Primeras páginas de los catálogos de paneles.</h2>
+              <p>
+                Presiona cualquier ficha para verla ampliada. Las referencias pueden variar según inventario, potencia disponible y actualización tecnológica de cada fabricante.
+              </p>
+            </div>
+            <div className="panelPdfGrid">
+              {panelPdfPreviews.map((pdf) => (
+                <a className="panelPdfCard" href={pdf.image} target="_blank" rel="noreferrer" key={`${pdf.brand}-${pdf.title}`}>
+                  <div className="panelPdfImageWrap">
+                    <Image src={pdf.image} alt={`${pdf.brand} ${pdf.title}`} width={900} height={1280} className="panelPdfImage" />
+                  </div>
+                  <div className="panelPdfBody">
+                    <span>{pdf.brand}</span>
+                    <h3>{pdf.title}</h3>
+                    <strong>{pdf.range}</strong>
+                    <small>Presiona para ampliar</small>
+                  </div>
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       <section className="section">
         <div className="container detailContentGrid">
           <div className="detailCard">
@@ -126,8 +216,8 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
               ))}
             </ul>
             <div className="detailNote">
-              <strong>Nota comercial:</strong> la disponibilidad de modelos, marcas y configuraciones puede ajustarse según inventario,
-              cotización activa y especificación técnica del proyecto.
+              <strong>Nota comercial:</strong> Solar Supply trabaja con líneas de paneles que pueden actualizarse según disponibilidad, nuevas tecnologías,
+              potencia vigente y especificación del proyecto. Para modelos adicionales o fichas actualizadas, la confirmación se realiza por WhatsApp.
             </div>
           </div>
           <ContactBlock />
@@ -139,9 +229,9 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
           <div className="container">
             <div className="sectionHeader center">
               <span className="eyebrow">Información técnica clave</span>
-              <h2>Paneles disponibles para cotización.</h2>
+              <h2>Referencias de paneles para consulta comercial.</h2>
               <p>
-                Resumen comercial de las fichas recibidas. Para disponibilidad, precio final, potencia exacta o modelos adicionales, se confirma directamente por WhatsApp.
+                Resumen de las fichas recibidas. Para precio final, disponibilidad, equivalencias o modelos adicionales, se confirma directamente por WhatsApp.
               </p>
             </div>
 
@@ -164,9 +254,9 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
             <div className="panelConsultBox">
               <div>
                 <span className="eyebrow small">Consulta comercial</span>
-                <h3>¿Necesitas otra potencia, Jinko Solar o disponibilidad actual?</h3>
+                <h3>Más potencias, nuevas tecnologías o disponibilidad actual</h3>
                 <p>
-                  Solar Supply puede confirmar inventario, equivalencias, fichas técnicas y recomendaciones según el tamaño del proyecto.
+                  El catálogo puede crecer con nuevas líneas y tecnologías de paneles. Solar Supply confirma la opción adecuada según inventario, ficha vigente y requerimientos del proyecto.
                 </p>
               </div>
               <Link

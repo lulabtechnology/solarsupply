@@ -241,7 +241,7 @@ p { color: var(--muted); line-height: 1.72; }
 .productHeroTrack {
   display: flex;
   width: 100%;
-  animation: productCarousel 18s linear infinite;
+  animation: productCarousel 16s linear infinite;
 }
 .productHeroSlide {
   position: relative;
@@ -260,6 +260,16 @@ p { color: var(--muted); line-height: 1.72; }
   height: 100%;
   object-fit: contain;
   padding: 28px 34px 24px;
+}
+.productStaticVisual {
+  min-height: 250px;
+  aspect-ratio: 1.35 / 0.78;
+}
+.productStaticImage {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
 }
 .productImage { display: block; width: 100%; height: auto; }
 .productHeroCarousel:hover .productHeroTrack, .detailVisualCarousel:hover .detailVisualTrack { animation-play-state: paused; }
@@ -375,7 +385,7 @@ p { color: var(--muted); line-height: 1.72; }
 .detailVisualTrack {
   display: flex;
   width: max-content;
-  animation: productCarousel 20s linear infinite;
+  animation: productCarousel 18s linear infinite;
 }
 .detailVisualSlide {
   position: relative;
@@ -394,7 +404,7 @@ p { color: var(--muted); line-height: 1.72; }
 }
 .panelVisualCarousel .detailVisualTrack {
   width: 100%;
-  animation-duration: 18s;
+  animation-duration: 16s;
 }
 .panelVisualCarousel .detailVisualSlide {
   flex: 0 0 100%;
@@ -405,6 +415,72 @@ p { color: var(--muted); line-height: 1.72; }
 }
 .panelVisualCarousel .detailVisualImage {
   padding: 28px 34px 24px;
+}
+.panelPdfSection {
+  background: #fff;
+}
+.panelPdfGrid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 34px;
+}
+.panelPdfCard {
+  overflow: hidden;
+  border-radius: 24px;
+  background: #fff;
+  border: 1px solid rgba(220, 230, 243, .9);
+  box-shadow: 0 16px 38px rgba(6, 27, 73, .08);
+  color: inherit;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.panelPdfCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+.panelPdfImageWrap {
+  min-height: 285px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #f5f9ff, #ffffff);
+  padding: 12px;
+}
+.panelPdfImage {
+  width: 100%;
+  height: 285px;
+  object-fit: contain;
+  border-radius: 16px;
+  box-shadow: 0 10px 26px rgba(6, 27, 73, .12);
+}
+.panelPdfBody {
+  padding: 16px;
+}
+.panelPdfBody span {
+  color: var(--orange);
+  display: block;
+  font-weight: 900;
+  font-size: .68rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.panelPdfBody h3 {
+  font-size: 1rem;
+  margin: 8px 0 6px;
+  line-height: 1.2;
+}
+.panelPdfBody strong {
+  display: inline-flex;
+  padding: 6px 9px;
+  border-radius: 999px;
+  background: var(--soft);
+  color: var(--navy);
+  font-size: .78rem;
+}
+.panelPdfBody small {
+  display: block;
+  margin-top: 10px;
+  color: var(--muted);
+  font-weight: 800;
 }
 .panelInfoGrid {
   display: grid;
@@ -648,7 +724,9 @@ p { color: var(--muted); line-height: 1.72; }
   .heroVisual { order: -1; }
   .trustGrid, .fourGrid { grid-template-columns: repeat(2, 1fr); }
   .productGrid.allProducts, .brandGrid, .brandGrid.brandGridFour, .servicesGrid, .resourcesGrid, .stepsGrid, .offerCards, .catalogGrid { grid-template-columns: 1fr 1fr; }
-  .panelInfoGrid { grid-template-columns: 1fr; }
+  .panelInfoGrid, .panelPdfGrid { grid-template-columns: 1fr; }
+  .panelPdfImageWrap { min-height: 340px; }
+  .panelPdfImage { height: 340px; }
   .footerGrid { grid-template-columns: 1fr 1fr; }
   .contactPanel { position: static; }
 }
@@ -669,7 +747,7 @@ p { color: var(--muted); line-height: 1.72; }
   .whatsAppFloat span { display: none; }
   .whatsAppFloat { padding: 15px; }
   .mapCard { padding: 28px; }
-  .productHeroCarousel { min-height: 220px; }
+  .productHeroCarousel, .productStaticVisual { min-height: 220px; }
   .productHeroSlide {
     min-width: 100%;
     width: 100%;
@@ -683,7 +761,9 @@ p { color: var(--muted); line-height: 1.72; }
     aspect-ratio: 1.2 / 0.82;
   }
   .panelVisualCarousel .detailVisualImage { padding: 22px 24px 18px; }
-  .panelInfoGrid { grid-template-columns: 1fr; }
+  .panelInfoGrid, .panelPdfGrid { grid-template-columns: 1fr; }
+  .panelPdfImageWrap { min-height: 340px; }
+  .panelPdfImage { height: 340px; }
   .panelConsultBox { align-items: stretch; flex-direction: column; }
   .productSlideCaption, .detailVisualCaption { align-items: flex-start; flex-direction: column; gap: 4px; }
   .productSlideCaption span, .detailVisualCaption span { text-align: left; }
