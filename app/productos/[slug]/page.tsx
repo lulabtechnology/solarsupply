@@ -297,6 +297,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
 
   const isPaneles = product.slug === "paneles-solares";
   const isMicro = product.slug === "microinversores-inversores-rsd";
+  const isStructure = product.slug === "estructura-accesorios-electricos";
   const sourceSlides = product.carousel?.length
     ? product.carousel
     : [{ name: product.title, label: product.highlight, image: product.image }];
@@ -304,6 +305,11 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
   const isTechnicalDetail = isPaneles || isMicro;
   const currentPdfPreviews = isMicro ? microPdfPreviews : panelPdfPreviews;
   const currentHighlights = isMicro ? microHighlights : panelHighlights;
+  const detailNoteText = isStructure
+    ? "Solar Supply confirma disponibilidad, cantidades, compatibilidad de montaje y accesorios necesarios para cada proyecto. La cotización final se valida por WhatsApp según medidas, tipo de techo y requerimientos de instalación."
+    : isMicro
+      ? "Solar Supply trabaja con soluciones de conversión, respaldo, microinversores y RSD que pueden variar según compatibilidad técnica, baterías, disponibilidad y configuración del proyecto. Para modelos adicionales o fichas actualizadas, la confirmación se realiza por WhatsApp."
+      : "Solar Supply trabaja con líneas de paneles que pueden actualizarse según disponibilidad, nuevas tecnologías, potencia vigente y especificación del proyecto. Para modelos adicionales o fichas actualizadas, la confirmación se realiza por WhatsApp.";
 
   return (
     <>
@@ -322,20 +328,33 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
             </div>
           </div>
 
-          <div className={`detailVisualCarousel${isTechnicalDetail ? " panelVisualCarousel" : ""}`} aria-label={`Carrusel visual de ${product.title}`}>
-            <div className="detailVisualTrack">
-              {slides.map((slide, index) => (
-                <div className="detailVisualSlide" key={`${slide.name}-${index}`}>
-                  <Image src={slide.image} alt={slide.name} width={900} height={620} className="detailVisualImage" />
-                  <div className="detailVisualCaption">
-                    <strong>{slide.name}</strong>
-                    <span>{slide.label}</span>
-                  </div>
-                </div>
-              ))}
+          {isStructure ? (
+            <div className="detailStaticVisual structureDetailVisual" aria-label={`Imagen de ${product.title}`}>
+              <Image
+                src={product.image}
+                alt="Estructuras y accesorios eléctricos para montaje de paneles solares"
+                width={1600}
+                height={900}
+                className="detailStaticImage"
+                priority
+              />
             </div>
-            <span className="productBadge">{product.highlight}</span>
-          </div>
+          ) : (
+            <div className={`detailVisualCarousel${isTechnicalDetail ? " panelVisualCarousel" : ""}`} aria-label={`Carrusel visual de ${product.title}`}>
+              <div className="detailVisualTrack">
+                {slides.map((slide, index) => (
+                  <div className="detailVisualSlide" key={`${slide.name}-${index}`}>
+                    <Image src={slide.image} alt={slide.name} width={900} height={620} className="detailVisualImage" />
+                    <div className="detailVisualCaption">
+                      <strong>{slide.name}</strong>
+                      <span>{slide.label}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <span className="productBadge">{product.highlight}</span>
+            </div>
+          )}
         </div>
       </section>
 
@@ -381,9 +400,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
               ))}
             </ul>
             <div className="detailNote">
-              <strong>Nota comercial:</strong> {isMicro
-                ? "Solar Supply trabaja con soluciones de conversión, respaldo, microinversores y RSD que pueden variar según compatibilidad técnica, baterías, disponibilidad y configuración del proyecto. Para modelos adicionales o fichas actualizadas, la confirmación se realiza por WhatsApp."
-                : "Solar Supply trabaja con líneas de paneles que pueden actualizarse según disponibilidad, nuevas tecnologías, potencia vigente y especificación del proyecto. Para modelos adicionales o fichas actualizadas, la confirmación se realiza por WhatsApp."}
+              <strong>Nota comercial:</strong> {detailNoteText}
             </div>
           </div>
           <ContactBlock />
@@ -431,6 +448,71 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
               </div>
               <Link
                 href={whatsappUrl(isMicro ? "Hola Solar Supply, quiero consultar microinversores, inversores, RSD, compatibilidad de baterías y fichas técnicas." : "Hola Solar Supply, quiero consultar paneles solares disponibles, marcas, potencias y fichas técnicas.")}
+                className="primaryButton"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Consultar por WhatsApp <ArrowRight size={18} />
+              </Link>
+            </div>
+          </div>
+        </section>
+      ) : isStructure && product.catalogItems.length > 0 ? (
+        <section className="section softSection structureProductsSection">
+          <div className="container">
+            <div className="sectionHeader center">
+              <span className="eyebrow">Lista de productos CHIKO</span>
+              <h2>Productos incluidos para estructuras y accesorios eléctricos.</h2>
+              <p>
+                La información se muestra en formato de tabla comercial, con imagen referencial, código, descripción y unidad para facilitar la cotización por WhatsApp.
+              </p>
+            </div>
+
+            <div className="structureProductTable">
+              <div className="structureTableHeader" aria-hidden="true">
+                <span>#</span>
+                <span>Imagen</span>
+                <span>Código</span>
+                <span>Descripción</span>
+                <span>Unidad</span>
+              </div>
+
+              {product.catalogItems.map((item, index) => (
+                <article className="structureTableRow" key={item.title}>
+                  <div className="structureTableIndex">{String(index + 1).padStart(2, "0")}</div>
+                  <div className="structureTableImageWrap">
+                    <Image src={item.image} alt={item.title} width={520} height={360} className="structureTableImage" />
+                  </div>
+                  <div className="structureTableCode">
+                    <span>Código</span>
+                    <strong>{"code" in item ? String(item.code) : "-"}</strong>
+                  </div>
+                  <div className="structureTableInfo">
+                    <span>{item.label}</span>
+                    <h3>{item.title}</h3>
+                    <p>{item.description}</p>
+                    <div className="tagList compactTags">
+                      {item.specs.map((spec) => <small key={spec}>{spec}</small>)}
+                    </div>
+                  </div>
+                  <div className="structureTableUnit">
+                    <span>Unidad</span>
+                    <strong>{"unit" in item ? String(item.unit) : "-"}</strong>
+                  </div>
+                </article>
+              ))}
+            </div>
+
+            <div className="panelConsultBox structureConsultBox">
+              <div>
+                <span className="eyebrow small">Consulta comercial</span>
+                <h3>Cotizar estructuras, rieles y accesorios CHIKO</h3>
+                <p>
+                  Solar Supply puede confirmar cantidades, disponibilidad y combinación de accesorios según tipo de techo, cantidad de paneles y alcance del proyecto.
+                </p>
+              </div>
+              <Link
+                href={whatsappUrl("Hola Solar Supply, quiero cotizar estructuras y accesorios CHIKO de la lista de productos.")}
                 className="primaryButton"
                 target="_blank"
                 rel="noreferrer"

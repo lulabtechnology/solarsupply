@@ -8,13 +8,19 @@ type ProductFamily = (typeof productFamilies)[number];
 export function ProductCard({ product }: { product: ProductFamily }) {
   const isPaneles = product.slug === "paneles-solares";
   const isMicro = product.slug === "microinversores-inversores-rsd";
-  const isStaticProduct = isPaneles || isMicro;
+  const isStructure = product.slug === "estructura-accesorios-electricos";
+  const isStaticProduct = isPaneles || isMicro || isStructure;
   const sourceSlides = product.carousel?.length
     ? product.carousel
     : [{ name: product.title, label: product.highlight, image: product.image }];
   const slides = [...sourceSlides, ...sourceSlides];
   const customMiniLogos = "miniLogos" in product && Array.isArray(product.miniLogos) ? product.miniLogos : [];
   const miniLogoSlides = customMiniLogos.length > 0 ? customMiniLogos : isPaneles ? sourceSlides : [];
+  const staticAlt = isPaneles
+    ? "Paneles solares instalados en techo comercial"
+    : isMicro
+      ? "Inversores solares instalados en pared técnica"
+      : "Estructuras y accesorios eléctricos para montaje de paneles solares";
 
   return (
     <article className="productCard">
@@ -22,7 +28,7 @@ export function ProductCard({ product }: { product: ProductFamily }) {
         <div className="productImageWrap productStaticVisual" aria-label={`Imagen de ${product.title}`}>
           <Image
             src={product.image}
-            alt={isPaneles ? "Paneles solares instalados en techo comercial" : "Inversores solares instalados en pared técnica"}
+            alt={staticAlt}
             width={1600}
             height={900}
             className="productStaticImage"

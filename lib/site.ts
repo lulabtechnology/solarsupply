@@ -193,64 +193,161 @@ carousel: [
   {
     slug: "estructura-accesorios-electricos",
     title: "Estructuras y accesorios eléctricos",
-    eyebrow: "CHIKO · montaje · accesorios",
+    eyebrow: "CHIKO · estructuras · accesorios",
     summary:
-      "Familia para estructuras CHIKO, rieles, grapas, soportes, cable solar, conectores MC4, clips, amarres y accesorios eléctricos que completan la instalación solar.",
-    image: "/images/products/catalog-chiko-quotation.webp",
-    highlight: "CHIKO · montaje solar",
+      "Estructuras CHIKO, rieles, grapas, soportes, cable solar, conectores MC4, clips, amarres y accesorios eléctricos para completar instalaciones fotovoltaicas.",
+    image: "/images/products/card-estructuras-accesorios-solar.webp",
+    highlight: "CHIKO",
+    miniLogos: [
+      { name: "CHIKO", label: "Solar Mounting Solutions", image: "/images/products/logo-chiko.png" }
+    ],
     items: [
-      "Se agrega CHIKO como línea principal de estructuras y montaje: Rail #518, L Feet, splices, clamps, grounding clip y grounding lug.",
-      "Se incluyen accesorios eléctricos y de instalación: cable solar 6mm² rojo/negro, conectores MC4, cable clips SUS304 y cable ties SUS304.",
-      "La subpágina queda organizada con carrusel grande y tarjetas por familia para que se pueda ampliar con nuevos productos sin romper la estructura."
+      "Se organiza la línea CHIKO para montaje solar con riel #518, splice kit, mid clamp, end clamp y L Feet para techo metálico.",
+      "Se incluyen accesorios de puesta a tierra, cable solar 6mm² rojo/negro, conector MC4, clips para cable, amarres SUS304 y tile hooks.",
+      "La información se presenta como lista de productos para cotización, con imagen referencial, código, descripción y unidad de venta."
     ],
     cta: "Consultar estructuras y accesorios",
-    carousel: [
-      { name: "CHIKO L Feet · Rail #518", label: "Lista de compra", image: "/images/products/catalog-chiko-quotation.webp" },
-      { name: "Metal Roof L Feet Mount", label: "Estructura para techo metálico", image: "/images/products/catalog-chiko-metal-roof-l-feet.webp" },
-      { name: "Classic Rail · clamps", label: "Rieles y grapas", image: "/images/products/catalog-chiko-rail-clamps.webp" },
-      { name: "Flat Roof Mount", label: "Estructura para techo plano", image: "/images/products/catalog-chiko-flat-roof.webp" },
-      { name: "Ground Mount", label: "Estructura en suelo", image: "/images/products/catalog-chiko-ground-mount.webp" }
-    ],
+    carousel: [],
     catalogItems: [
       {
-        title: "CHIKO L Feet + Rail #518",
-        label: "Estructura de techo metálico",
-        image: "/images/products/catalog-chiko-quotation.webp",
+        title: "CHIKO Solar Alu Standard #518 Rail 4800mm",
+        code: "CK-FT-R518B1-4800",
+        label: "Riel de aluminio",
+        unit: "PCS",
+        image: "/images/products/chiko-rail-518.webp",
         description:
-          "Sistema de montaje CHIKO para techo metálico con riel #518, rail splice kit, mid clamp, end clamp, L Feet mount, grounding clip y grounding lug.",
-        specs: ["CK-FT-R518B1-4800", "Rail #518 4800mm", "Rail Splice Kit", "Mid/End Clamp 30-40mm", "L Feet Mount"]
+          "Riel estándar de aluminio CHIKO #518 de 4800mm para soporte y alineación de módulos solares en sistemas de montaje fotovoltaico.",
+        specs: ["Rail #518", "4800mm", "Aluminio", "Montaje solar", "Uso con splice, clamps y L Feet"]
       },
       {
-        title: "Accesorios eléctricos CHIKO",
-        label: "Balance y conexión",
-        image: "/images/products/catalog-chiko-quotation.webp",
+        title: "CHIKO Solar Rail Splice Kit for #518 Rail",
+        code: "CK-618-1-150",
+        label: "Empalme para riel",
+        unit: "PCS",
+        image: "/images/products/chiko-rail-splice-kit.webp",
         description:
-          "Accesorios para completar la instalación: cable solar PV 6mm² rojo y negro, conectores MC4 para cable 6mm², clips SUS304 y amarres SUS304.",
-        specs: ["PV Cable 6mm² rojo", "PV Cable 6mm² negro", "MC4 6mm²", "SUS304 Cable Clip", "SUS304 Cable Ties"]
+          "Kit de empalme para unir tramos de riel #518 y mantener continuidad estructural en líneas de montaje más largas.",
+        specs: ["Para Rail #518", "Splice kit", "Unión de rieles", "Montaje estructural"]
       },
       {
-        title: "CHIKO Metal Roof Mount Bracket",
-        label: "Montaje para techo metálico",
-        image: "/images/products/catalog-chiko-metal-roof-l-feet.webp",
+        title: "CHIKO Solar Adjustable Mid Clamp Kit 30-40mm",
+        code: "CK-154R4F-(30-40)-40",
+        label: "Grapa intermedia",
+        unit: "SET",
+        image: "/images/products/chiko-mid-clamp.webp",
         description:
-          "Soluciones de montaje para techos trapezoidales y corrugados, incluyendo L Feet, hanger bolt, trapezoidal clamp, rail-free mount y standing seam clamps.",
-        specs: ["L Feet Mount", "Hanger Bolt Mount", "Trapezoidal Clamp", "Rail-Free Mount", "Standing Seam Clamps"]
+          "Grapa intermedia ajustable para fijar módulos solares entre paneles, compatible con espesores de 30 a 40mm.",
+        specs: ["Mid clamp", "30-40mm", "Ajustable", "Fijación entre módulos"]
       },
       {
-        title: "CHIKO Classic Rail · grapas · empalmes",
-        label: "Rieles y fijación",
-        image: "/images/products/catalog-chiko-rail-clamps.webp",
+        title: "CHIKO 730 Adjustable End Clamp 30-40mm",
+        code: "CK-730R4-(30-40)-35",
+        label: "Grapa final",
+        unit: "SET",
+        image: "/images/products/chiko-end-clamp.webp",
         description:
-          "Familia de rieles, empalmes, mid clamps, end clamps y grapas ajustables para fijación ordenada de módulos solares.",
-        specs: ["Classic Rail", "Rail Splice Kit", "Mid Clamp", "End Clamp", "Adjustable Clamp"]
+          "Grapa final ajustable para asegurar el extremo de la fila de paneles solares dentro del sistema de montaje.",
+        specs: ["End clamp", "30-40mm", "Ajustable", "Cierre de fila"]
       },
       {
-        title: "CHIKO Flat Roof y Ground Mount",
-        label: "Estructuras especiales",
-        image: "/images/products/catalog-chiko-flat-roof.webp",
+        title: "CHIKO Solar Alu Metal Roof L Feet Mount",
+        code: "CK-FTS-202RT4-1-40",
+        label: "Soporte L Feet",
+        unit: "SET",
+        image: "/images/products/chiko-l-feet-mount.webp",
         description:
-          "Opciones de montaje para techos planos y aplicaciones en suelo: sistemas ballast, triangular mount y estructuras para proyectos comerciales o industriales.",
-        specs: ["Flat roof", "Ballast mount", "Triangular mount", "Ground mount", "Comercial / industrial"]
+          "Soporte tipo L Feet de aluminio para techo metálico, usado como punto de anclaje del riel en cubiertas trapezoidales o corrugadas.",
+        specs: ["L Feet", "Techo metálico", "Aluminio", "Montaje con riel"]
+      },
+      {
+        title: "CHIKO Grounding Clip for 518# Rail",
+        code: "CK-GTC-R3G",
+        label: "Clip de puesta a tierra",
+        unit: "SET",
+        image: "/images/products/chiko-grounding-clip.webp",
+        description:
+          "Clip de grounding para riel #518, diseñado para crear continuidad eléctrica entre el módulo y la estructura de montaje.",
+        specs: ["Grounding clip", "Para Rail #518", "Continuidad eléctrica", "Puesta a tierra"]
+      },
+      {
+        title: "CHIKO Grounding Lug for 518 Rail",
+        code: "CK-592R43-1-20",
+        label: "Grounding lug",
+        unit: "SET",
+        image: "/images/products/chiko-grounding-lug.webp",
+        description:
+          "Terminal de puesta a tierra para riel #518, utilizado como punto de conexión del conductor de tierra del sistema.",
+        specs: ["Grounding lug", "Para Rail #518", "Conexión a tierra", "Accesorio eléctrico"]
+      },
+      {
+        title: "CHIKO Solar PV Cable 6mm² Red 500m/Coil",
+        code: "CK-0809-6.0R",
+        label: "Cable solar rojo",
+        unit: "meter",
+        image: "/images/products/chiko-pv-cable-red.webp",
+        description:
+          "Cable fotovoltaico monoconductor de 6mm² en color rojo, para conexiones DC en instalaciones solares.",
+        specs: ["6mm²", "Rojo", "Single core", "500m por rollo", "Cable PV"]
+      },
+      {
+        title: "CHIKO Solar PV Cable 6mm² Black 500m/Coil",
+        code: "CK-0809-6.0",
+        label: "Cable solar negro",
+        unit: "meter",
+        image: "/images/products/chiko-pv-cable-black.webp",
+        description:
+          "Cable fotovoltaico monoconductor de 6mm² en color negro, para conexiones DC en instalaciones solares.",
+        specs: ["6mm²", "Negro", "Single core", "500m por rollo", "Cable PV"]
+      },
+      {
+        title: "MC4 Connector for 6mm² cable",
+        code: "CK-0807-A/B-6.0",
+        label: "Conector MC4",
+        unit: "SET",
+        image: "/images/products/chiko-mc4-connector.webp",
+        description:
+          "Conector tipo MC4 para cable solar de 6mm², utilizado para conexiones seguras entre módulos y componentes DC.",
+        specs: ["MC4", "Para cable 6mm²", "Conexión DC", "Set"]
+      },
+      {
+        title: "CHIKO Solar SUS 304 Cable Clip for 4.0mm Cable",
+        code: "CK-FSC-CP2",
+        label: "Clip para cable",
+        unit: "SET",
+        image: "/images/products/chiko-cable-clip.webp",
+        description:
+          "Clip de acero inoxidable SUS304 para organizar y sujetar cableado solar en el sistema de montaje.",
+        specs: ["SUS304", "Para cable 4.0mm", "4 pcs por panel", "Organización de cableado"]
+      },
+      {
+        title: "CHIKO SUS304 Cable Ties 350mm",
+        code: "CK-FSC-TA-46-350-1",
+        label: "Amarre inoxidable",
+        unit: "SET",
+        image: "/images/products/chiko-cable-ties.webp",
+        description:
+          "Amarres de acero inoxidable SUS304 de 350mm para fijación y ordenamiento de cables en instalaciones solares.",
+        specs: ["SUS304", "350mm", "Cable ties", "Fijación de cableado"]
+      },
+      {
+        title: "CHIKO SUS304 Tile Hook #1 with wood screws",
+        code: "CK-FTH-01R43-Q65",
+        label: "Tile hook #1",
+        unit: "SET",
+        image: "/images/products/chiko-tile-hook-01.webp",
+        description:
+          "Gancho de acero inoxidable SUS304 para techo de teja, suministrado con tres tornillos para madera 6.3*65mm.",
+        specs: ["Tile hook #1", "SUS304", "3 tornillos 6.3*65mm", "Techo de teja"]
+      },
+      {
+        title: "CHIKO SUS304 Tile Hook #1B with wood screws",
+        code: "CK-FTH-01BR43-Q65",
+        label: "Tile hook #1B",
+        unit: "SET",
+        image: "/images/products/chiko-tile-hook-01b.webp",
+        description:
+          "Gancho CHIKO SUS304 tipo #1B para techo de teja, con tres tornillos para madera 6.3*65mm incluidos.",
+        specs: ["Tile hook #1B", "SUS304", "3 tornillos 6.3*65mm", "Techo de teja"]
       }
     ]
   }

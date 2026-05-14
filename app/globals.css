@@ -435,6 +435,29 @@ p { color: var(--muted); line-height: 1.72; }
   object-fit: contain;
   display: block;
 }
+.detailStaticVisual {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid rgba(220, 230, 243, .92);
+  border-radius: var(--radius);
+  background: rgba(255,255,255,.78);
+  box-shadow: var(--shadow);
+  aspect-ratio: 1.35 / .78;
+}
+.detailStaticImage {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.structureDetailVisual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(6, 27, 73, 0) 45%, rgba(6, 27, 73, .18) 100%);
+  pointer-events: none;
+}
 .panelVisualCarousel .detailVisualTrack {
   width: 100%;
   animation-duration: 16s;
@@ -624,6 +647,96 @@ p { color: var(--muted); line-height: 1.72; }
 .catalogCardBody > span { color: var(--orange); font-weight: 900; text-transform: uppercase; letter-spacing: .08em; font-size: .76rem; }
 .catalogCardBody h3 { font-size: 1.55rem; margin: 10px 0; }
 .catalogCardBody p { font-size: .96rem; }
+
+.structureProductTable {
+  display: grid;
+  gap: 14px;
+  margin-top: 34px;
+}
+.structureTableHeader,
+.structureTableRow {
+  display: grid;
+  grid-template-columns: 64px 180px minmax(140px, .75fr) minmax(260px, 1.7fr) 96px;
+  align-items: center;
+  gap: 16px;
+}
+.structureTableHeader {
+  padding: 0 20px 4px;
+  color: var(--muted);
+  font-size: .75rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+.structureTableRow {
+  padding: 18px;
+  border: 1px solid rgba(220, 230, 243, .9);
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: 0 14px 36px rgba(6, 27, 73, .07);
+}
+.structureTableIndex {
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  border-radius: 16px;
+  background: var(--navy);
+  color: #fff;
+  font-weight: 900;
+}
+.structureTableImageWrap {
+  min-height: 116px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #f5f9ff, #fff);
+  border: 1px solid rgba(220, 230, 243, .78);
+}
+.structureTableImage {
+  width: 100%;
+  height: 124px;
+  object-fit: contain;
+  display: block;
+  padding: 8px;
+}
+.structureTableCode span,
+.structureTableInfo > span,
+.structureTableUnit span {
+  display: block;
+  color: var(--orange);
+  font-weight: 900;
+  font-size: .7rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.structureTableCode strong,
+.structureTableUnit strong {
+  color: var(--navy);
+  font-size: .96rem;
+  line-height: 1.25;
+  word-break: break-word;
+}
+.structureTableInfo h3 {
+  margin: 0 0 8px;
+  font-size: 1.16rem;
+}
+.structureTableInfo p {
+  margin: 0;
+  font-size: .9rem;
+  line-height: 1.55;
+}
+.compactTags {
+  margin-top: 12px;
+  gap: 6px;
+}
+.compactTags small {
+  padding: 7px 9px;
+  font-size: .72rem;
+}
+.structureConsultBox { margin-top: 28px; }
 @keyframes productCarousel {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
@@ -760,6 +873,9 @@ p { color: var(--muted); line-height: 1.72; }
   .panelInfoGrid, .panelPdfGrid { grid-template-columns: 1fr; }
   .panelPdfImageWrap { min-height: 340px; }
   .panelPdfImage { height: 340px; }
+  .structureTableHeader { display: none; }
+  .structureTableRow { grid-template-columns: 56px 160px 1fr 92px; align-items: center; }
+  .structureTableInfo { grid-column: 1 / -1; }
   .footerGrid { grid-template-columns: 1fr 1fr; }
   .contactPanel { position: static; }
 }
@@ -798,6 +914,7 @@ p { color: var(--muted); line-height: 1.72; }
     aspect-ratio: 1.2 / 0.82;
   }
   .panelVisualCarousel .detailVisualImage { padding: 22px 24px 18px; }
+  .detailStaticVisual { aspect-ratio: 1.2 / .82; }
   .panelInfoGrid, .panelPdfGrid { grid-template-columns: 1fr; }
   .panelPdfImageWrap { min-height: 340px; }
   .panelPdfImage { height: 340px; }
@@ -805,5 +922,11 @@ p { color: var(--muted); line-height: 1.72; }
   .productSlideCaption, .detailVisualCaption { align-items: flex-start; flex-direction: column; gap: 4px; }
   .productSlideCaption span, .detailVisualCaption span { text-align: left; }
   .catalogImageWrap { min-height: 280px; padding: 18px; }
+  .structureTableHeader { display: none; }
+  .structureTableRow { grid-template-columns: 1fr; gap: 14px; }
+  .structureTableIndex { width: 42px; height: 42px; border-radius: 14px; }
+  .structureTableImageWrap { min-height: 190px; }
+  .structureTableImage { height: 190px; }
+  .structureTableInfo { grid-column: auto; }
 }
 
