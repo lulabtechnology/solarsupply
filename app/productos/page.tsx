@@ -15,9 +15,9 @@ export default function ProductosPage() {
       <section className="pageHero compactHero">
         <div className="container">
           <span className="eyebrow">Catálogo corporativo</span>
-          <h1>Productos solares organizados por marcas, catálogos y líneas comerciales.</h1>
+          <h1>Equipos solares organizados para cotizar por marca y aplicación.</h1>
           <p>
-            Cada familia muestra un carrusel de marcas o productos para que el cliente identifique primero la categoría y luego entre al detalle de lo que Solar Supply puede cotizar.
+            Seleccione la familia que necesita y revise las líneas disponibles: paneles solares, microinversores, inversores, RSD, baterías, estructuras y accesorios para proyectos fotovoltaicos.
           </p>
         </div>
       </section>
@@ -33,9 +33,9 @@ export default function ProductosPage() {
       <section className="section softSection">
         <div className="container brandSection">
           <SectionHeader
-            eyebrow="Nueva lógica de productos"
-            title="Marcas por fuera, productos y catálogos dentro de cada familia."
-            text="La sección queda preparada para trabajar por tandas: primero se muestran las marcas principales y, al entrar en cada categoría, se despliegan productos, catálogos e imágenes específicas."
+            eyebrow="Catálogo por familias"
+            title="Marcas visibles y productos organizados para consulta comercial."
+            text="Cada categoría está pensada para presentar primero las marcas principales y luego resumir la información clave de los productos disponibles para cotización."
           />
           <div className="brandGrid brandGridFour">
             {brands.map((brand) => (

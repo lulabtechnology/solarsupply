@@ -10,6 +10,51 @@ type ProductPageProps = {
   params: Promise<{ slug: string }>;
 };
 
+const panelHighlights = [
+  {
+    brand: "Trina Solar",
+    model: "Vertex N TSM-NEG19RC.20",
+    range: "610-635W",
+    summary:
+      "Módulo N-type i-TOPCon bifacial dual glass para proyectos que requieren alta eficiencia, buena generación y garantía extendida.",
+    points: [
+      "Potencia máxima hasta 635W",
+      "Eficiencia máxima hasta 23.5%",
+      "Tecnología N-type i-TOPCon bifacial dual glass",
+      "Coeficiente de temperatura Pmax -0.29%/°C",
+      "12 años de garantía de producto y 30 años de garantía de potencia"
+    ]
+  },
+  {
+    brand: "Trina Solar",
+    model: "Vertex N TSM-NEG21C.20",
+    range: "695-720W",
+    summary:
+      "Panel de alta potencia para proyectos de mayor escala, con tolerancia positiva y enfoque en reducción de costo del sistema.",
+    points: [
+      "Rango de potencia 695-720W",
+      "Eficiencia máxima hasta 23.2%",
+      "Tolerancia positiva 0~+5W",
+      "Tecnología N-type i-TOPCon bifacial dual glass",
+      "30 años de garantía de potencia"
+    ]
+  },
+  {
+    brand: "Canadian Solar",
+    model: "TOPBiHiKu6 CS6.2-66TB",
+    range: "600-630W",
+    summary:
+      "Módulo N-type bifacial TOPCon para aplicaciones solares con buena respuesta en clima caliente y generación adicional por la parte trasera.",
+    points: [
+      "Rango de potencia 600-630W",
+      "Eficiencia máxima hasta 23.3%",
+      "Hasta 85% de bifacialidad",
+      "Coeficiente de temperatura Pmax -0.29%/°C",
+      "12 años de garantía de producto y 30 años de garantía lineal de potencia"
+    ]
+  }
+];
+
 export async function generateStaticParams() {
   return productFamilies.map((product) => ({ slug: product.slug }));
 }
@@ -30,6 +75,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
 
   if (!product) notFound();
 
+  const isPaneles = product.slug === "paneles-solares";
   const sourceSlides = product.carousel?.length
     ? product.carousel
     : [{ name: product.title, label: product.highlight, image: product.image }];
@@ -52,7 +98,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
             </div>
           </div>
 
-          <div className="detailVisualCarousel" aria-label={`Carrusel visual de ${product.title}`}>
+          <div className={`detailVisualCarousel${isPaneles ? " panelVisualCarousel" : ""}`} aria-label={`Carrusel visual de ${product.title}`}>
             <div className="detailVisualTrack">
               {slides.map((slide, index) => (
                 <div className="detailVisualSlide" key={`${slide.name}-${index}`}>
@@ -88,7 +134,53 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
         </div>
       </section>
 
-      {product.catalogItems.length > 0 && (
+      {isPaneles ? (
+        <section className="section softSection">
+          <div className="container">
+            <div className="sectionHeader center">
+              <span className="eyebrow">Información técnica clave</span>
+              <h2>Paneles disponibles para cotización.</h2>
+              <p>
+                Resumen comercial de las fichas recibidas. Para disponibilidad, precio final, potencia exacta o modelos adicionales, se confirma directamente por WhatsApp.
+              </p>
+            </div>
+
+            <div className="panelInfoGrid">
+              {panelHighlights.map((panel) => (
+                <article className="panelInfoCard" key={`${panel.brand}-${panel.model}`}>
+                  <span>{panel.brand}</span>
+                  <h3>{panel.model}</h3>
+                  <strong>{panel.range}</strong>
+                  <p>{panel.summary}</p>
+                  <ul>
+                    {panel.points.map((point) => (
+                      <li key={point}><CheckCircle2 size={18} /> <span>{point}</span></li>
+                    ))}
+                  </ul>
+                </article>
+              ))}
+            </div>
+
+            <div className="panelConsultBox">
+              <div>
+                <span className="eyebrow small">Consulta comercial</span>
+                <h3>¿Necesitas otra potencia, Jinko Solar o disponibilidad actual?</h3>
+                <p>
+                  Solar Supply puede confirmar inventario, equivalencias, fichas técnicas y recomendaciones según el tamaño del proyecto.
+                </p>
+              </div>
+              <Link
+                href={whatsappUrl("Hola Solar Supply, quiero consultar paneles solares disponibles, marcas, potencias y fichas técnicas.")}
+                className="primaryButton"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Consultar por WhatsApp <ArrowRight size={18} />
+              </Link>
+            </div>
+          </div>
+        </section>
+      ) : product.catalogItems.length > 0 && (
         <section className="section softSection">
           <div className="container">
             <div className="sectionHeader center">

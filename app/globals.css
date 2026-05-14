@@ -241,7 +241,7 @@ p { color: var(--muted); line-height: 1.72; }
 .productHeroTrack {
   display: flex;
   width: 100%;
-  animation: productCarousel 22s linear infinite;
+  animation: productCarousel 18s linear infinite;
 }
 .productHeroSlide {
   position: relative;
@@ -375,7 +375,7 @@ p { color: var(--muted); line-height: 1.72; }
 .detailVisualTrack {
   display: flex;
   width: max-content;
-  animation: productCarousel 24s linear infinite;
+  animation: productCarousel 20s linear infinite;
 }
 .detailVisualSlide {
   position: relative;
@@ -391,6 +391,101 @@ p { color: var(--muted); line-height: 1.72; }
   height: 100%;
   object-fit: contain;
   display: block;
+}
+.panelVisualCarousel .detailVisualTrack {
+  width: 100%;
+  animation-duration: 18s;
+}
+.panelVisualCarousel .detailVisualSlide {
+  flex: 0 0 100%;
+  min-width: 100%;
+  width: 100%;
+  aspect-ratio: 1.35 / 0.78;
+  overflow: hidden;
+}
+.panelVisualCarousel .detailVisualImage {
+  padding: 28px 34px 24px;
+}
+.panelInfoGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 34px;
+}
+.panelInfoCard {
+  padding: 30px;
+  border-radius: var(--radius);
+  background: #fff;
+  border: 1px solid rgba(220, 230, 243, .9);
+  box-shadow: 0 16px 40px rgba(6, 27, 73, .07);
+}
+.panelInfoCard > span {
+  color: var(--orange);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  font-size: .76rem;
+}
+.panelInfoCard h3 {
+  margin: 10px 0 8px;
+  font-size: 1.35rem;
+}
+.panelInfoCard > strong {
+  display: inline-flex;
+  margin-bottom: 12px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  color: #fff;
+  background: var(--navy);
+  font-size: .9rem;
+}
+.panelInfoCard p {
+  font-size: .95rem;
+  margin-bottom: 18px;
+}
+.panelInfoCard ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 10px;
+}
+.panelInfoCard li {
+  display: flex;
+  gap: 9px;
+  align-items: flex-start;
+  color: var(--muted);
+  line-height: 1.45;
+  font-size: .92rem;
+}
+.panelInfoCard svg {
+  color: var(--orange);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.panelConsultBox {
+  margin-top: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 30px;
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, var(--navy), var(--navy-3));
+  color: #fff;
+  box-shadow: var(--shadow);
+}
+.panelConsultBox h3 {
+  color: #fff;
+  margin: 8px 0;
+  font-size: 1.45rem;
+}
+.panelConsultBox p {
+  margin: 0;
+  color: rgba(255,255,255,.76);
+}
+.panelConsultBox .primaryButton {
+  flex-shrink: 0;
 }
 .catalogGrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
 .catalogCard {
@@ -553,6 +648,7 @@ p { color: var(--muted); line-height: 1.72; }
   .heroVisual { order: -1; }
   .trustGrid, .fourGrid { grid-template-columns: repeat(2, 1fr); }
   .productGrid.allProducts, .brandGrid, .brandGrid.brandGridFour, .servicesGrid, .resourcesGrid, .stepsGrid, .offerCards, .catalogGrid { grid-template-columns: 1fr 1fr; }
+  .panelInfoGrid { grid-template-columns: 1fr; }
   .footerGrid { grid-template-columns: 1fr 1fr; }
   .contactPanel { position: static; }
 }
@@ -581,6 +677,14 @@ p { color: var(--muted); line-height: 1.72; }
   }
   .productHeroSlide .productImage { padding: 22px 24px 18px; }
   .detailVisualSlide { min-width: min(78vw, 430px); }
+  .panelVisualCarousel .detailVisualSlide {
+    min-width: 100%;
+    width: 100%;
+    aspect-ratio: 1.2 / 0.82;
+  }
+  .panelVisualCarousel .detailVisualImage { padding: 22px 24px 18px; }
+  .panelInfoGrid { grid-template-columns: 1fr; }
+  .panelConsultBox { align-items: stretch; flex-direction: column; }
   .productSlideCaption, .detailVisualCaption { align-items: flex-start; flex-direction: column; gap: 4px; }
   .productSlideCaption span, .detailVisualCaption span { text-align: left; }
   .catalogImageWrap { min-height: 280px; padding: 18px; }

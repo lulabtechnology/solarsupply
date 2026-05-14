@@ -42,9 +42,9 @@ export const productFamilies = [
     image: "/images/products/catalog-paneles-marcas.svg",
     highlight: "Trina · Jinko · Canadian",
     items: [
-      "La categoría mantiene visibles las marcas Trina, Jinko y Canadian como líneas principales de paneles solares.",
-      "Se agregan las referencias Trina Vertex N enviadas en PDF: 610-635W y 695-720W.",
-      "El carrusel muestra imágenes grandes de marcas y fichas, no miniaturas pequeñas ni imágenes genéricas."
+      "Trina Solar queda cargado con dos referencias técnicas: Vertex N 610-635W y Vertex N 695-720W.",
+      "Canadian Solar queda cargado con la ficha TOPBiHiKu6 600-630W para consulta comercial.",
+      "Jinko Solar queda visible como línea de paneles disponible para confirmar inventario, potencia y ficha técnica por WhatsApp."
     ],
     cta: "Consultar paneles solares",
 carousel: [
