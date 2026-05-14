@@ -116,6 +116,165 @@ const panelHighlights = [
   }
 ];
 
+const microPdfPreviews = [
+  {
+    brand: "FOX ESS",
+    title: "US Series Split-Phase Hybrid/AC",
+    range: "3.8-11.4kW",
+    image: "/images/products/pdf-fox-us-series-cover.webp"
+  },
+  {
+    brand: "FOX ESS",
+    title: "EP6 batería de alto voltaje",
+    range: "23.04 kWh máx.",
+    image: "/images/products/pdf-fox-ep6-cover.webp"
+  },
+  {
+    brand: "FOX ESS",
+    title: "EP12 batería de alto voltaje",
+    range: "46.08 kWh máx.",
+    image: "/images/products/pdf-fox-ep12-cover.webp"
+  },
+  {
+    brand: "FOX ESS",
+    title: "G Series G7 / G10",
+    range: "Monofásicos",
+    image: "/images/products/pdf-fox-g-series-cover.webp"
+  },
+  {
+    brand: "NEP",
+    title: "BDM-1600/2000/2250",
+    range: "Microinversores",
+    image: "/images/products/pdf-nep-bdm-cover.webp"
+  },
+  {
+    brand: "NEP",
+    title: "Accesorios para microinversores",
+    range: "Cable · End cap · WiFi · Tools",
+    image: "/images/products/pdf-nep-accessories-cover.webp"
+  },
+  {
+    brand: "NEP",
+    title: "BDH-8KSP/10KSP/12KSP-LB",
+    range: "Híbrido 48V",
+    image: "/images/products/pdf-nep-bdh-cover.webp"
+  },
+  {
+    brand: "NEP",
+    title: "PVG-2 / PVG-3",
+    range: "Rapid Shutdown",
+    image: "/images/products/pdf-nep-rsd-datasheet-cover.webp"
+  },
+  {
+    brand: "NEP",
+    title: "NEP RSD Solution",
+    range: "Solución RSD",
+    image: "/images/products/pdf-nep-rsd-solution-cover.webp"
+  }
+];
+
+const microHighlights = [
+  {
+    brand: "FOX ESS",
+    model: "US Series Split-Phase Hybrid/AC",
+    range: "3.8kW a 11.4kW",
+    summary:
+      "Inversor de almacenamiento monofásico para aplicaciones con baterías de alto voltaje, respaldo y monitoreo remoto.",
+    points: [
+      "Rango de potencia 3.8kW a 11.4kW",
+      "Compatible con baterías de alto voltaje",
+      "Hasta 4 unidades en paralelo",
+      "Type 4X para instalación exterior",
+      "Monitoreo remoto vía app o portal web"
+    ]
+  },
+  {
+    brand: "FOX ESS",
+    model: "G Series G7 / G10",
+    range: "Inversores monofásicos",
+    summary:
+      "Línea G Series de inversores monofásicos con tres MPPT, alta eficiencia, monitoreo remoto y protección para instalación exterior.",
+    points: [
+      "Modelos G7, G8, G9, G10 y G10.5",
+      "Three MPPT Inverters",
+      "Eficiencia máxima 97.8%",
+      "IP65 Rated",
+      "Plataforma de monitoreo remoto"
+    ]
+  },
+  {
+    brand: "FOX ESS",
+    model: "EP6 / EP12",
+    range: "Baterías compatibles",
+    summary:
+      "Baterías de alto voltaje para complementar soluciones híbridas y de almacenamiento en proyectos solares.",
+    points: [
+      "EP6 escalable hasta 23.04 kWh",
+      "EP12 escalable hasta 46.08 kWh",
+      "90% de profundidad de descarga",
+      "Nivel de protección IP65",
+      "Montaje sobre muro o piso"
+    ]
+  },
+  {
+    brand: "NEP",
+    model: "BDM-1600 / 2000 / 2250",
+    range: "Microinversores",
+    summary:
+      "Microinversores NEP para instalaciones solares con monitoreo a nivel de panel y opciones de comunicación WiFi o PLC.",
+    points: [
+      "Modelos BDM-1600, BDM-2000 y BDM-2250",
+      "Instalación plug and play",
+      "Monitoreo a nivel de panel",
+      "Protecciones integradas como GFDI y surge protection",
+      "Garantía base 12 años con opción de extensión"
+    ]
+  },
+  {
+    brand: "NEP",
+    model: "BDH-8KSP-LB / 10KSP-LB / 12KSP-LB",
+    range: "Inversor híbrido 48V",
+    summary:
+      "Solución híbrida NEP para PV, generador, on/off grid y acoplamiento AC/DC, compatible con bancos de baterías de 48V.",
+    points: [
+      "Modelos 8kW, 10kW y 12kW",
+      "Máximo 18kW PV hacia batería y salidas AC",
+      "Soporta hasta 10 unidades en paralelo",
+      "Whole Home 200A AC passthrough and backup",
+      "AFCI y NEP RSD integrados"
+    ]
+  },
+  {
+    brand: "NEP",
+    model: "PVG-2 / PVG-3 y RSD Solution",
+    range: "Rapid Shutdown",
+    summary:
+      "Dispositivos de apagado rápido a nivel de módulo para seguridad, diagnóstico, monitoreo y compatibilidad con inversores NEP y no NEP.",
+    points: [
+      "PVG-2 y PVG-3 para apagado rápido",
+      "Monitoreo a nivel de módulo",
+      "Comunicación PLC de dos vías",
+      "Opciones WiFi, Ethernet y celular según solución",
+      "PVG-O como gateway/transmisor para inversores no NEP"
+    ]
+  },
+  {
+    brand: "NEP",
+    model: "Accesorios para microinversores",
+    range: "Instalación y comunicación",
+    summary:
+      "Accesorios comerciales para completar la instalación de microinversores NEP, según la lista enviada por el cliente.",
+    points: [
+      "Microinversor BDM-2000 / 2250W WiFi",
+      "Trunk cable 2.4m 10AWG",
+      "End cap para cable troncal",
+      "BDNZ-Wifi single phase y three phase",
+      "Herramienta de desconexión para microinversor y trunk cable"
+    ]
+  }
+];
+
+
 export async function generateStaticParams() {
   return productFamilies.map((product) => ({ slug: product.slug }));
 }
@@ -137,10 +296,14 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
   if (!product) notFound();
 
   const isPaneles = product.slug === "paneles-solares";
+  const isMicro = product.slug === "microinversores-inversores-rsd";
   const sourceSlides = product.carousel?.length
     ? product.carousel
     : [{ name: product.title, label: product.highlight, image: product.image }];
   const slides = [...sourceSlides, ...sourceSlides];
+  const isTechnicalDetail = isPaneles || isMicro;
+  const currentPdfPreviews = isMicro ? microPdfPreviews : panelPdfPreviews;
+  const currentHighlights = isMicro ? microHighlights : panelHighlights;
 
   return (
     <>
@@ -159,7 +322,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
             </div>
           </div>
 
-          <div className={`detailVisualCarousel${isPaneles ? " panelVisualCarousel" : ""}`} aria-label={`Carrusel visual de ${product.title}`}>
+          <div className={`detailVisualCarousel${isTechnicalDetail ? " panelVisualCarousel" : ""}`} aria-label={`Carrusel visual de ${product.title}`}>
             <div className="detailVisualTrack">
               {slides.map((slide, index) => (
                 <div className="detailVisualSlide" key={`${slide.name}-${index}`}>
@@ -176,18 +339,20 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
         </div>
       </section>
 
-      {isPaneles && (
+      {isTechnicalDetail && (
         <section className="section panelPdfSection">
           <div className="container">
             <div className="sectionHeader center">
               <span className="eyebrow">Fichas técnicas disponibles</span>
-              <h2>Primeras páginas de los catálogos de paneles.</h2>
+              <h2>{isMicro ? "Primeras páginas de los catálogos de inversores, microinversores y RSD." : "Primeras páginas de los catálogos de paneles."}</h2>
               <p>
-                Presiona cualquier ficha para verla ampliada. Las referencias pueden variar según inventario, potencia disponible y actualización tecnológica de cada fabricante.
+                {isMicro
+                  ? "Presiona cualquier ficha para verla ampliada. Las referencias pueden variar según inventario, compatibilidad de baterías, configuración del sistema y actualización de cada fabricante."
+                  : "Presiona cualquier ficha para verla ampliada. Las referencias pueden variar según inventario, potencia disponible y actualización tecnológica de cada fabricante."}
               </p>
             </div>
             <div className="panelPdfGrid">
-              {panelPdfPreviews.map((pdf) => (
+              {currentPdfPreviews.map((pdf) => (
                 <a className="panelPdfCard" href={pdf.image} target="_blank" rel="noreferrer" key={`${pdf.brand}-${pdf.title}`}>
                   <div className="panelPdfImageWrap">
                     <Image src={pdf.image} alt={`${pdf.brand} ${pdf.title}`} width={900} height={1280} className="panelPdfImage" />
@@ -216,27 +381,30 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
               ))}
             </ul>
             <div className="detailNote">
-              <strong>Nota comercial:</strong> Solar Supply trabaja con líneas de paneles que pueden actualizarse según disponibilidad, nuevas tecnologías,
-              potencia vigente y especificación del proyecto. Para modelos adicionales o fichas actualizadas, la confirmación se realiza por WhatsApp.
+              <strong>Nota comercial:</strong> {isMicro
+                ? "Solar Supply trabaja con soluciones de conversión, respaldo, microinversores y RSD que pueden variar según compatibilidad técnica, baterías, disponibilidad y configuración del proyecto. Para modelos adicionales o fichas actualizadas, la confirmación se realiza por WhatsApp."
+                : "Solar Supply trabaja con líneas de paneles que pueden actualizarse según disponibilidad, nuevas tecnologías, potencia vigente y especificación del proyecto. Para modelos adicionales o fichas actualizadas, la confirmación se realiza por WhatsApp."}
             </div>
           </div>
           <ContactBlock />
         </div>
       </section>
 
-      {isPaneles ? (
+      {isTechnicalDetail ? (
         <section className="section softSection">
           <div className="container">
             <div className="sectionHeader center">
               <span className="eyebrow">Información técnica clave</span>
-              <h2>Referencias de paneles para consulta comercial.</h2>
+              <h2>{isMicro ? "Referencias de inversores, microinversores y RSD para consulta comercial." : "Referencias de paneles para consulta comercial."}</h2>
               <p>
-                Resumen de las fichas recibidas. Para precio final, disponibilidad, equivalencias o modelos adicionales, se confirma directamente por WhatsApp.
+                {isMicro
+                  ? "Resumen de las fichas recibidas para FOX ESS y NEP. Para precio final, compatibilidad, disponibilidad o modelos adicionales, se confirma directamente por WhatsApp."
+                  : "Resumen de las fichas recibidas. Para precio final, disponibilidad, equivalencias o modelos adicionales, se confirma directamente por WhatsApp."}
               </p>
             </div>
 
             <div className="panelInfoGrid">
-              {panelHighlights.map((panel) => (
+              {currentHighlights.map((panel) => (
                 <article className="panelInfoCard" key={`${panel.brand}-${panel.model}`}>
                   <span>{panel.brand}</span>
                   <h3>{panel.model}</h3>
@@ -254,13 +422,15 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
             <div className="panelConsultBox">
               <div>
                 <span className="eyebrow small">Consulta comercial</span>
-                <h3>Más potencias, nuevas tecnologías o disponibilidad actual</h3>
+                <h3>{isMicro ? "Más modelos, compatibilidades o fichas vigentes" : "Más potencias, nuevas tecnologías o disponibilidad actual"}</h3>
                 <p>
-                  El catálogo puede crecer con nuevas líneas y tecnologías de paneles. Solar Supply confirma la opción adecuada según inventario, ficha vigente y requerimientos del proyecto.
+                  {isMicro
+                    ? "El catálogo puede crecer con nuevos inversores, baterías compatibles, microinversores, accesorios y soluciones RSD. Solar Supply confirma la opción adecuada según inventario, ficha vigente y requerimientos del proyecto."
+                    : "El catálogo puede crecer con nuevas líneas y tecnologías de paneles. Solar Supply confirma la opción adecuada según inventario, ficha vigente y requerimientos del proyecto."}
                 </p>
               </div>
               <Link
-                href={whatsappUrl("Hola Solar Supply, quiero consultar paneles solares disponibles, marcas, potencias y fichas técnicas.")}
+                href={whatsappUrl(isMicro ? "Hola Solar Supply, quiero consultar microinversores, inversores, RSD, compatibilidad de baterías y fichas técnicas." : "Hola Solar Supply, quiero consultar paneles solares disponibles, marcas, potencias y fichas técnicas.")}
                 className="primaryButton"
                 target="_blank"
                 rel="noreferrer"

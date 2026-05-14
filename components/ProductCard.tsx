@@ -7,18 +7,22 @@ type ProductFamily = (typeof productFamilies)[number];
 
 export function ProductCard({ product }: { product: ProductFamily }) {
   const isPaneles = product.slug === "paneles-solares";
+  const isMicro = product.slug === "microinversores-inversores-rsd";
+  const isStaticProduct = isPaneles || isMicro;
   const sourceSlides = product.carousel?.length
     ? product.carousel
     : [{ name: product.title, label: product.highlight, image: product.image }];
   const slides = [...sourceSlides, ...sourceSlides];
+  const customMiniLogos = "miniLogos" in product && Array.isArray(product.miniLogos) ? product.miniLogos : [];
+  const miniLogoSlides = customMiniLogos.length > 0 ? customMiniLogos : isPaneles ? sourceSlides : [];
 
   return (
     <article className="productCard">
-      {isPaneles ? (
+      {isStaticProduct ? (
         <div className="productImageWrap productStaticVisual" aria-label={`Imagen de ${product.title}`}>
           <Image
             src={product.image}
-            alt="Paneles solares instalados en techo comercial"
+            alt={isPaneles ? "Paneles solares instalados en techo comercial" : "Inversores solares instalados en pared técnica"}
             width={1600}
             height={900}
             className="productStaticImage"
@@ -47,10 +51,10 @@ export function ProductCard({ product }: { product: ProductFamily }) {
         <Link href={`/productos/${product.slug}`} className="textLink">
           Ver detalle <ArrowRight size={17} />
         </Link>
-        {isPaneles && (
-          <div className="panelMiniLogoCarousel" aria-label="Carrusel de marcas de paneles solares">
+        {isStaticProduct && miniLogoSlides.length > 0 && (
+          <div className="panelMiniLogoCarousel" aria-label={`Carrusel de marcas de ${product.title}`}>
             <div className="panelMiniLogoTrack">
-              {[...sourceSlides, ...sourceSlides].map((slide, index) => (
+              {[...miniLogoSlides, ...miniLogoSlides, ...miniLogoSlides].map((slide, index) => (
                 <div className="panelMiniLogoSlide" key={`${slide.name}-mini-${index}`}>
                   <Image src={slide.image} alt={slide.name} width={260} height={120} className="panelMiniLogoImage" />
                 </div>

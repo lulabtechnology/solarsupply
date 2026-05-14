@@ -92,37 +92,43 @@ carousel: [
     title: "Microinversores, inversores y RSD",
     eyebrow: "NEP · FOX ESS",
     summary:
-      "Categoría para soluciones NEP y FOX ESS: microinversores, inversores híbridos, inversores monofásicos, accesorios para micros y dispositivos Rapid Shutdown.",
-    image: "/images/products/card-inversores-rsd.svg",
+      "Soluciones para conversión, respaldo y seguridad solar: microinversores NEP, inversores FOX ESS, equipos híbridos compatibles con baterías y dispositivos Rapid Shutdown.",
+    image: "/images/products/card-microinversores-rsd-static.webp",
     highlight: "NEP · FOX ESS",
+    miniLogos: [
+      { name: "FOX ESS", label: "Inversores", image: "/images/products/logo-fox-ess-mini.png" },
+      { name: "NEP", label: "Microinversores · RSD", image: "/images/products/logo-nep-mini.png" }
+    ],
     items: [
-      "NEP queda segmentado en microinversores BDM, inversores híbridos BDH, RSD PVG y accesorios para microinversores.",
-      "FOX ESS queda segmentado en inversores híbridos/AC US Series y monofásicos G Series G7/G10.",
-      "El carrusel principal muestra marcas y catálogos grandes; al entrar al detalle se ven los productos que se venden dentro de esta familia."
+      "FOX ESS se presenta como línea de inversores híbridos/AC, inversores monofásicos G Series y baterías compatibles EP6/EP12.",
+      "NEP se presenta con microinversores BDM, inversor híbrido BDH, accesorios de instalación y soluciones Rapid Shutdown PVG.",
+      "Las fichas visibles pueden actualizarse según inventario, potencia disponible, compatibilidad de baterías y requerimientos del proyecto."
     ],
     cta: "Cotizar inversores y RSD",
     carousel: [
-      { name: "NEP", label: "Microinversores · Híbridos · RSD", image: "/images/products/brand-nep.svg" },
-      { name: "NEP BDM", label: "Microinversores", image: "/images/products/catalog-nep-bdm-2250.webp" },
-      { name: "NEP BDH", label: "Inversor híbrido", image: "/images/products/catalog-nep-hybrid-bdh.webp" },
-      { name: "NEP PVG", label: "Rapid Shutdown", image: "/images/products/catalog-nep-rsd-pvg.webp" },
-      { name: "FOX ESS", label: "Marca / catálogo", image: "/images/products/brand-fox-ess.svg" },
-      { name: "FOX ESS US Series", label: "Híbrido / AC", image: "/images/products/catalog-fox-us-series.webp" },
-      { name: "FOX ESS G Series", label: "G7 / G10 monofásicos", image: "/images/products/catalog-fox-g-series.webp" }
+      { name: "FOX ESS US Series", label: "Híbrido / AC", image: "/images/products/pdf-fox-us-series-cover.webp" },
+      { name: "FOX ESS EP6", label: "Batería compatible", image: "/images/products/pdf-fox-ep6-cover.webp" },
+      { name: "FOX ESS EP12", label: "Batería compatible", image: "/images/products/pdf-fox-ep12-cover.webp" },
+      { name: "FOX ESS G Series", label: "G7 / G10 monofásicos", image: "/images/products/pdf-fox-g-series-cover.webp" },
+      { name: "NEP BDM", label: "Microinversores", image: "/images/products/pdf-nep-bdm-cover.webp" },
+      { name: "Accesorios NEP", label: "Microinversores", image: "/images/products/pdf-nep-accessories-cover.webp" },
+      { name: "NEP BDH", label: "Inversor híbrido", image: "/images/products/pdf-nep-bdh-cover.webp" },
+      { name: "NEP PVG", label: "Rapid Shutdown", image: "/images/products/pdf-nep-rsd-datasheet-cover.webp" },
+      { name: "NEP RSD Solution", label: "Solución RSD", image: "/images/products/pdf-nep-rsd-solution-cover.webp" }
     ],
     catalogItems: [
       {
         title: "NEP BDM-1600 / 2000 / 2250",
         label: "Microinversores NEP",
-        image: "/images/products/catalog-nep-bdm-2250.webp",
+        image: "/images/products/pdf-nep-bdm-cover.webp",
         description:
           "Microinversores NEP para soluciones solares residenciales y de techo, con monitoreo a nivel de panel, comunicación WiFi o PLC e instalación plug and play.",
-        specs: ["1600 / 2000 / 2250 VA", "WiFi o PLC", "Plug and play", "Monitoreo por panel", "IP66/IP67"]
+        specs: ["1600 / 2000 / 2250 VA", "WiFi o PLC", "Plug and play", "Monitoreo por panel", "Garantía 12 años"]
       },
       {
         title: "NEP BDH-8KSP-LB / BDH-10KSP-LB / BDH-12KSP-LB",
         label: "Inversor híbrido NEP",
-        image: "/images/products/catalog-nep-hybrid-bdh.webp",
+        image: "/images/products/pdf-nep-bdh-cover.webp",
         description:
           "Inversor híbrido NEP compatible con múltiples aplicaciones: PV, generador, on/off grid y acoplamiento AC/DC, preparado para trabajar con bancos de baterías de 48V.",
         specs: ["8 kW / 10 kW / 12 kW", "Baterías 48V", "Hasta 10 en paralelo", "200A passthrough", "AFCI + RSD integrado"]
@@ -130,23 +136,15 @@ carousel: [
       {
         title: "NEP PVG-2 / PVG-3",
         label: "Rapid Shutdown RSD",
-        image: "/images/products/catalog-nep-rsd-pvg.webp",
+        image: "/images/products/pdf-nep-rsd-datasheet-cover.webp",
         description:
-          "Dispositivos NEP RSD para apagado rápido a nivel de módulo, diseñados para trabajar con inversores NEP y también con inversores de otras marcas mediante transmisor/gateway.",
-        specs: ["PVG-2 y PVG-3", "2 o 3 módulos", "Monitoreo por panel", "Comunicación 2-way PLC", "Servicio y diagnóstico"]
-      },
-      {
-        title: "Accesorios NEP para microinversores",
-        label: "Accesorios de instalación",
-        image: "/images/products/catalog-nep-accessories.webp",
-        description:
-          "Accesorios comerciales para completar la instalación de microinversores NEP: cable troncal, end cap, módulos BDNZ-Wifi y herramientas de desconexión.",
-        specs: ["BDM-2000", "Trunk cable 2.4 m 10AWG", "End cap", "BDNZ-Wifi", "Tools"]
+          "Dispositivos NEP RSD para apagado rápido a nivel de módulo, con monitoreo, diagnóstico y comunicación PLC de dos vías.",
+        specs: ["PVG-2 y PVG-3", "2 o 3 módulos", "Monitoreo por panel", "Comunicación 2-way PLC", "Diagnóstico de servicio"]
       },
       {
         title: "FOX ESS US Series Split-Phase Hybrid/AC",
         label: "Inversor híbrido/AC FOX ESS",
-        image: "/images/products/catalog-fox-us-series.webp",
+        image: "/images/products/pdf-fox-us-series-cover.webp",
         description:
           "Inversor de almacenamiento monofásico diseñado para aplicaciones con baterías de alto voltaje, respaldo y monitoreo remoto.",
         specs: ["3.8 kW a 11.4 kW", "Hasta 4 unidades en paralelo", "Type 4X exterior", "Monitoreo remoto"]
@@ -154,7 +152,7 @@ carousel: [
       {
         title: "FOX ESS G Series G7 / G10",
         label: "Inversores monofásicos FOX ESS",
-        image: "/images/products/catalog-fox-g-series.webp",
+        image: "/images/products/pdf-fox-g-series-cover.webp",
         description:
           "Inversores monofásicos G Series con tres MPPT, monitoreo remoto, protección IP65 y eficiencia máxima de 97.8%.",
         specs: ["G7 y G10", "Three MPPT", "IP65", "Eficiencia máx. 97.8%", "Monitoreo por app o portal"]
