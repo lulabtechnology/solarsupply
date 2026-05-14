@@ -107,7 +107,7 @@ carousel: [
     cta: "Cotizar inversores y RSD",
     carousel: [
       { name: "NEP", label: "Microinversores · RSD", image: "/images/products/brand-nep.svg" },
-      { name: "FOX ESS", label: "Inversores · Híbridos", image: "/images/products/brand-fox-ess.svg" }
+      { name: "FOX ESS", label: "Inversores · Híbridos", image: "/images/products/brand-fox-ess-card.png" }
     ],
     catalogItems: [
       {
