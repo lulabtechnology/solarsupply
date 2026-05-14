@@ -237,19 +237,21 @@ p { color: var(--muted); line-height: 1.72; }
 .productCard { overflow: hidden; transition: transform .2s ease, box-shadow .2s ease; }
 .productCard:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
 .productImageWrap { position: relative; overflow: hidden; background: var(--soft); }
-.productHeroCarousel { min-height: 356px; }
+.productHeroCarousel { min-height: 250px; }
 .productHeroTrack {
   display: flex;
-  width: max-content;
+  width: 100%;
   animation: productCarousel 22s linear infinite;
 }
 .productHeroSlide {
   position: relative;
-  flex: 0 0 auto;
-  min-width: clamp(300px, 42vw, 560px);
-  aspect-ratio: 1.45 / 1;
+  flex: 0 0 100%;
+  min-width: 100%;
+  width: 100%;
+  aspect-ratio: 1.35 / 0.78;
   display: grid;
   place-items: center;
+  overflow: hidden;
   background: linear-gradient(135deg, #ffffff 0%, #f4f8ff 72%, #fff6e7 100%);
 }
 .productHeroSlide .productImage {
@@ -257,7 +259,7 @@ p { color: var(--muted); line-height: 1.72; }
   width: 100%;
   height: 100%;
   object-fit: contain;
-  padding: 0;
+  padding: 28px 34px 24px;
 }
 .productImage { display: block; width: 100%; height: auto; }
 .productHeroCarousel:hover .productHeroTrack, .detailVisualCarousel:hover .detailVisualTrack { animation-play-state: paused; }
@@ -571,8 +573,13 @@ p { color: var(--muted); line-height: 1.72; }
   .whatsAppFloat span { display: none; }
   .whatsAppFloat { padding: 15px; }
   .mapCard { padding: 28px; }
-  .productHeroCarousel { min-height: 252px; }
-  .productHeroSlide { min-width: min(78vw, 380px); }
+  .productHeroCarousel { min-height: 220px; }
+  .productHeroSlide {
+    min-width: 100%;
+    width: 100%;
+    aspect-ratio: 1.2 / 0.82;
+  }
+  .productHeroSlide .productImage { padding: 22px 24px 18px; }
   .detailVisualSlide { min-width: min(78vw, 430px); }
   .productSlideCaption, .detailVisualCaption { align-items: flex-start; flex-direction: column; gap: 4px; }
   .productSlideCaption span, .detailVisualCaption span { text-align: left; }
