@@ -316,6 +316,39 @@ p { color: var(--muted); line-height: 1.72; }
   font-weight: 900;
 }
 .textLink { margin-top: 8px; }
+.panelMiniLogoCarousel {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 18px;
+  padding: 12px 0 2px;
+  border-top: 1px solid rgba(220, 230, 243, .78);
+}
+.panelMiniLogoTrack {
+  display: flex;
+  width: max-content;
+  gap: 12px;
+  animation: productCarousel 13s linear infinite;
+}
+.panelMiniLogoCarousel:hover .panelMiniLogoTrack { animation-play-state: paused; }
+.panelMiniLogoSlide {
+  flex: 0 0 148px;
+  width: 148px;
+  height: 72px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border: 1px solid rgba(220, 230, 243, .92);
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 10px 24px rgba(6, 27, 73, .07);
+}
+.panelMiniLogoImage {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 12px 14px;
+}
 .backLink { margin-bottom: 22px; color: #52617a; }
 
 .offerStrip {
@@ -754,6 +787,10 @@ p { color: var(--muted); line-height: 1.72; }
     aspect-ratio: 1.2 / 0.82;
   }
   .productHeroSlide .productImage { padding: 22px 24px 18px; }
+  .panelMiniLogoCarousel { margin-top: 16px; }
+  .panelMiniLogoTrack { gap: 10px; animation-duration: 12s; }
+  .panelMiniLogoSlide { flex-basis: 130px; width: 130px; height: 64px; border-radius: 16px; }
+  .panelMiniLogoImage { padding: 10px 12px; }
   .detailVisualSlide { min-width: min(78vw, 430px); }
   .panelVisualCarousel .detailVisualSlide {
     min-width: 100%;
