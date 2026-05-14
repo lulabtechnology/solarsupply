@@ -4,8 +4,8 @@ export const site = {
   domain: "https://www.solarsupplysa.com",
   email: "leonor.gomez@solarledpty.com",
   phone: "310-2696",
-  whatsappLabel: "6768-1246",
-  whatsappNumber: "50767681246",
+  whatsappLabel: "6768-1246 / 6026-1515",
+  whatsappNumber: "50760261515",
   address:
     "Plaza Calle 50, Piso 1, Local 1, Calle 50, Urb. Obarrio, Bella Vista, Panamá",
   googleMapsUrl:
