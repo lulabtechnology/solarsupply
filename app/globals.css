@@ -686,7 +686,7 @@ p { color: var(--muted); line-height: 1.72; }
   font-weight: 900;
 }
 .structureTableImageWrap {
-  min-height: 116px;
+  min-height: 138px;
   display: grid;
   place-items: center;
   overflow: hidden;
@@ -694,12 +694,92 @@ p { color: var(--muted); line-height: 1.72; }
   background: linear-gradient(135deg, #f5f9ff, #fff);
   border: 1px solid rgba(220, 230, 243, .78);
 }
+.zoomableImageButton {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  cursor: zoom-in;
+  text-align: left;
+}
+.zoomableImageInner {
+  position: relative;
+  width: 100%;
+  min-height: 138px;
+  display: grid;
+  place-items: center;
+}
 .structureTableImage {
   width: 100%;
-  height: 124px;
+  height: 136px;
   object-fit: contain;
   display: block;
   padding: 8px;
+}
+.zoomableImageHint {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: rgba(6, 27, 73, .88);
+  color: #fff;
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .02em;
+  box-shadow: 0 10px 24px rgba(6, 27, 73, .18);
+}
+.lightboxBackdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1200;
+  display: grid;
+  place-items: center;
+  padding: 28px;
+}
+.lightboxScrim {
+  position: absolute;
+  inset: 0;
+  border: 0;
+  background: rgba(6, 27, 73, .72);
+  cursor: zoom-out;
+}
+.lightboxPanel {
+  position: relative;
+  z-index: 1;
+  width: min(1100px, calc(100vw - 40px));
+  max-height: calc(100vh - 56px);
+  padding: 20px;
+  border-radius: 28px;
+  background: #fff;
+  box-shadow: 0 24px 60px rgba(6, 27, 73, .28);
+}
+.lightboxImage {
+  width: 100%;
+  height: auto;
+  max-height: calc(100vh - 120px);
+  object-fit: contain;
+  display: block;
+  border-radius: 20px;
+}
+.lightboxClose {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  z-index: 2;
+  width: 42px;
+  height: 42px;
+  border: 0;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  background: rgba(6, 27, 73, .92);
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 10px 24px rgba(6, 27, 73, .25);
 }
 .structureTableCode span,
 .structureTableInfo > span,
@@ -925,8 +1005,16 @@ p { color: var(--muted); line-height: 1.72; }
   .structureTableHeader { display: none; }
   .structureTableRow { grid-template-columns: 1fr; gap: 14px; }
   .structureTableIndex { width: 42px; height: 42px; border-radius: 14px; }
-  .structureTableImageWrap { min-height: 190px; }
-  .structureTableImage { height: 190px; }
+  .structureTableImageWrap { min-height: 210px; }
+  .zoomableImageInner { min-height: 210px; }
+  .structureTableImage { height: 200px; }
   .structureTableInfo { grid-column: auto; }
 }
 
+
+@media (max-width: 640px) {
+  .zoomableImageHint { font-size: .68rem; padding: 6px 9px; }
+  .lightboxBackdrop { padding: 14px; }
+  .lightboxPanel { width: min(100%, calc(100vw - 18px)); padding: 14px; border-radius: 20px; }
+  .lightboxImage { max-height: calc(100vh - 90px); }
+}

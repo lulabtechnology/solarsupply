@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowRight, CheckCircle2 } from "lucide-react";
 import { ContactBlock } from "@/components/ContactBlock";
+import { ZoomableProductImage } from "@/components/ZoomableProductImage";
 import { productFamilies, whatsappUrl } from "@/lib/site";
 
 type ProductPageProps = {
@@ -464,7 +465,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
               <span className="eyebrow">Lista de productos CHIKO</span>
               <h2>Productos incluidos para estructuras y accesorios eléctricos.</h2>
               <p>
-                La información se muestra en formato de tabla comercial, con imagen referencial, código, descripción y unidad para facilitar la cotización por WhatsApp.
+                La información se muestra con foto de cada producto, código, descripción y unidad para facilitar la cotización por WhatsApp. Puede presionar cada imagen para ampliarla.
               </p>
             </div>
 
@@ -481,7 +482,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
                 <article className="structureTableRow" key={item.title}>
                   <div className="structureTableIndex">{String(index + 1).padStart(2, "0")}</div>
                   <div className="structureTableImageWrap">
-                    <Image src={item.image} alt={item.title} width={520} height={360} className="structureTableImage" />
+                    <ZoomableProductImage src={item.image} alt={item.title} className="structureTableImage" />
                   </div>
                   <div className="structureTableCode">
                     <span>Código</span>
