@@ -106,15 +106,8 @@ carousel: [
     ],
     cta: "Cotizar inversores y RSD",
     carousel: [
-      { name: "FOX ESS US Series", label: "Híbrido / AC", image: "/images/products/pdf-fox-us-series-cover.webp" },
-      { name: "FOX ESS EP6", label: "Batería compatible", image: "/images/products/pdf-fox-ep6-cover.webp" },
-      { name: "FOX ESS EP12", label: "Batería compatible", image: "/images/products/pdf-fox-ep12-cover.webp" },
-      { name: "FOX ESS G Series", label: "G7 / G10 monofásicos", image: "/images/products/pdf-fox-g-series-cover.webp" },
-      { name: "NEP BDM", label: "Microinversores", image: "/images/products/pdf-nep-bdm-cover.webp" },
-      { name: "Accesorios NEP", label: "Microinversores", image: "/images/products/pdf-nep-accessories-cover.webp" },
-      { name: "NEP BDH", label: "Inversor híbrido", image: "/images/products/pdf-nep-bdh-cover.webp" },
-      { name: "NEP PVG", label: "Rapid Shutdown", image: "/images/products/pdf-nep-rsd-datasheet-cover.webp" },
-      { name: "NEP RSD Solution", label: "Solución RSD", image: "/images/products/pdf-nep-rsd-solution-cover.webp" }
+      { name: "NEP", label: "Microinversores · RSD", image: "/images/products/brand-nep.svg" },
+      { name: "FOX ESS", label: "Inversores · Híbridos", image: "/images/products/brand-fox-ess.svg" }
     ],
     catalogItems: [
       {
