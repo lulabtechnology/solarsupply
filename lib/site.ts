@@ -39,7 +39,7 @@ export const productFamilies = [
     eyebrow: "Trina · Jinko · Canadian",
     summary:
       "Paneles solares organizados por marca y ficha técnica para que el cliente vea opciones disponibles, potencias y referencias comerciales antes de cotizar.",
-    image: "/images/products/catalog-paneles-marcas.svg",
+    image: "/images/products/catalog-paneles-marcas.png",
     highlight: "Trina · Jinko · Canadian",
     items: [
       "La categoría mantiene visibles las marcas Trina, Jinko y Canadian como líneas principales de paneles solares.",
@@ -48,11 +48,14 @@ export const productFamilies = [
     ],
     cta: "Consultar paneles solares",
     carousel: [
-      { name: "Trina · Jinko · Canadian", label: "Marcas de paneles", image: "/images/products/catalog-paneles-marcas.svg" },
+      { name: "Trina Solar", label: "Marca de paneles", image: "/images/products/logo-trina-paneles.png" },
+      { name: "Jinko Solar", label: "Marca de paneles", image: "/images/products/logo-jinko-paneles.png" },
+      { name: "Canadian Solar", label: "Marca de paneles", image: "/images/products/logo-canadian-paneles.png" },
       { name: "Trina Vertex N 610-635W", label: "N-type i-TOPCon", image: "/images/products/catalog-trina-vertex-n-635.webp" },
       { name: "Trina Vertex N 695-720W", label: "Bifacial dual glass", image: "/images/products/catalog-trina-vertex-n-720.webp" },
-      { name: "Jinko Solar", label: "Paneles solares", image: "/images/products/brand-jinko.svg" },
-      { name: "Canadian Solar", label: "Paneles solares", image: "/images/products/brand-canadian.svg" }
+      { name: "Trina · Jinko · Canadian", label: "Marcas de paneles", image: "/images/products/catalog-paneles-marcas.png" },
+      { name: "Jinko Solar", label: "Paneles solares", image: "/images/products/logo-jinko-paneles.png" },
+      { name: "Canadian Solar", label: "Paneles solares", image: "/images/products/logo-canadian-paneles.png" }
     ],
     catalogItems: [
       {
@@ -74,7 +77,7 @@ export const productFamilies = [
       {
         title: "Jinko Solar",
         label: "Marca de paneles solares",
-        image: "/images/products/brand-jinko.svg",
+        image: "/images/products/logo-jinko-paneles.png",
         description:
           "Marca incluida como línea visible para cotización de paneles solares según inventario, potencia disponible y requerimientos del proyecto.",
         specs: ["Marca principal", "Cotización por inventario", "Paneles solares", "Uso residencial y comercial"]
@@ -82,7 +85,7 @@ export const productFamilies = [
       {
         title: "Canadian Solar",
         label: "Marca de paneles solares",
-        image: "/images/products/brand-canadian.svg",
+        image: "/images/products/logo-canadian-paneles.png",
         description:
           "Marca visible dentro del carrusel de paneles solares para presentar alternativas comerciales en proyectos fotovoltaicos.",
         specs: ["Marca principal", "Cotización por proyecto", "Paneles solares", "Uso comercial e industrial"]
