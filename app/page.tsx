@@ -28,9 +28,10 @@ export default function HomePage() {
               </Link>
             </div>
             <div className="heroStats">
-              <div><strong>Paneles solares</strong><span>suministro por marca</span></div>
-              <div><strong>NEP y FOX ESS</strong><span>catálogos destacados</span></div>
-              <div><strong>Respaldo técnico</strong><span>orientación comercial</span></div>
+              <div><strong>Paneles Solares</strong><span>línea comercial</span></div>
+              <div><strong>Microinversores, inversores y RSD</strong><span>línea comercial</span></div>
+              <div><strong>Baterías</strong><span>línea comercial</span></div>
+              <div><strong>Estructuras y accesorios eléctricos</strong><span>línea comercial</span></div>
             </div>
           </div>
           <div className="heroVisual">
@@ -41,10 +42,10 @@ export default function HomePage() {
 
       <section className="trustBand">
         <div className="container trustGrid">
-          <div><SunMedium size={24} /><span>Paneles solares</span></div>
-          <div><Zap size={24} /><span>Inversores y microinversores</span></div>
-          <div><ShieldCheck size={24} /><span>Rapid Shutdown y seguridad</span></div>
-          <div><Globe2 size={24} /><span>Proyección internacional</span></div>
+          <div><SunMedium size={24} /><span>Paneles Solares</span></div>
+          <div><Zap size={24} /><span>Microinversores, inversores y RSD</span></div>
+          <div><ShieldCheck size={24} /><span>Baterías</span></div>
+          <div><Globe2 size={24} /><span>Estructuras y accesorios eléctricos</span></div>
         </div>
       </section>
 
@@ -73,7 +74,7 @@ export default function HomePage() {
             center
             eyebrow="Productos principales"
             title="Un catálogo pensado para vender hoy y crecer mañana."
-            text="Solar Supply presenta sus productos por carrusel de marcas y catálogos: paneles Trina, Jinko y Canadian; soluciones NEP y FOX ESS; baterías y accesorios eléctricos."
+            text="Solar Supply presenta sus principales categorías comerciales: paneles solares, microinversores, inversores y RSD, baterías, y estructuras y accesorios eléctricos."
           />
           <div className="productGrid">
             {productFamilies.slice(0, 4).map((product) => (

@@ -276,6 +276,64 @@ const microHighlights = [
 ];
 
 
+
+const microAccessoryItems = [
+  {
+    title: "Microinversor NEP 2250W WiFi",
+    code: "BDM-2000",
+    label: "Accesorio / equipo NEP",
+    unit: "-",
+    image: "/images/products/nep-bdm-2000.webp",
+    description: "Microinversor NEP 2250W WiFi para sistemas solares con enfoque en conversión distribuida y monitoreo.",
+    specs: ["Microinversor", "2250W", "WiFi", "NEP"]
+  },
+  {
+    title: "Cable troncal para microinversor",
+    code: "TRUNK CABLE",
+    label: "Accesorio NEP",
+    unit: "-",
+    image: "/images/products/nep-trunk-cable.webp",
+    description: "Cable troncal de 2.4m 10AWG para conexión de microinversores dentro del sistema NEP.",
+    specs: ["2.4m", "10AWG", "Cable troncal", "Instalación"]
+  },
+  {
+    title: "End cap para cable troncal",
+    code: "END CAP",
+    label: "Accesorio NEP",
+    unit: "-",
+    image: "/images/products/nep-end-cap.webp",
+    description: "Tapón final para cable troncal, utilizado para completar y proteger la línea de conexión.",
+    specs: ["End cap", "Protección", "Cable troncal", "NEP"]
+  },
+  {
+    title: "BDNZ-Wifi single phase",
+    code: "BDNZ-Wifi",
+    label: "Accesorio NEP",
+    unit: "-",
+    image: "/images/products/nep-bdnz-wifi-single.webp",
+    description: "Módulo BDNZ-Wifi para solución single phase y funciones de comunicación / export control en entorno trifásico según la referencia enviada.",
+    specs: ["Single phase", "WiFi", "Comunicación", "NEP"]
+  },
+  {
+    title: "BDNZ-Wifi three phase",
+    code: "BDNZ-Wifi",
+    label: "Accesorio NEP",
+    unit: "-",
+    image: "/images/products/nep-bdnz-wifi-three.webp",
+    description: "Módulo BDNZ-Wifi three phase para comunicación y control dentro del ecosistema de microinversores NEP.",
+    specs: ["Three phase", "WiFi", "Comunicación", "NEP"]
+  },
+  {
+    title: "Herramienta de desconexión",
+    code: "TOOLS",
+    label: "Accesorio NEP",
+    unit: "-",
+    image: "/images/products/nep-tool-disconnect.webp",
+    description: "Herramienta para desconectar microinversor y trunk cable, y abrir el trunk connector durante instalación o mantenimiento.",
+    specs: ["Tool", "Desconexión", "Mantenimiento", "NEP"]
+  }
+];
+
 export async function generateStaticParams() {
   return productFamilies.map((product) => ({ slug: product.slug }));
 }
@@ -299,6 +357,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
   const isPaneles = product.slug === "paneles-solares";
   const isMicro = product.slug === "microinversores-inversores-rsd";
   const isStructure = product.slug === "estructura-accesorios-electricos";
+  const isBattery = product.slug === "baterias";
   const sourceSlides = product.carousel?.length
     ? product.carousel
     : [{ name: product.title, label: product.highlight, image: product.image }];
@@ -310,7 +369,9 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
     ? "Solar Supply confirma disponibilidad, cantidades, compatibilidad de montaje y accesorios necesarios para cada proyecto. La cotización final se valida por WhatsApp según medidas, tipo de techo y requerimientos de instalación."
     : isMicro
       ? "Solar Supply trabaja con soluciones de conversión, respaldo, microinversores y RSD que pueden variar según compatibilidad técnica, baterías, disponibilidad y configuración del proyecto. Para modelos adicionales o fichas actualizadas, la confirmación se realiza por WhatsApp."
-      : "Solar Supply trabaja con líneas de paneles que pueden actualizarse según disponibilidad, nuevas tecnologías, potencia vigente y especificación del proyecto. Para modelos adicionales o fichas actualizadas, la confirmación se realiza por WhatsApp.";
+      : isBattery
+        ? "Solar Supply comercializa baterías para respaldo y almacenamiento energético. La opción final se define según autonomía requerida, compatibilidad, espacio de instalación y alcance del proyecto."
+        : "Solar Supply trabaja con líneas de paneles que pueden actualizarse según disponibilidad, nuevas tecnologías, potencia vigente y especificación del proyecto. Para modelos adicionales o fichas actualizadas, la confirmación se realiza por WhatsApp.";
 
   return (
     <>
@@ -329,11 +390,11 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
             </div>
           </div>
 
-          {isStructure ? (
+          {isStructure || isBattery ? (
             <div className="detailStaticVisual structureDetailVisual" aria-label={`Imagen de ${product.title}`}>
               <Image
                 src={product.image}
-                alt="Estructuras y accesorios eléctricos para montaje de paneles solares"
+                alt={isBattery ? "Baterías de almacenamiento instaladas para respaldo energético" : "Estructuras y accesorios eléctricos para montaje de paneles solares"}
                 width={1600}
                 height={900}
                 className="detailStaticImage"
@@ -459,61 +520,173 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
           </div>
         </section>
       ) : isStructure && product.catalogItems.length > 0 ? (
-        <section className="section softSection structureProductsSection">
+        <>
+          <section className="section softSection structureProductsSection">
+            <div className="container">
+              <div className="sectionHeader center microAccessoriesIntro">
+                <span className="eyebrow">Accesorios para microinversores NEP</span>
+                <h2>Accesorios y referencias que se venden junto a soluciones de microinversores.</h2>
+                <p>
+                  Estas referencias se muestran con imagen individual, código y descripción comercial. Puede presionar cada imagen para ampliarla.
+                </p>
+              </div>
+
+              <div className="structureProductTable">
+                <div className="structureTableHeader" aria-hidden="true">
+                  <span>#</span>
+                  <span>Imagen</span>
+                  <span>Código</span>
+                  <span>Descripción</span>
+                  <span>Unidad</span>
+                </div>
+
+                {microAccessoryItems.map((item, index) => (
+                  <article className="structureTableRow" key={item.title}>
+                    <div className="structureTableIndex">{String(index + 1).padStart(2, "0")}</div>
+                    <div className="structureTableImageWrap">
+                      <ZoomableProductImage src={item.image} alt={item.title} className="structureTableImage" />
+                    </div>
+                    <div className="structureTableCode">
+                      <span>Código</span>
+                      <strong>{item.code}</strong>
+                    </div>
+                    <div className="structureTableInfo">
+                      <span>{item.label}</span>
+                      <h3>{item.title}</h3>
+                      <p>{item.description}</p>
+                      <div className="tagList compactTags">
+                        {item.specs.map((spec) => <small key={spec}>{spec}</small>)}
+                      </div>
+                    </div>
+                    <div className="structureTableUnit">
+                      <span>Unidad</span>
+                      <strong>{item.unit}</strong>
+                    </div>
+                  </article>
+                ))}
+              </div>
+
+              <div className="panelConsultBox structureConsultBox">
+                <div>
+                  <span className="eyebrow small">Consulta comercial</span>
+                  <h3>Cotizar microinversores y accesorios NEP</h3>
+                  <p>
+                    Solar Supply puede confirmar disponibilidad, accesorios de instalación, comunicación y compatibilidad según el proyecto.
+                  </p>
+                </div>
+                <Link
+                  href={whatsappUrl("Hola Solar Supply, quiero cotizar microinversores NEP y los accesorios relacionados de la lista mostrada.")}
+                  className="primaryButton"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Consultar por WhatsApp <ArrowRight size={18} />
+                </Link>
+              </div>
+            </div>
+          </section>
+
+          <section className="section softSection structureProductsSection">
+            <div className="container">
+              <div className="sectionHeader center">
+                <span className="eyebrow">Lista de productos CHIKO</span>
+                <h2>Productos incluidos para estructuras y accesorios eléctricos.</h2>
+                <p>
+                  La información se muestra con foto de cada producto, código, descripción y unidad para facilitar la cotización por WhatsApp. Puede presionar cada imagen para ampliarla.
+                </p>
+              </div>
+
+              <div className="structureProductTable">
+                <div className="structureTableHeader" aria-hidden="true">
+                  <span>#</span>
+                  <span>Imagen</span>
+                  <span>Código</span>
+                  <span>Descripción</span>
+                  <span>Unidad</span>
+                </div>
+
+                {product.catalogItems.map((item, index) => (
+                  <article className="structureTableRow" key={item.title}>
+                    <div className="structureTableIndex">{String(index + 1).padStart(2, "0")}</div>
+                    <div className="structureTableImageWrap">
+                      <ZoomableProductImage src={item.image} alt={item.title} className="structureTableImage" />
+                    </div>
+                    <div className="structureTableCode">
+                      <span>Código</span>
+                      <strong>{"code" in item ? String(item.code) : "-"}</strong>
+                    </div>
+                    <div className="structureTableInfo">
+                      <span>{item.label}</span>
+                      <h3>{item.title}</h3>
+                      <p>{item.description}</p>
+                      <div className="tagList compactTags">
+                        {item.specs.map((spec) => <small key={spec}>{spec}</small>)}
+                      </div>
+                    </div>
+                    <div className="structureTableUnit">
+                      <span>Unidad</span>
+                      <strong>{"unit" in item ? String(item.unit) : "-"}</strong>
+                    </div>
+                  </article>
+                ))}
+              </div>
+
+              <div className="panelConsultBox structureConsultBox">
+                <div>
+                  <span className="eyebrow small">Consulta comercial</span>
+                  <h3>Cotizar estructuras, rieles y accesorios CHIKO</h3>
+                  <p>
+                    Solar Supply puede confirmar cantidades, disponibilidad y combinación de accesorios según tipo de techo, cantidad de paneles y alcance del proyecto.
+                  </p>
+                </div>
+                <Link
+                  href={whatsappUrl("Hola Solar Supply, quiero cotizar estructuras y accesorios CHIKO de la lista de productos.")}
+                  className="primaryButton"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Consultar por WhatsApp <ArrowRight size={18} />
+                </Link>
+              </div>
+            </div>
+          </section>
+        </>
+      ) : isBattery ? (
+        <section className="section softSection batteryInfoSection">
           <div className="container">
             <div className="sectionHeader center">
-              <span className="eyebrow">Lista de productos CHIKO</span>
-              <h2>Productos incluidos para estructuras y accesorios eléctricos.</h2>
+              <span className="eyebrow">Baterías disponibles</span>
+              <h2>Solar Supply vende baterías para respaldo y almacenamiento energético.</h2>
               <p>
-                La información se muestra con foto de cada producto, código, descripción y unidad para facilitar la cotización por WhatsApp. Puede presionar cada imagen para ampliarla.
+                Esta categoría se maneja por consulta comercial para definir capacidad, compatibilidad y alcance del proyecto. Para cotizar, confirmar disponibilidad o recibir orientación, escríbanos por WhatsApp.
               </p>
             </div>
 
-            <div className="structureProductTable">
-              <div className="structureTableHeader" aria-hidden="true">
-                <span>#</span>
-                <span>Imagen</span>
-                <span>Código</span>
-                <span>Descripción</span>
-                <span>Unidad</span>
-              </div>
-
-              {product.catalogItems.map((item, index) => (
-                <article className="structureTableRow" key={item.title}>
-                  <div className="structureTableIndex">{String(index + 1).padStart(2, "0")}</div>
-                  <div className="structureTableImageWrap">
-                    <ZoomableProductImage src={item.image} alt={item.title} className="structureTableImage" />
-                  </div>
-                  <div className="structureTableCode">
-                    <span>Código</span>
-                    <strong>{"code" in item ? String(item.code) : "-"}</strong>
-                  </div>
-                  <div className="structureTableInfo">
-                    <span>{item.label}</span>
-                    <h3>{item.title}</h3>
-                    <p>{item.description}</p>
-                    <div className="tagList compactTags">
-                      {item.specs.map((spec) => <small key={spec}>{spec}</small>)}
-                    </div>
-                  </div>
-                  <div className="structureTableUnit">
-                    <span>Unidad</span>
-                    <strong>{"unit" in item ? String(item.unit) : "-"}</strong>
-                  </div>
-                </article>
-              ))}
+            <div className="miniCards">
+              <article>
+                <h3>Respaldo energético</h3>
+                <p>Opciones para proyectos que requieren continuidad operativa, almacenamiento y respaldo frente a cortes o variaciones.</p>
+              </article>
+              <article>
+                <h3>Escalabilidad</h3>
+                <p>La selección puede ajustarse según autonomía requerida, crecimiento esperado del sistema y espacio disponible.</p>
+              </article>
+              <article>
+                <h3>Orientación comercial</h3>
+                <p>Solar Supply apoya la selección según tipo de proyecto, compatibilidad técnica y necesidad real del cliente.</p>
+              </article>
             </div>
 
             <div className="panelConsultBox structureConsultBox">
               <div>
                 <span className="eyebrow small">Consulta comercial</span>
-                <h3>Cotizar estructuras, rieles y accesorios CHIKO</h3>
+                <h3>Cotizar baterías para su proyecto</h3>
                 <p>
-                  Solar Supply puede confirmar cantidades, disponibilidad y combinación de accesorios según tipo de techo, cantidad de paneles y alcance del proyecto.
+                  Escríbanos por WhatsApp para consultar disponibilidad, capacidad recomendada, compatibilidad y configuración de baterías para su instalación.
                 </p>
               </div>
               <Link
-                href={whatsappUrl("Hola Solar Supply, quiero cotizar estructuras y accesorios CHIKO de la lista de productos.")}
+                href={whatsappUrl("Hola Solar Supply, quiero consultar baterías para respaldo y almacenamiento energético.")}
                 className="primaryButton"
                 target="_blank"
                 rel="noreferrer"

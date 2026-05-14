@@ -184,7 +184,7 @@ h3 { color: var(--navy); letter-spacing: -0.02em; }
 p { color: var(--muted); line-height: 1.72; }
 .heroCopy p, .pageHero p { font-size: 1.12rem; max-width: 660px; }
 .heroActions { display: flex; flex-wrap: wrap; gap: 14px; margin: 32px 0; }
-.heroStats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; max-width: 640px; }
+.heroStats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; max-width: 980px; }
 .heroStats div {
   padding: 18px 18px;
   border: 1px solid var(--line);
@@ -1017,4 +1017,11 @@ p { color: var(--muted); line-height: 1.72; }
   .lightboxBackdrop { padding: 14px; }
   .lightboxPanel { width: min(100%, calc(100vw - 18px)); padding: 14px; border-radius: 20px; }
   .lightboxImage { max-height: calc(100vh - 90px); }
+}
+
+.batteryInfoSection .miniCards { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.batteryInfoSection .miniCards article { min-height: 100%; }
+.microAccessoriesIntro { margin-bottom: 18px; }
+@media (max-width: 900px) {
+  .batteryInfoSection .miniCards { grid-template-columns: 1fr; }
 }

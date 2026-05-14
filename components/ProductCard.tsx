@@ -9,7 +9,8 @@ export function ProductCard({ product }: { product: ProductFamily }) {
   const isPaneles = product.slug === "paneles-solares";
   const isMicro = product.slug === "microinversores-inversores-rsd";
   const isStructure = product.slug === "estructura-accesorios-electricos";
-  const isStaticProduct = isPaneles || isMicro || isStructure;
+  const isBattery = product.slug === "baterias";
+  const isStaticProduct = isPaneles || isMicro || isStructure || isBattery;
   const sourceSlides = product.carousel?.length
     ? product.carousel
     : [{ name: product.title, label: product.highlight, image: product.image }];
@@ -20,7 +21,9 @@ export function ProductCard({ product }: { product: ProductFamily }) {
     ? "Paneles solares instalados en techo comercial"
     : isMicro
       ? "Inversores solares instalados en pared técnica"
-      : "Estructuras y accesorios eléctricos para montaje de paneles solares";
+      : isBattery
+        ? "Baterías de almacenamiento instaladas para respaldo energético"
+        : "Estructuras y accesorios eléctricos para montaje de paneles solares";
 
   return (
     <article className="productCard">
