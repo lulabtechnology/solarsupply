@@ -2,9 +2,9 @@ export const site = {
   name: "Solar Supply, S.A.",
   shortName: "Solar Supply",
   domain: "https://www.solarsupplysa.com",
-  email: "leonor.gomez@solarledpty.com",
+  email: "info@solarsupplysa.com",
   phone: "310-2696",
-  whatsappLabel: "6768-1246 / 6026-1515",
+  whatsappLabel: "6026-1515",
   whatsappNumber: "50760261515",
   address:
     "Plaza Calle 50, Piso 1, Local 1, Calle 50, Urb. Obarrio, Bella Vista, Panamá",

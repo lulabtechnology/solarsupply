@@ -117,6 +117,7 @@ export default function HomePage() {
             />
             <div className="contactQuickInfo">
               <p><strong>Teléfono:</strong> {site.phone}</p>
+              <p><strong>WhatsApp:</strong> {site.whatsappLabel}</p>
               <p><strong>Correo:</strong> {site.email}</p>
               <p><strong>Dirección:</strong> {site.address}</p>
             </div>
