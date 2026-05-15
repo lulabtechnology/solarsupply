@@ -390,7 +390,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
             </div>
           </div>
 
-          {isStructure || isBattery ? (
+          {isStructure ? (
             <div className="detailStaticVisual structureDetailVisual" aria-label={`Imagen de ${product.title}`}>
               <Image
                 src={product.image}
@@ -652,41 +652,43 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
           </section>
         </>
       ) : isBattery ? (
-        <section className="section softSection batteryInfoSection">
+        <section className="section softSection">
           <div className="container">
             <div className="sectionHeader center">
-              <span className="eyebrow">Baterías disponibles</span>
-              <h2>Solar Supply vende baterías para respaldo y almacenamiento energético.</h2>
+              <span className="eyebrow">Productos y catálogos</span>
+              <h2>Modelos visibles dentro de Baterías.</h2>
               <p>
-                Esta categoría se maneja por consulta comercial para definir capacidad, compatibilidad y alcance del proyecto. Para cotizar, confirmar disponibilidad o recibir orientación, escríbanos por WhatsApp.
+                Esta familia se presenta con referencias FOX ESS para facilitar la consulta comercial. Puede revisar las dos opciones visibles y escribirnos por WhatsApp para confirmar disponibilidad, compatibilidad y configuración recomendada.
               </p>
             </div>
-
-            <div className="miniCards">
-              <article>
-                <h3>Respaldo energético</h3>
-                <p>Opciones para proyectos que requieren continuidad operativa, almacenamiento y respaldo frente a cortes o variaciones.</p>
-              </article>
-              <article>
-                <h3>Escalabilidad</h3>
-                <p>La selección puede ajustarse según autonomía requerida, crecimiento esperado del sistema y espacio disponible.</p>
-              </article>
-              <article>
-                <h3>Orientación comercial</h3>
-                <p>Solar Supply apoya la selección según tipo de proyecto, compatibilidad técnica y necesidad real del cliente.</p>
-              </article>
+            <div className="catalogGrid">
+              {product.catalogItems.map((item) => (
+                <article className="catalogCard" key={item.title}>
+                  <div className="catalogImageWrap">
+                    <ZoomableProductImage src={item.image} alt={item.title} className="catalogImage" />
+                  </div>
+                  <div className="catalogCardBody">
+                    <span>{item.label}</span>
+                    <h3>{item.title}</h3>
+                    <p>{item.description}</p>
+                    <div className="tagList">
+                      {item.specs.map((spec) => <small key={spec}>{spec}</small>)}
+                    </div>
+                  </div>
+                </article>
+              ))}
             </div>
 
-            <div className="panelConsultBox structureConsultBox">
+            <div className="panelConsultBox">
               <div>
                 <span className="eyebrow small">Consulta comercial</span>
-                <h3>Cotizar baterías para su proyecto</h3>
+                <h3>Cotizar baterías FOX ESS para su proyecto</h3>
                 <p>
-                  Escríbanos por WhatsApp para consultar disponibilidad, capacidad recomendada, compatibilidad y configuración de baterías para su instalación.
+                  Solar Supply confirma por WhatsApp la batería adecuada según autonomía requerida, compatibilidad con el sistema, espacio disponible y alcance del proyecto.
                 </p>
               </div>
               <Link
-                href={whatsappUrl("Hola Solar Supply, quiero consultar baterías para respaldo y almacenamiento energético.")}
+                href={whatsappUrl("Hola Solar Supply, quiero consultar baterías FOX ESS EP6 y EP12 para respaldo y almacenamiento energético.")}
                 className="primaryButton"
                 target="_blank"
                 rel="noreferrer"

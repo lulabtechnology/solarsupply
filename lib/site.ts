@@ -160,13 +160,27 @@ carousel: [
       "Baterías FOX ESS de alto voltaje para proyectos que necesitan respaldo energético, almacenamiento escalable y continuidad operativa.",
     image: "/images/products/card-baterias-instaladas.webp",
     highlight: "EP6 · EP12",
+    miniLogos: [
+      { name: "FOX ESS", label: "Baterías", image: "/images/products/logo-fox-ess-mini.png" }
+    ],
     items: [
       "FOX ESS EP6 queda dentro de baterías como solución de alto voltaje escalable.",
       "FOX ESS EP12 queda dentro de baterías como alternativa de mayor capacidad para proyectos con más demanda energética.",
       "Solar Supply vende baterías para respaldo y almacenamiento energético, con cotización y orientación comercial por WhatsApp."
     ],
     cta: "Consultar baterías",
-    carousel: [],
+    carousel: [
+      {
+        name: "FOX ESS",
+        label: "Baterías de alto voltaje",
+        image: "/images/products/brand-fox-ess-card.png"
+      },
+      {
+        name: "EP6 · EP12",
+        label: "Respaldo y almacenamiento energético",
+        image: "/images/products/card-baterias-instaladas.webp"
+      }
+    ],
     catalogItems: [
       {
         title: "FOX ESS EP6",
