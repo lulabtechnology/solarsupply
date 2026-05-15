@@ -171,14 +171,14 @@ carousel: [
     cta: "Consultar baterías",
     carousel: [
       {
-        name: "FOX ESS",
-        label: "Baterías de alto voltaje",
-        image: "/images/products/brand-fox-ess-card.png"
-      },
-      {
         name: "EP6 · EP12",
         label: "Respaldo y almacenamiento energético",
         image: "/images/products/card-baterias-instaladas.webp"
+      },
+      {
+        name: "FOX ESS",
+        label: "Baterías de alto voltaje",
+        image: "/images/products/brand-fox-ess-card.png"
       }
     ],
     catalogItems: [

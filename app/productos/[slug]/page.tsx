@@ -150,12 +150,6 @@ const microPdfPreviews = [
   },
   {
     brand: "NEP",
-    title: "Accesorios para microinversores",
-    range: "Cable · End cap · WiFi · Tools",
-    image: "/images/products/pdf-nep-accessories-cover.webp"
-  },
-  {
-    brand: "NEP",
     title: "BDH-8KSP/10KSP/12KSP-LB",
     range: "Híbrido 48V",
     image: "/images/products/pdf-nep-bdh-cover.webp"
@@ -166,12 +160,6 @@ const microPdfPreviews = [
     range: "Rapid Shutdown",
     image: "/images/products/pdf-nep-rsd-datasheet-cover.webp"
   },
-  {
-    brand: "NEP",
-    title: "NEP RSD Solution",
-    range: "Solución RSD",
-    image: "/images/products/pdf-nep-rsd-solution-cover.webp"
-  }
 ];
 
 const microHighlights = [
@@ -402,7 +390,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
               />
             </div>
           ) : (
-            <div className={`detailVisualCarousel${isTechnicalDetail ? " panelVisualCarousel" : ""}`} aria-label={`Carrusel visual de ${product.title}`}>
+            <div className={`detailVisualCarousel${(isTechnicalDetail || isBattery) ? " panelVisualCarousel" : ""}`} aria-label={`Carrusel visual de ${product.title}`}>
               <div className="detailVisualTrack">
                 {slides.map((slide, index) => (
                   <div className="detailVisualSlide" key={`${slide.name}-${index}`}>
