@@ -28,9 +28,9 @@ export default function HomePage() {
               </Link>
             </div>
             <div className="heroStats">
-              <div><strong>Paneles Solares</strong><span>línea comercial</span></div>
+              <div><strong>Paneles Solares</strong><span>línea comercial · línea residencial</span></div>
               <div><strong>Microinversores, inversores y RSD</strong><span>línea comercial</span></div>
-              <div><strong>Baterías</strong><span>línea comercial</span></div>
+              <div><strong>Baterías</strong><span>línea comercial · línea residencial</span></div>
               <div><strong>Estructuras y accesorios eléctricos</strong><span>línea comercial</span></div>
             </div>
           </div>

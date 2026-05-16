@@ -212,9 +212,9 @@ carousel: [
       { name: "CHIKO", label: "Solar Mounting Solutions", image: "/images/products/logo-chiko.png" }
     ],
     items: [
-      "Se organiza la línea CHIKO para montaje solar con riel #518, splice kit, mid clamp, end clamp y L Feet para techo metálico.",
-      "Se incluyen accesorios de puesta a tierra, cable solar 6mm² rojo/negro, conector MC4, clips para cable, amarres SUS304 y tile hooks.",
-      "La información se presenta como lista de productos para cotización, con imagen referencial, código, descripción y unidad de venta."
+      "Se organiza la línea CHIKO para montaje solar con riel #518, rail splice kit, mid clamp, end clamp, L Feet y montura triangular fija para techos planos.",
+      "Se incluyen accesorios de puesta a tierra, cable solar 6mm² rojo/negro, conector MC4, clips para cable, amarres SUS304 y tile hooks para techo de teja.",
+      "La información se presenta como lista de productos para cotización, con imagen individual, código, descripción y unidad de venta."
     ],
     cta: "Consultar estructuras y accesorios",
     carousel: [],
@@ -230,14 +230,24 @@ carousel: [
         specs: ["Rail #518", "4800mm", "Aluminio", "Montaje solar", "Uso con splice, clamps y L Feet"]
       },
       {
-        title: "CHIKO Solar Rail Splice Kit for #518 Rail",
-        code: "CK-618-1-150",
+        title: "CHIKO Rail Splice Kit 200mm",
+        code: "#540 / #541 / #537 / #539",
         label: "Empalme para riel",
         unit: "PCS",
         image: "/images/products/chiko-rail-splice-kit.webp",
         description:
-          "Kit de empalme para unir tramos de riel #518 y mantener continuidad estructural en líneas de montaje más largas.",
-        specs: ["Para Rail #518", "Splice kit", "Unión de rieles", "Montaje estructural"]
+          "Empalme de aluminio de 200mm para unir tramos de riel en sistemas de montaje solar, manteniendo continuidad estructural y alineación del perfil.",
+        specs: ["200mm", "Rail splice kit", "Unión de rieles", "Montaje estructural"]
+      },
+      {
+        title: "CHIKO Fixed Aluminum Alloy Triangular Mount",
+        code: "CK-FTT-BL",
+        label: "Montura triangular fija",
+        unit: "SET",
+        image: "/images/products/chiko-fixed-triangular-mount.webp",
+        description:
+          "Montura triangular fija de aleación de aluminio para techos planos comerciales. Disponible por disponibilidad o pedido, y pensada como estructura de soporte para paneles solares en configuraciones inclinadas.",
+        specs: ["Flat roof", "Aleación de aluminio", "10° / 15° / 20° / 25° / 30°", "Disponible por pedido"]
       },
       {
         title: "CHIKO Solar Adjustable Mid Clamp Kit 30-40mm",
