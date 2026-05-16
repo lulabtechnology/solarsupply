@@ -508,70 +508,137 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
           </div>
         </section>
       ) : isStructure && product.catalogItems.length > 0 ? (
-        <section className="section softSection structureProductsSection">
-          <div className="container">
-            <div className="sectionHeader center">
-              <span className="eyebrow">Lista de productos CHIKO</span>
-              <h2>Productos incluidos para estructuras y accesorios eléctricos.</h2>
-              <p>
-                La información se muestra con imagen individual de cada producto, código, descripción y unidad para facilitar la cotización por WhatsApp. Puede presionar cada imagen para ampliarla.
-              </p>
-            </div>
-
-            <div className="structureProductTable">
-              <div className="structureTableHeader" aria-hidden="true">
-                <span>#</span>
-                <span>Imagen</span>
-                <span>Código</span>
-                <span>Descripción</span>
-                <span>Unidad</span>
-              </div>
-
-              {product.catalogItems.map((item, index) => (
-                <article className="structureTableRow" key={item.title}>
-                  <div className="structureTableIndex">{String(index + 1).padStart(2, "0")}</div>
-                  <div className="structureTableImageWrap">
-                    <ZoomableProductImage src={item.image} alt={item.title} className="structureTableImage" />
-                  </div>
-                  <div className="structureTableCode">
-                    <span>Código</span>
-                    <strong>{"code" in item ? String(item.code) : "-"}</strong>
-                  </div>
-                  <div className="structureTableInfo">
-                    <span>{item.label}</span>
-                    <h3>{item.title}</h3>
-                    <p>{item.description}</p>
-                    <div className="tagList compactTags">
-                      {item.specs.map((spec) => <small key={spec}>{spec}</small>)}
-                    </div>
-                  </div>
-                  <div className="structureTableUnit">
-                    <span>Unidad</span>
-                    <strong>{"unit" in item ? String(item.unit) : "-"}</strong>
-                  </div>
-                </article>
-              ))}
-            </div>
-
-            <div className="panelConsultBox structureConsultBox">
-              <div>
-                <span className="eyebrow small">Consulta comercial</span>
-                <h3>Cotizar estructuras, rieles y accesorios CHIKO</h3>
+        <>
+          <section className="section softSection structureProductsSection">
+            <div className="container">
+              <div className="sectionHeader center microAccessoriesIntro">
+                <span className="eyebrow">Accesorios para microinversores NEP</span>
+                <h2>Accesorios y referencias que se venden junto a soluciones de microinversores.</h2>
                 <p>
-                  Solar Supply puede confirmar cantidades, disponibilidad y combinación de accesorios según tipo de techo, cantidad de paneles y alcance del proyecto.
+                  Estas referencias se muestran con imagen individual, código y descripción comercial. Puede presionar cada imagen para ampliarla.
                 </p>
               </div>
-              <Link
-                href={whatsappUrl("Hola Solar Supply, quiero cotizar estructuras y accesorios CHIKO de la lista de productos.")}
-                className="primaryButton"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Consultar por WhatsApp <ArrowRight size={18} />
-              </Link>
+
+              <div className="structureProductTable">
+                <div className="structureTableHeader" aria-hidden="true">
+                  <span>#</span>
+                  <span>Imagen</span>
+                  <span>Código</span>
+                  <span>Descripción</span>
+                  <span>Unidad</span>
+                </div>
+
+                {microAccessoryItems.map((item, index) => (
+                  <article className="structureTableRow" key={item.title}>
+                    <div className="structureTableIndex">{String(index + 1).padStart(2, "0")}</div>
+                    <div className="structureTableImageWrap">
+                      <ZoomableProductImage src={item.image} alt={item.title} className="structureTableImage" />
+                    </div>
+                    <div className="structureTableCode">
+                      <span>Código</span>
+                      <strong>{item.code}</strong>
+                    </div>
+                    <div className="structureTableInfo">
+                      <span>{item.label}</span>
+                      <h3>{item.title}</h3>
+                      <p>{item.description}</p>
+                      <div className="tagList compactTags">
+                        {item.specs.map((spec) => <small key={spec}>{spec}</small>)}
+                      </div>
+                    </div>
+                    <div className="structureTableUnit">
+                      <span>Unidad</span>
+                      <strong>{item.unit}</strong>
+                    </div>
+                  </article>
+                ))}
+              </div>
+
+              <div className="panelConsultBox structureConsultBox">
+                <div>
+                  <span className="eyebrow small">Consulta comercial</span>
+                  <h3>Cotizar microinversores y accesorios NEP</h3>
+                  <p>
+                    Solar Supply puede confirmar disponibilidad, accesorios de instalación, comunicación y compatibilidad según el proyecto.
+                  </p>
+                </div>
+                <Link
+                  href={whatsappUrl("Hola Solar Supply, quiero cotizar microinversores NEP y los accesorios relacionados de la lista mostrada.")}
+                  className="primaryButton"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Consultar por WhatsApp <ArrowRight size={18} />
+                </Link>
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+
+          <section className="section softSection structureProductsSection">
+            <div className="container">
+              <div className="sectionHeader center">
+                <span className="eyebrow">Lista de productos CHIKO</span>
+                <h2>Productos incluidos para estructuras y accesorios eléctricos.</h2>
+                <p>
+                  La información se muestra con foto de cada producto, código, descripción y unidad para facilitar la cotización por WhatsApp. Puede presionar cada imagen para ampliarla.
+                </p>
+              </div>
+
+              <div className="structureProductTable">
+                <div className="structureTableHeader" aria-hidden="true">
+                  <span>#</span>
+                  <span>Imagen</span>
+                  <span>Código</span>
+                  <span>Descripción</span>
+                  <span>Unidad</span>
+                </div>
+
+                {product.catalogItems.map((item, index) => (
+                  <article className="structureTableRow" key={item.title}>
+                    <div className="structureTableIndex">{String(index + 1).padStart(2, "0")}</div>
+                    <div className="structureTableImageWrap">
+                      <ZoomableProductImage src={item.image} alt={item.title} className="structureTableImage" />
+                    </div>
+                    <div className="structureTableCode">
+                      <span>Código</span>
+                      <strong>{"code" in item ? String(item.code) : "-"}</strong>
+                    </div>
+                    <div className="structureTableInfo">
+                      <span>{item.label}</span>
+                      <h3>{item.title}</h3>
+                      <p>{item.description}</p>
+                      <div className="tagList compactTags">
+                        {item.specs.map((spec) => <small key={spec}>{spec}</small>)}
+                      </div>
+                    </div>
+                    <div className="structureTableUnit">
+                      <span>Unidad</span>
+                      <strong>{"unit" in item ? String(item.unit) : "-"}</strong>
+                    </div>
+                  </article>
+                ))}
+              </div>
+
+              <div className="panelConsultBox structureConsultBox">
+                <div>
+                  <span className="eyebrow small">Consulta comercial</span>
+                  <h3>Cotizar estructuras, rieles y accesorios CHIKO</h3>
+                  <p>
+                    Solar Supply puede confirmar cantidades, disponibilidad y combinación de accesorios según tipo de techo, cantidad de paneles y alcance del proyecto.
+                  </p>
+                </div>
+                <Link
+                  href={whatsappUrl("Hola Solar Supply, quiero cotizar estructuras y accesorios CHIKO de la lista de productos.")}
+                  className="primaryButton"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Consultar por WhatsApp <ArrowRight size={18} />
+                </Link>
+              </div>
+            </div>
+          </section>
+        </>
       ) : isBattery ? (
         <section className="section softSection">
           <div className="container">
