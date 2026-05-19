@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Facebook, Globe, Instagram, Mail, MapPin, MessageCircle, Music2, Phone, UserRound } from "lucide-react";
 import { navItems, productFamilies, site, whatsappUrl } from "@/lib/site";
 import { Logo } from "@/components/Logo";
 
@@ -56,6 +56,70 @@ export function SiteFooter() {
           <Link href={whatsappUrl()} className="footerCta" target="_blank" rel="noreferrer">
             Solicitar cotización
           </Link>
+
+          <div className="footerExtraPanel">
+            <div className="footerExtraHeading">
+              <UserRound size={16} />
+              <span>{site.footerContactName}</span>
+            </div>
+
+            <ul className="footerSocialList">
+              <li>
+                <a href={site.footerWhatsappUrl} target="_blank" rel="noreferrer" className="footerSocialLink">
+                  <span className="footerSocialIcon whatsapp"><MessageCircle size={16} /></span>
+                  <span>
+                    <strong>WhatsApp directo</strong>
+                    <small>Escríbenos por WhatsApp</small>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href={`mailto:${site.footerSalesEmail}`} className="footerSocialLink">
+                  <span className="footerSocialIcon email"><Mail size={16} /></span>
+                  <span>
+                    <strong>Correo de ventas</strong>
+                    <small>{site.footerSalesEmail}</small>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href={site.websiteUrl} target="_blank" rel="noreferrer" className="footerSocialLink">
+                  <span className="footerSocialIcon web"><Globe size={16} /></span>
+                  <span>
+                    <strong>Sitio web</strong>
+                    <small>www.solarsupplysa.com</small>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href={site.instagramUrl} target="_blank" rel="noreferrer" className="footerSocialLink">
+                  <span className="footerSocialIcon instagram"><Instagram size={16} /></span>
+                  <span>
+                    <strong>Instagram</strong>
+                    <small>@solar_supply_</small>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href={site.facebookUrl} target="_blank" rel="noreferrer" className="footerSocialLink">
+                  <span className="footerSocialIcon facebook"><Facebook size={16} /></span>
+                  <span>
+                    <strong>Facebook</strong>
+                    <small>Solar Supply SA</small>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href={site.tiktokUrl} target="_blank" rel="noreferrer" className="footerSocialLink">
+                  <span className="footerSocialIcon tiktok"><Music2 size={16} /></span>
+                  <span>
+                    <strong>TikTok</strong>
+                    <small>@solar_supply_</small>
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </footer>

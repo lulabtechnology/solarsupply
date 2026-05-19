@@ -11,6 +11,13 @@ export const site = {
   googleMapsUrl:
     "https://www.google.com/maps/search/?api=1&query=Plaza+Calle+50+Piso+1+Local+1+Calle+50+Obarrio+Bella+Vista+Panama",
   contactPerson: "Leonor Gómez Marín",
+  footerContactName: "Ing. Darío Savoretti",
+  footerWhatsappUrl: "https://wa.me/message/GYZFGVZ4HCPTN1",
+  footerSalesEmail: "ventas@solarsupply.com",
+  websiteUrl: "https://www.solarsupplysa.com",
+  instagramUrl: "https://www.instagram.com/solar_supply_",
+  facebookUrl: "https://www.facebook.com/Solar%20Supply%20SA",
+  tiktokUrl: "https://www.tiktok.com/@solar_supply_",
   tagline: "Suministro solar confiable con respaldo técnico sólido.",
   market: "Panamá, Centroamérica y Suramérica",
   keywords: [

@@ -907,6 +907,74 @@ p { color: var(--muted); line-height: 1.72; }
 .footerList a:hover, .footerContact a:hover, .creditLink:hover { color: #fff; }
 .creditLink { display: inline-flex; color: rgba(255,255,255,.66); font-weight: 800; margin-top: 10px; }
 
+.footerExtraPanel {
+  margin-top: 20px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255,255,255,.10);
+}
+.footerExtraHeading {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+  font-weight: 800;
+  margin-bottom: 14px;
+}
+.footerSocialList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 10px;
+}
+.footerSocialLink {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 16px;
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.08);
+  color: rgba(255,255,255,.88);
+  transition: transform .22s ease, background .22s ease, border-color .22s ease;
+}
+.footerSocialLink:hover {
+  transform: translateY(-2px);
+  background: rgba(255,255,255,.09);
+  border-color: rgba(255,255,255,.18);
+  color: #fff;
+}
+.footerSocialLink span:last-child {
+  display: grid;
+  gap: 2px;
+}
+.footerSocialLink strong {
+  font-size: .96rem;
+  line-height: 1.1;
+}
+.footerSocialLink small {
+  color: rgba(255,255,255,.66);
+  font-size: .8rem;
+  line-height: 1.3;
+}
+.footerSocialIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #fff;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.18), 0 12px 22px rgba(0,0,0,.18);
+}
+.footerSocialIcon.whatsapp { background: linear-gradient(135deg, #1bc960, #0e9f49); }
+.footerSocialIcon.email { background: linear-gradient(135deg, #ffb44d, #f47a20); }
+.footerSocialIcon.web { background: linear-gradient(135deg, #53b8ff, #3a86ff); }
+.footerSocialIcon.instagram { background: linear-gradient(135deg, #ff7a18, #e1306c 55%, #833ab4); }
+.footerSocialIcon.facebook { background: linear-gradient(135deg, #1877f2, #0f5fc9); }
+.footerSocialIcon.tiktok { background: linear-gradient(135deg, #111827, #000000); }
+
 .whatsAppFloat {
   position: fixed;
   z-index: 45;
