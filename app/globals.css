@@ -899,6 +899,8 @@ p { color: var(--muted); line-height: 1.72; }
   padding: 70px 0 32px;
 }
 .footerGrid { display: grid; grid-template-columns: 1.35fr .75fr 1fr 1.2fr; gap: 34px; align-items: start; }
+.footerBrand .logoLink { background: rgba(255,255,255,.98); padding: 14px 18px; border-radius: 18px; box-shadow: 0 16px 38px rgba(0,0,0,.18); display: inline-flex; }
+.footerBrand .logoImage { max-width: 205px; height: auto; }
 .footerBrand p { color: rgba(255,255,255,.72); margin-top: 18px; }
 .footerGrid h3 { color: #fff; margin-bottom: 18px; }
 .footerList a, .footerContact a, .footerContact span { color: rgba(255,255,255,.72); }
