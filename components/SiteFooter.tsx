@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Facebook, Globe, Instagram, Mail, MapPin, MessageCircle, Music2, Phone, UserRound } from "lucide-react";
+import { Facebook, Globe, Instagram, Mail, MapPin, MessageCircle, Music2, Phone } from "lucide-react";
 import { navItems, productFamilies, site, whatsappUrl } from "@/lib/site";
 import { Logo } from "@/components/Logo";
 
@@ -58,11 +58,6 @@ export function SiteFooter() {
           </Link>
 
           <div className="footerExtraPanel">
-            <div className="footerExtraHeading">
-              <UserRound size={16} />
-              <span>{site.footerContactName}</span>
-            </div>
-
             <ul className="footerSocialList">
               <li>
                 <a href={site.footerWhatsappUrl} target="_blank" rel="noreferrer" className="footerSocialLink">
